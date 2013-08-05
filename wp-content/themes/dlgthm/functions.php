@@ -580,20 +580,22 @@ add_filter( 'template_include', array( 'Global_Wrapping', 'wrap' ), 99 );
  *-------------------------------------------------------
 */
 
-
-function create_post_types()
-{
-	$default_post_type = array(
+$default_post_type = array(
 		'labels' => array(
 			'name' => 'Industry Content',
 			'singular_name' => 'Industry Content'
 		),
 		'public' => true,
-		'has_archive' => true
+		'has_archive' => true,
+		'show_ui' => true
 	);
-	$post_types = array(
-		$default_post_type
-	);
+$post_types = array(
+	$default_post_type
+);
+
+function create_post_types()
+{
+	global $post_types;
 	foreach($post_types as $post_type)
 	{
 		register_post_type($post_type['labels']['name'], $post_type);
@@ -612,6 +614,21 @@ add_action('init', 'create_post_types');
 /* cpt = custom post types */
 function cpt_crud_menu() {
 	add_menu_page("Content Manager", "Content", 'manage_options', 'content-manager', 'cpt_crud_options', null, 24);
+	global $post_types;
+	foreach($post_types as $post_type)
+	{
+		add_submenu_page('content-manager', $post_type['labels']['name'], $post_type['labels']['name'], 'manage_options', 'custom-submenu', 'cpt_single_options');
+	}
+}
+function cpt_single_options()
+{
+	if ( !current_user_can( 'manage_options' ) )  {
+		wp_die( __( 'You do not have sufficient permissions to access this page.' ) );
+	}
+	echo '
+	<script type="text/javascript">
+		window.location="/wp-admin/edit.php?post_type=industrycontent";
+	</script>';
 }
 add_action( 'admin_menu', 'cpt_crud_menu' );
 function cpt_crud_options() {
