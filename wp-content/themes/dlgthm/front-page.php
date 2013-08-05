@@ -1,1 +1,2 @@
-<div>Example file, basically empty</div><?php echo "lol"; ?>
+
+<div>Example file, basically empty</div>
