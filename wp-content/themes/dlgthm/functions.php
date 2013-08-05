@@ -580,20 +580,171 @@ add_filter( 'template_include', array( 'Global_Wrapping', 'wrap' ), 99 );
  *-------------------------------------------------------
 */
 
-$default_post_type = array(
+//generate an array of options for a CPT based on a "most used" profile template
+//(only allows names)
+//(requires unique name)
+function new_default_CPT($name, $singlular_name)
+{
+	$default_post_type = array(
 		'labels' => array(
-			'name' => 'Industry Content',
-			'singular_name' => 'Industry Content'
+			'name' => $name,
+			'singular_name' => $singular_name
 		),
 		'public' => true,
 		'has_archive' => true,
 		'show_ui' => true,
 		'show_in_menu' => 'content-manager'
 	);
-$post_types = array(
-	$default_post_type
-);
+	return $default_post_type;
+}
 
+//The names and singular names of every CPT we want to use in the theme, in order
+$CPT_name_list = array(
+	//About Us
+		//Team
+			'Office People',
+			'Leadership People',
+		'Faculty',
+		'Our Partners',
+		'Our Values',
+		'News & Press',
+	//Services
+		//Marketing
+			'Branding',
+			'Messaging',
+			'Demand Generation',
+		//Leadership
+			'Organizational Alignment',
+		//Data & Analytics
+			'RAD & TAM Modeling',
+			'Campaign Performance',
+			'Market Sizing',
+		//Ecosystem Management
+	//Industries
+			//Healthcare
+			//Technology
+			//SMB
+			//Channel
+			//Public Sector
+				'K12',
+				'HED',
+				'SLG',
+				'FED',
+	//Landing Page
+		'Landing Slide',
+	//Practice Areas
+		//Digital
+			'SEO',
+			'Websites',
+			'eCommerce',
+			'Mobile Apps',
+		//Analytics
+		//Publishing
+	//Insights
+			//Blog
+			//Publications/Articles
+			//Live Dialog
+				//View content
+				//Upcoming Live Dialogs
+				//Request an Invitation
+	//Contact ("Reach Out maybe? lol")
+			//Maps/Directions
+				'Our Offices',
+			//Connect via Social
+			//Subscribe
+			//Careers
+			//Alumni
+			//Open Door Program
+	//Course Offerings
+			//Health & Wellness
+			//Leadership (Perch)
+	//Landing Page
+			//Clients
+				'Client Logos',
+				'Testimonials',
+				'Case Studies'
+			//Our Story
+	);
+$CPT_singular_name_list = array(
+	//About Us
+		//Team
+			'Office People',
+			'Leadership People',
+		'Faculty',
+		'Our Partners',
+		'Our Values',
+		'News & Press',
+	//Services
+		//Marketing
+			'Branding',
+			'Messaging',
+			'Demand Generation',
+		//Leadership
+			'Organizational Alignment',
+		//Data & Analytics
+			'RAD & TAM Modeling',
+			'Campaign Performance',
+			'Market Sizing',
+		//Ecosystem Management
+	//Industries
+			//Healthcare
+			//Technology
+			//SMB
+			//Channel
+			//Public Sector
+				'K12',
+				'HED',
+				'SLG',
+				'FED',
+	//Landing Page
+		'Landing Slide',
+	//Practice Areas
+		//Digital
+			'SEO',
+			'Websites',
+			'eCommerce',
+			'Mobile Apps',
+		//Analytics
+		//Publishing
+	//Insights
+			//Blog
+			//Publications/Articles
+			//Live Dialog
+				//View content
+				//Upcoming Live Dialogs
+				//Request an Invitation
+	//Contact ("Reach Out maybe? lol")
+			//Maps/Directions
+				'Our Offices',
+			//Connect via Social
+			//Subscribe
+			//Careers
+			//Alumni
+			//Open Door Program
+	//Course Offerings
+			//Health & Wellness
+			//Leadership (Perch)
+	//Landing Page
+			//Clients
+				'Client Logos',
+				'Testimonials',
+				'Case Studies'
+			//Our Story
+	);
+
+//Actual specification of CPTs
+$post_types = array();
+
+//Test to make sure we have a valid list of name, singular_name pairs.
+if(!assert(count($CPT_name_list) == count($CPT_singular_name_list))) die('Corrupt CPT definitions. Check line 681 of functions.php.');
+
+//create a complete array containing all of our CPT options
+for($i = 0; $i < count($CPT_name_list); $i++)
+{
+	$post_types[] = new_default_CPT($CPT_name_list[$i], $CPT_singular_name_list[$i]);
+}
+
+//actually define a function to create the CPTs
 function create_post_types()
 {
 	global $post_types;
@@ -602,20 +753,22 @@ function create_post_types()
 		register_post_type($post_type['labels']['name'], $post_type);
 	}
 }
+
+//bind our function to the init hook
 add_action('init', 'create_post_types');
 
 /*
  *-------------------------------------------------------
  *
- *                    Custom Admin Menus
+ *              Top Level Content Admin Menu
  *
  *-------------------------------------------------------
 */
 
-/* cpt = custom post types */
 function cpt_crud_menu() {
 	add_menu_page("Content Manager", "Content", 'manage_options', 'content-manager', 'cpt_crud_options', null, 24);
 }
+
 function cpt_single_options()
 {
 	if ( !current_user_can( 'manage_options' ) )  {
@@ -626,12 +779,32 @@ function cpt_single_options()
 		window.location="/wp-admin/edit.php?post_type=industrycontent";
 	</script>';
 }
-add_action( 'admin_menu', 'cpt_crud_menu' );
-function cpt_crud_options() {
-	if ( !current_user_can( 'manage_options' ) )  {
-		wp_die( __( 'You do not have sufficient permissions to access this page.' ) );
-	}
-	echo '<div class="wrap">';
-	echo '<p>Here is where the form would go if I actually had options.</p>';
-	echo '</div>';
+
+add_action('admin_menu', 'cpt_crud_menu');
+
+/*
+ *-------------------------------------------------------
+ *
+ *                    Additional Styles
+ *
+ *-------------------------------------------------------
+*/
+
+function theme_styles()  
+{ 
+  // Register the style like this for a theme:  
+  // (First the unique name for the style (custom-style) then the src, 
+  // then dependencies and ver no. and media type)
+  wp_register_style( 'app-style', 
+    get_bloginfo('template_url').'/css/main.min.css', 
+    array(), 
+    '0.1', 
+    'all'
+    //optionally screen, handheld, print
+    );
+
+  // enqueing the style:
+  wp_enqueue_style( 'app-style' );
 }
+//adding the hook
+add_action('wp_enqueue_scripts', 'theme_styles');
