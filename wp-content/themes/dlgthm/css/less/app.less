@@ -2,8 +2,75 @@
 a {
   color: @black;
 }
+
 #idelement {
   width: 300px;
   height: 300px;
   background-color: #ccc;
+}
+
+// Dialog colors
+// -------------------------
+@dialogblue: #518fcc;
+@dialogbrown: #572700;
+
+@blue: #007489;
+@red: #b42d38; 
+@orange: #e47f26;
+@yellow: #f4c017;
+@green: #becb31;
+
+@grey1: #6d6e71;
+@grey2: #939598;
+@grey3: #bcbec0;
+@grey4: #e6e7e8;
+@beige1: #c5c19d;
+@beige2: #e1dcc9;
+@beige3: #f4f1e9;
+
+.banner {
+   @navheight: 58px;
+   height: @navheight;
+   line-height: @navheight;
+   background-color: @dialogblue;
+
+   .navbar-inner {
+      background: none;
+      background-image: none;
+      border: none;
+      -webkit-box-shadow:  0px 2px 8px 2px rgba(0, 0, 0, .7);
+      box-shadow:  0px 2px 8px 2px rgba(0, 0, 0, .7);
+   }
+   #dialoglogo {
+      width: 120px;
+      height: 50px;
+      position: relative;
+      margin: 0;
+      padding: 0;
+      img {
+         position: absolute;
+         display: block;
+         height: 165px;
+         top: -13px;
+      }
+   }
+   .subnav {
+      height: 34px;
+      line-height: 34px;
+      background: #7e7f82; /* Old browsers */
+      background: -moz-linear-gradient(top,  #7e7f82 51%, #5d5e60 100%); /* FF3.6+ */
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(51%,#7e7f82), color-stop(100%,#5d5e60)); /* Chrome,Safari4+ */
+      background: -webkit-linear-gradient(top,  #7e7f82 51%,#5d5e60 100%); /* Chrome10+,Safari5.1+ */
+      background: -o-linear-gradient(top,  #7e7f82 51%,#5d5e60 100%); /* Opera 11.10+ */
+      background: -ms-linear-gradient(top,  #7e7f82 51%,#5d5e60 100%); /* IE10+ */
+      background: linear-gradient(to bottom,  #7e7f82 51%,#5d5e60 100%); /* W3C */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7e7f82', endColorstr='#5d5e60',GradientType=0 ); /* IE6-9 */
+
+
+
+
+
+      box-shadow:  0px 5px 10px 0px rgba(0, 0, 0, 0.3);
+      border-bottom: 1px solid #8e8f93;
+   }
 }
