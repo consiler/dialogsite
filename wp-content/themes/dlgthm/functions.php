@@ -525,3 +525,32 @@ function twentythirteen_customize_preview_js() {
 	wp_enqueue_script( 'twentythirteen-customizer', get_template_directory_uri() . '/js/theme-customizer.js', array( 'customize-preview' ), '20130226', true );
 }
 add_action( 'customize_preview_init', 'twentythirteen_customize_preview_js' );
+
+/*
+* 
+*               .-://:-`       `:+oso+-`       `-://:-.                
+*             -+ooooooo+:`   `+hdddddddh/    `/+ooooooo+.              
+*            .ooooooooooo/   oddddddddddd/   +ooooooooooo.             
+*            /oooooooooooo`  ddddddddddddy  `oooooooooooo:             
+*            -ooooooooooo/   sddddddddddd+   +ooooooooooo.             
+*             -+ooooooo+/`   `oddddddddh+`   `/oooooooo+-              
+*              `.:///:-`       ./osyso:.       `-:///:.`               
+*                                                                                                                                            
+*                                                                      
+* ````````         ``                 ``                               
+* `+/:::::::/-`     :/                 -+                              
+* `o:       `-+:    ``                 :o                              
+* `o:         .o-   -:    `-::::::.    :o     `-:::::-`     `.:::::.`:.
+* `o:          ++   /+   `+/`   `-+.   :o    :+-`  ``:+.   `//.`  `-/o-
+* `o:          /o   /+   `.`  ```.o-   :o   .o.       :o`  /+       -o-
+* `o:          +/   /+    .::::---o-   :o   :o        .o-  o:       .o-
+* `o:         :o.   /+   /+.`    `o-   :o   -o.       -o`  /+       :o-
+* `o:```````-//.    /+   /+`   `.:o:`  :o    :+.`   `-+-   `//.```.:/o-
+* `//:::::::-.      ::   `:/::::-`-/-  -/     .::::::-`      .-:::-..o.
+*                                                         ./`      :+` 
+*                                                          -/:----//.  
+*                                                            `....`   
+*/
+require_once 'lib/template_wrapper.php';
+require_once 'lib/cpt.php';
+require_once 'lib/style-enqueue.php';
