@@ -23,7 +23,6 @@
  * @subpackage Twenty_Thirteen
  * @since Twenty Thirteen 1.0
  */
-
 /**
  * Sets up the content width value based on the theme's design.
  * @see twentythirteen_content_width() for template-specific adjustments.
