@@ -587,7 +587,8 @@ $default_post_type = array(
 		),
 		'public' => true,
 		'has_archive' => true,
-		'show_ui' => true
+		'show_ui' => true,
+		'show_in_menu' => 'content-manager'
 	);
 $post_types = array(
 	$default_post_type
@@ -614,11 +615,6 @@ add_action('init', 'create_post_types');
 /* cpt = custom post types */
 function cpt_crud_menu() {
 	add_menu_page("Content Manager", "Content", 'manage_options', 'content-manager', 'cpt_crud_options', null, 24);
-	global $post_types;
-	foreach($post_types as $post_type)
-	{
-		add_submenu_page('content-manager', $post_type['labels']['name'], $post_type['labels']['name'], 'manage_options', 'custom-submenu', 'cpt_single_options');
-	}
 }
 function cpt_single_options()
 {
