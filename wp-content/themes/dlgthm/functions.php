@@ -525,16 +525,24 @@ function twentythirteen_customize_preview_js() {
 }
 add_action( 'customize_preview_init', 'twentythirteen_customize_preview_js' );
 
-function my_template_path() {
-	return My_Wrapping::$main_template;
+/*
+ *-------------------------------------------------------
+ *
+ *                    Template Wrapper
+ *
+ *-------------------------------------------------------
+*/
+
+function global_template_path() {
+	return Global_Wrapping::$main_template;
 }
 
-function my_template_base() {
-	return My_Wrapping::$base;
+function global_template_base() {
+	return Global_Wrapping::$base;
 }
 
 
-class My_Wrapping {
+class Global_Wrapping {
 
 	/**
 	 * Stores the full path to the main template file
@@ -562,5 +570,63 @@ class My_Wrapping {
 		return locate_template( $templates );
 	}
 }
+add_filter( 'template_include', array( 'Global_Wrapping', 'wrap' ), 99 );
 
-add_filter( 'template_include', array( 'My_Wrapping', 'wrap' ), 99 );
+/*
+ *-------------------------------------------------------
+ *
+ *                    Custom Post Types
+ *
+ *-------------------------------------------------------
+*/
+
+class PostType {
+	private $var;
+	function __construct(){
+		$this->var = "testing";
+		echo "lol";
+	}
+}
+$p = new PostType();
+/*function create_post_type_POSTNAME() {
+	register_post_type( 'POSTNAME',
+		array(
+			'labels' => array(
+				'name' => __( $POSTNAME_DISPLAY_NAME ),
+				'singular_name' => __( $POSTNAME_SINGULAR_NAME )
+			),
+		'public' => true,
+		'has_archive' => true,
+		)
+	);
+}
+/*
+return function
+	that registers the post type I want by default
+	passes arguements to register_post_type($name, $array)
+		where $array is 'lables' => {name, singular_name}, 'public', 'has_archive'
+		may want additional array keys. store this stuff in a prefab dictionary and then load these functions from dictionaries
+
+add_action('init', 'create_post_type');
+
+/*
+ *-------------------------------------------------------
+ *
+ *                    Custom Admin Menus
+ *
+ *-------------------------------------------------------
+*/
+
+/* cpt = custom post types */
+function cpt_crud_menu() {
+	add_menu_page("Content Manager", "Content", 'manage_options', 'content-manager', 'cpt_crud_options', null, 24);
+}
+add_action( 'admin_menu', 'cpt_crud_menu' );
+function cpt_crud_options() {
+	if ( !current_user_can( 'manage_options' ) )  {
+		wp_die( __( 'You do not have sufficient permissions to access this page.' ) );
+	}
+	echo '<div class="wrap">';
+	echo '<p>Here is where the form would go if I actually had options.</p>';
+	echo '</div>';
+}
