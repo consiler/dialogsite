@@ -580,78 +580,26 @@ add_filter( 'template_include', array( 'Global_Wrapping', 'wrap' ), 99 );
  *-------------------------------------------------------
 */
 
-class PostType {
-	private $label_options;
-	private $instance_options;
-	function __construct($labeloptions, $instanceoptions)
-	{
-		if(assert($labeloptions == NULL)) die();
-		//$labeloptions is required, looks like:
-		//array('name' => __(), 'singular_name' => __())
 
-		//optional default instanceoptions, else pass the argument
-		//options include everything you can pass to register_post_type
-		//ex: public (boolean), has_archive (boolean)
-		//are meant to be used in an associative array
-		if($instanceoptions == NULL)
-		{
-			$this->instance_options = array(
-			'labels' =>
-				$labeloptions,
-			'public' => true,
-			'has_archive' => true
-			);
-		} else {
-			//if custom instance options, give register_post_type
-			//the union of {'labels' => $labels}
-			//and {rest of options...}
-			//to form a valid options array for register_post_type
-			$this->instance_options = array_merge($instanceoptions, array('labels' => $labeloptions));
-		}
-		//at this point, instance options is ready to be passed to register_post_type
-
-	}
-	function returnAnonymousPostTypeFunction()
-	{
-		$args = "";
-		$code = "
-			register_post_type( '".$this->labeloptions['name'].",
-				array(
-					'labels' => array(
-						'name' => __( 'Products' ),
-						'singular_name' => __( 'Product' )
-					),
-				'public' => true,
-				'has_archive' => true,
-				)
-			);
-		";
-		return create_function($args, $code);
-	}
-}
-
-$p = new PostType(array('name' => 'Lol Test', 'singular_name' => 'Lol Tests'));
-print_r($p);
-/*function create_post_type_POSTNAME() {
-	register_post_type( 'POSTNAME',
-		array(
-			'labels' => array(
-				'name' => __( $POSTNAME_DISPLAY_NAME ),
-				'singular_name' => __( $POSTNAME_SINGULAR_NAME )
-			),
+function create_post_types()
+{
+	$default_post_type = array(
+		'labels' => array(
+			'name' => 'Industry Content',
+			'singular_name' => 'Industry Content'
+		),
 		'public' => true,
-		'has_archive' => true,
-		)
+		'has_archive' => true
 	);
+	$post_types = array(
+		$default_post_type
+	);
+	foreach($post_types as $post_type)
+	{
+		register_post_type($post_type['labels']['name'], $post_type);
+	}
 }
-/*
-return function
-	that registers the post type I want by default
-	passes arguements to register_post_type($name, $array)
-		where $array is 'lables' => {name, singular_name}, 'public', 'has_archive'
-		may want additional array keys. store this stuff in a prefab dictionary and then load these functions from dictionaries
-
-add_action('init', 'create_post_type');
+add_action('init', 'create_post_types');
 
 /*
  *-------------------------------------------------------
