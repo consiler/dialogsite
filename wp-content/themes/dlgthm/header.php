@@ -29,18 +29,22 @@
 	<![endif]-->
 	<?php wp_head(); ?>
 </head>
-<a class="brand" id="dialoglogo" href="<?php echo home_url(); ?>/">
-          <img src="<?php bloginfo('template_url'); ?>/assets/img/dialog-logo-brown.png">
-        </a>
+
 <body <?php body_class(); ?>>
-	<div id="page" class="hfeed site">
-		<div
+  <div id="page" class="hfeed site">
+	
 			<div id="navbar" class="navbar">
-				<nav id="site-navigation" class="navigation main-navigation" role="navigation">
-					<h3 class="menu-toggle"><?php _e( 'Menu', 'twentythirteen' ); ?></h3>
-					<a class="screen-reader-text skip-link" href="#content" title="<?php esc_attr_e( 'Skip to content', 'twentythirteen' ); ?>"><?php _e( 'Skip to content', 'twentythirteen' ); ?></a>
-					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
-				</nav><!-- #site-navigation -->
+				<a class="brand" id="dialoglogo" href="<?php echo home_url(); ?>/">
+          <img src="<?php bloginfo('template_url'); ?>/images/dialog-logo-brown.png">
+        </a>
+					<div class="primary-nav">
+						<nav id="site-navigation" class="navigation main-navigation" role="navigation">
+							<h3 class="menu-toggle"><?php _e( 'Menu', 'twentythirteen' ); ?></h3>
+							<a class="screen-reader-text skip-link" href="#content" title="<?php esc_attr_e( 'Skip to content', 'twentythirteen' ); ?>"><?php _e( 'Skip to content', 'twentythirteen' ); ?></a>
+							<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
+						</nav><!-- #site-navigation -->
+					</div>
+				<div class="secondary-nav">  </div>
 			</div><!-- #navbar -->
 
 		<div id="main" class="site-main">
