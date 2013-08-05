@@ -14,6 +14,18 @@ module.exports = function(grunt) {
         }
       }
     },
+    jade: {
+      compile: {
+          options: {
+            data: {
+              debug: false
+            }
+          },
+          files: {
+            "front-page.php": ["jade/front-page.jade"]
+          }
+        }
+      },
     watch: {
       less: {
         files: [
@@ -26,7 +38,8 @@ module.exports = function(grunt) {
 
   grunt.loadTasks('tasks');
   grunt.loadNpmTasks('grunt-recess');
+  grunt.loadNpmTasks('grunt-contrib-jade');
   grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.registerTask('default', ['recess']);
+  grunt.registerTask('default', ['jade', 'recess']);
   grunt.registerTask('dev', ['watch']);
 };

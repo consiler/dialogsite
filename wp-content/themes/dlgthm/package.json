@@ -4,6 +4,7 @@
   "devDependencies": {
     "grunt": "~0.4.0",
     "grunt-recess": "~0.3.0",
-    "grunt-contrib-watch": "~0.5.1"
+    "grunt-contrib-watch": "~0.5.1",
+    "grunt-contrib-jade": "~0.8.0"
   }
 }

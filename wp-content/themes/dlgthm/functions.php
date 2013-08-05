@@ -480,14 +480,16 @@ function twentythirteen_body_class( $classes ) {
 	return $classes;
 }
 add_filter( 'body_class', 'twentythirteen_body_class' );
-
 /**
  * Adjusts content_width value for video post formats and attachment templates.
  *
  * @since Twenty Thirteen 1.0
  *
  * @return void
+ *//**
+ * 
  */
+
 function twentythirteen_content_width() {
 	global $content_width;
 
