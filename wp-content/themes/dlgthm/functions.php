@@ -614,8 +614,8 @@ class PostType {
 	function returnAnonymousPostTypeFunction()
 	{
 		$args = "";
-		$code = <<EOD
-			register_post_type( 'acme_product',
+		$code = "
+			register_post_type( '".$this->labeloptions['name'].",
 				array(
 					'labels' => array(
 						'name' => __( 'Products' ),
@@ -625,7 +625,7 @@ class PostType {
 				'has_archive' => true,
 				)
 			);
-		EOD;
+		";
 		return create_function($args, $code);
 	}
 }
