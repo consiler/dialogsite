@@ -1,3 +1,4 @@
+<?php
 /*
  *-------------------------------------------------------
  *
@@ -44,3 +45,4 @@ class Global_Wrapping {
   }
 }
 add_filter( 'template_include', array( 'Global_Wrapping', 'wrap' ), 99 );
+?>

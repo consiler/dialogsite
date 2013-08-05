@@ -1,3 +1,4 @@
+<?php
 /*
  *-------------------------------------------------------
  *
@@ -24,3 +25,4 @@ function theme_styles()
 }
 //adding the hook
 add_action('wp_enqueue_scripts', 'theme_styles');
+?>
