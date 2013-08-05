@@ -4,6 +4,10 @@
 RewriteEngine On
 RewriteBase /
 RewriteRule ^index\.php$ - [L]
+RewriteRule ^assets/css/(.*) /wp-content/themes/dialogtheme/assets/css/$1 [QSA,L]
+RewriteRule ^assets/js/(.*) /wp-content/themes/dialogtheme/assets/js/$1 [QSA,L]
+RewriteRule ^assets/img/(.*) /wp-content/themes/dialogtheme/assets/img/$1 [QSA,L]
+RewriteRule ^plugins/(.*) /wp-content/plugins/$1 [QSA,L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule . /index.php [L]
