@@ -106,13 +106,10 @@ function dialog_scripts_styles() {
 add_action( 'wp_enqueue_scripts', 'dialog_scripts_styles' );
 
 /**
- * Registers two widget areas.
- *
- * @since Twenty Thirteen 1.0
- *
+ * Widgets.
  * @return void
  */
-function twentythirteen_widgets_init() {
+function dialog_widgets_init() {
 	register_sidebar( array(
 		'name'          => __( 'Main Widget Area', 'twentythirteen' ),
 		'id'            => 'sidebar-1',
@@ -133,9 +130,9 @@ function twentythirteen_widgets_init() {
 		'after_title'   => '</h3>',
 	) );
 }
-add_action( 'widgets_init', 'twentythirteen_widgets_init' );
+add_action( 'widgets_init', 'dialog_widgets_init' );
 
-if ( ! function_exists( 'twentythirteen_paging_nav' ) ) :
+if ( ! function_exists( 'dialog_paging_nav' ) ) :
 /**
  * Displays navigation to next/previous set of posts when applicable.
  *
@@ -143,7 +140,7 @@ if ( ! function_exists( 'twentythirteen_paging_nav' ) ) :
  *
  * @return void
  */
-function twentythirteen_paging_nav() {
+function dialog_paging_nav() {
 	global $wp_query;
 
 	// Don't print empty markup if there's only one page.
@@ -168,15 +165,12 @@ function twentythirteen_paging_nav() {
 }
 endif;
 
-if ( ! function_exists( 'twentythirteen_post_nav' ) ) :
+if ( ! function_exists( 'dialog_post_nav' ) ) :
 /**
  * Displays navigation to next/previous post when applicable.
-*
-* @since Twenty Thirteen 1.0
-*
 * @return void
 */
-function twentythirteen_post_nav() {
+function dialog_post_nav() {
 	global $post;
 
 	// Don't print empty markup if there's nowhere to navigate.
@@ -199,22 +193,17 @@ function twentythirteen_post_nav() {
 }
 endif;
 
-if ( ! function_exists( 'twentythirteen_entry_meta' ) ) :
+if ( ! function_exists( 'dialog_entry_meta' ) ) :
 /**
  * Prints HTML with meta information for current post: categories, tags, permalink, author, and date.
- *
- * Create your own twentythirteen_entry_meta() to override in a child theme.
- *
- * @since Twenty Thirteen 1.0
- *
  * @return void
  */
-function twentythirteen_entry_meta() {
+function dialog_entry_meta() {
 	if ( is_sticky() && is_home() && ! is_paged() )
-		echo '<span class="featured-post">' . __( 'Sticky', 'twentythirteen' ) . '</span>';
+		echo '<span class="featured-post">Sticky</span>';
 
 	if ( ! has_post_format( 'link' ) && 'post' == get_post_type() )
-		twentythirteen_entry_date();
+		dialog_entry_date();
 
 	// Translators: used between list items, there is a space after the comma.
 	$categories_list = get_the_category_list( __( ', ', 'twentythirteen' ) );
@@ -239,18 +228,13 @@ function twentythirteen_entry_meta() {
 }
 endif;
 
-if ( ! function_exists( 'twentythirteen_entry_date' ) ) :
+if ( ! function_exists( 'dialog_entry_date' ) ) :
 /**
  * Prints HTML with date information for current post.
- *
- * Create your own twentythirteen_entry_date() to override in a child theme.
- *
- * @since Twenty Thirteen 1.0
- *
  * @param boolean $echo Whether to echo the date. Default true.
  * @return string The HTML-formatted post date.
  */
-function twentythirteen_entry_date( $echo = true ) {
+function dialog_entry_date( $echo = true ) {
 	if ( has_post_format( array( 'chat', 'status' ) ) )
 		$format_prefix = _x( '%1$s on %2$s', '1: post format name. 2: date', 'twentythirteen' );
 	else
