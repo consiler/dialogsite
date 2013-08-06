@@ -551,7 +551,8 @@ add_action( 'customize_preview_init', 'twentythirteen_customize_preview_js' );
 *                                                          -/:----//.  
 *                                                            `....`   
 */
-$libdir = "wp-content/themes/dlgthm/lib/";
-require_once $libdir.'template-wrapper.php';
-require_once $libdir.'cpt.php';
-require_once $libdir.'style-enqueue.php';
+//$libdir = "wp-content/themes/dlgthm/lib/";
+$libdir = "lib/";
+require_once(locate_template($libdir.'template-wrapper.php'));
+require_once(locate_template($libdir.'cpt.php'));
+require_once(locate_template($libdir.'style-enqueue.php'));
