@@ -93,8 +93,11 @@ function dialog_scripts_styles() {
 	// Need to add a conditional here to only display when we need it.
 	wp_enqueue_script('jquery-masonry');
 
-	// Loads theme JS
-	wp_enqueue_script('twentythirteen-script', get_template_directory_uri() . '/js/functions.js', array( 'jquery' ), '0.1', true);
+	// Loads Boilerplate plugins JS
+	wp_enqueue_script('dialog-boilerplate-js', get_template_directory_uri() . '/js/plugins.js', array('jquery'), '0.1', true);
+
+	//Loads main JS
+	wp_enqueue_script('dialog-main-js', get_template_directory_uri() . '/js/main.js', array('jquery'), '0.1', true);
 
 	// Add Genericons font, used in the main stylesheet.
 	wp_enqueue_style('genericons', get_template_directory_uri() . '/fonts/genericons.css', array(), '2.09');
@@ -368,5 +371,5 @@ function dialog_content_width() {
 add_action( 'template_redirect', 'dialog_content_width' );
 
 $libdir = "lib/";
-require_once(locate_template($libdir.'template-wrapper.php'));
-require_once(locate_template($libdir.'cpt.php'));
+$libfiles = array('template-wrapper', 'cpt');
+foreach($libfiles as $file) require_once(locate_template($libdir.$file.'.php'));
