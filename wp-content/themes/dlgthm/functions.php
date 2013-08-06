@@ -39,4 +39,5 @@ $libfiles = array(
   'cpt'
   );
 $libdir = "lib/";
+//Must be loaded in order.
 foreach($libfiles as $file) require_once(locate_template($libdir.$file.'.php'));
