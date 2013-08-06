@@ -28,8 +28,10 @@
 /**
  * Settings
  */
-define('DEF_THUMB_WIDTH', 604);
-define('DEF_THUMB_HEIGHT', 270);
+define('THUMB_W', 604);
+define('THUMB_H', 270);
+define('ATTACHED_IMG_W', 604);
+define('ATTACHED_IMG_H', 270);
 define('CROP_THUMBS', true);
 
 /**
@@ -61,7 +63,15 @@ function dialog_setup() {
 	
 	//custom img size for featured img, disp. on std. posts/pages.
 	add_theme_support( 'post-thumbnails' );
-	set_post_thumbnail_size(DEF_THUMB_WIDTH, DEF_THUMB_HEIGHT, CROP_THUMBS);
+	set_post_thumbnail_size(THUMB_W, THUMB_H, CROP_THUMBS);
+
+	/*
+	 * This theme supports all available post formats by default.
+	 * See http://codex.wordpress.org/Post_Formats
+	 */
+	add_theme_support( 'post-formats', array(
+		'aside', 'audio', 'chat', 'gallery', 'image', 'link', 'quote', 'status', 'video'
+	) );
 
 	// This theme uses its own gallery styles.
 	//To be safely removed later.
@@ -236,13 +246,13 @@ if ( ! function_exists( 'dialog_entry_date' ) ) :
  */
 function dialog_entry_date( $echo = true ) {
 	if ( has_post_format( array( 'chat', 'status' ) ) )
-		$format_prefix = _x( '%1$s on %2$s', '1: post format name. 2: date', 'twentythirteen' );
+		$format_prefix = _x( '%1$s on %2$s', '1: post format name. 2: date', 'dialog' );
 	else
 		$format_prefix = '%2$s';
 
 	$date = sprintf( '<span class="date"><a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date" datetime="%3$s">%4$s</time></a></span>',
 		esc_url( get_permalink() ),
-		esc_attr( sprintf( __( 'Permalink to %s', 'twentythirteen' ), the_title_attribute( 'echo=0' ) ) ),
+		esc_attr( sprintf('Permalink to %s', the_title_attribute( 'echo=0' ) ) ),
 		esc_attr( get_the_date( 'c' ) ),
 		esc_html( sprintf( $format_prefix, get_post_format_string( get_post_format() ), get_the_date() ) )
 	);
@@ -254,26 +264,22 @@ function dialog_entry_date( $echo = true ) {
 }
 endif;
 
-if ( ! function_exists( 'twentythirteen_the_attached_image' ) ) :
+if ( ! function_exists( 'dialog_the_attached_image' ) ) :
 /**
  * Prints the attached image with a link to the next attached image.
- *
- * @since Twenty Thirteen 1.0
- *
  * @return void
  */
-function twentythirteen_the_attached_image() {
+function dialog_the_attached_image() {
 	$post                = get_post();
-	$attachment_size     = apply_filters( 'twentythirteen_attachment_size', array( 724, 724 ) );
+	$attachment_size     = apply_filters( 'dialog_attachment_size', array(ATTACHED_IMG_W, ATTACHED_IMG_H));
 	$next_attachment_url = wp_get_attachment_url();
-
 	/**
 	 * Grab the IDs of all the image attachments in a gallery so we can get the URL
 	 * of the next adjacent image in a gallery, or the first image (if we're
 	 * looking at the last image in a gallery), or, in a gallery of one, just the
 	 * link to that image file.
 	 */
-	$attachment_ids = get_posts( array(
+	$attachment_ids = get_posts(array(
 		'post_parent'    => $post->post_parent,
 		'fields'         => 'ids',
 		'numberposts'    => -1,
@@ -282,7 +288,7 @@ function twentythirteen_the_attached_image() {
 		'post_mime_type' => 'image',
 		'order'          => 'ASC',
 		'orderby'        => 'menu_order ID'
-	) );
+	));
 
 	// If there is more than 1 attachment in a gallery...
 	if ( count( $attachment_ids ) > 1 ) {
@@ -312,17 +318,12 @@ endif;
 
 /**
  * Returns the URL from the post.
- *
  * @uses get_url_in_content() to get the URL in the post meta (if it exists) or
  * the first link found in the post content.
- *
  * Falls back to the post permalink if no URL is found in the post.
- *
- * @since Twenty Thirteen 1.0
- *
  * @return string The Link format URL.
  */
-function twentythirteen_get_link_url() {
+function dialog_get_link_url() {
 	$content = get_the_content();
 	$has_url = get_url_in_content( $content );
 
@@ -331,18 +332,14 @@ function twentythirteen_get_link_url() {
 
 /**
  * Extends the default WordPress body classes.
- *
  * Adds body classes to denote:
  * 1. Single or multiple authors.
  * 2. Active widgets in the sidebar to change the layout and spacing.
  * 3. When avatars are disabled in discussion settings.
- *
- * @since Twenty Thirteen 1.0
- *
  * @param array $classes A list of existing body class values.
  * @return array The filtered body class list.
  */
-function twentythirteen_body_class( $classes ) {
+function dialog_body_class( $classes ) {
 	if ( ! is_multi_author() )
 		$classes[] = 'single-author';
 
@@ -354,18 +351,14 @@ function twentythirteen_body_class( $classes ) {
 
 	return $classes;
 }
-add_filter( 'body_class', 'twentythirteen_body_class' );
+add_filter( 'body_class', 'dialog_body_class' );
+
 /**
  * Adjusts content_width value for video post formats and attachment templates.
- *
- * @since Twenty Thirteen 1.0
- *
  * @return void
- *//**
- * 
  */
 
-function twentythirteen_content_width() {
+function dialog_content_width() {
 	global $content_width;
 
 	if ( is_attachment() )
@@ -374,32 +367,6 @@ function twentythirteen_content_width() {
 		$content_width = 484;
 }
 add_action( 'template_redirect', 'twentythirteen_content_width' );
-
-/**
- * Add postMessage support for site title and description for the Customizer.
- *
- * @since Twenty Thirteen 1.0
- *
- * @param WP_Customize_Manager $wp_customize Customizer object.
- * @return void
- */
-function twentythirteen_customize_register( $wp_customize ) {
-	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
-	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
-	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
-}
-add_action( 'customize_register', 'twentythirteen_customize_register' );
-
-/**
- * Binds JavaScript handlers to make Customizer preview reload changes
- * asynchronously.
- *
- * @since Twenty Thirteen 1.0
- */
-function twentythirteen_customize_preview_js() {
-	wp_enqueue_script( 'twentythirteen-customizer', get_template_directory_uri() . '/js/theme-customizer.js', array( 'customize-preview' ), '20130226', true );
-}
-add_action( 'customize_preview_init', 'twentythirteen_customize_preview_js' );
 
 $libdir = "lib/";
 require_once(locate_template($libdir.'template-wrapper.php'));
