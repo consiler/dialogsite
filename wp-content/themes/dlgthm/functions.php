@@ -72,10 +72,6 @@ function dialog_setup() {
 	add_theme_support( 'post-formats', array(
 		'aside', 'audio', 'chat', 'gallery', 'image', 'link', 'quote', 'status', 'video'
 	) );
-
-	// This theme uses its own gallery styles.
-	//To be safely removed later.
-	add_filter( 'use_default_gallery_style', '__return_false' );
 }
 add_action('after_setup_theme', 'dialog_setup');
 
