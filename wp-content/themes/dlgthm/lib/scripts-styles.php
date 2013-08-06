@@ -27,9 +27,6 @@ function dialog_scripts_styles() {
   // Add Genericons font, used in the main stylesheet.
   wp_enqueue_style('genericons', get_template_directory_uri() . '/fonts/genericons.css', array(), '2.09');
 
-  //Loads our normalization stylesheet.
-  wp_enqueue_style('dialog-normalize-style', get_template_directory_uri() . '/css/normalize.css', array(), '0.1');
-
   // Loads our theme metadata stylesheet.
   wp_enqueue_style('dialog-style', get_stylesheet_uri(), array(), '2013-07-18');
 
@@ -37,8 +34,8 @@ function dialog_scripts_styles() {
   wp_enqueue_style('dialog-main-style', get_template_directory_uri() . '/css/main.css', array(), '0.1');
 
   // Loads the Internet Explorer specific stylesheet.
-  wp_enqueue_style( 'twentythirteen-ie', get_template_directory_uri() . '/css/ie.css', array( 'twentythirteen-style' ), '0.1' );
-  wp_style_add_data( 'twentythirteen-ie', 'conditional', 'lt IE 9' );
+  //wp_enqueue_style( 'twentythirteen-ie', get_template_directory_uri() . '/css/ie.css', array( 'twentythirteen-style' ), '0.1' );
+  //wp_style_add_data( 'twentythirteen-ie', 'conditional', 'lt IE 9' );
 }
 add_action( 'wp_enqueue_scripts', 'dialog_scripts_styles' );
 ?>
