@@ -10,7 +10,7 @@
 //generate an array of options for a CPT based on a "most used" profile template
 //(only allows names)
 //(requires unique name)
-function new_default_CPT($name, $singlular_name)
+function dialog_new_default_CPT($name, $singlular_name)
 {
   $default_post_type = array(
     'labels' => array(
@@ -168,11 +168,11 @@ if(!assert(count($CPT_name_list) == count($CPT_singular_name_list))) die('Corrup
 //create a complete array containing all of our CPT options
 for($i = 0; $i < count($CPT_name_list); $i++)
 {
-  $post_types[] = new_default_CPT($CPT_name_list[$i], $CPT_singular_name_list[$i]);
+  $post_types[] = dialog_new_default_CPT($CPT_name_list[$i], $CPT_singular_name_list[$i]);
 }
 
 //actually define a function to create the CPTs
-function create_post_types()
+function dialog_create_post_types()
 {
   global $post_types;
   foreach($post_types as $post_type)
@@ -181,7 +181,7 @@ function create_post_types()
   }
 }
 //bind our function to the init hook
-add_action('init', 'create_post_types');
+add_action('init', 'dialog_create_post_types');
 
 
 /*
@@ -192,11 +192,11 @@ add_action('init', 'create_post_types');
  *-------------------------------------------------------
 */
 
-function cpt_crud_menu() {
-  add_menu_page("Content Manager", "Content", 'manage_options', 'content-manager', 'cpt_crud_options', null, 24);
+function dialog_cpt_crud_menu() {
+  add_menu_page("Content Manager", "Content", 'manage_options', 'content-manager', 'dialog_cpt_crud_options', null, 24);
 }
 
-function cpt_single_options()
+function dialog_cpt_single_options()
 {
   if ( !current_user_can( 'manage_options' ) )  {
     wp_die( __( 'You do not have sufficient permissions to access this page.' ) );
@@ -207,5 +207,5 @@ function cpt_single_options()
   </script>';
 }
 
-add_action('admin_menu', 'cpt_crud_menu');
+add_action('admin_menu', 'dialog_cpt_crud_menu');
 ?>
