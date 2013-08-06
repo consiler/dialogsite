@@ -537,7 +537,7 @@ add_action( 'customize_preview_init', 'twentythirteen_customize_preview_js' );
 *              `.:///:-`       ./osyso:.       `-:///:.`               
 *                                                                                                                                            
 *                                                                      
-* ````````         ``                 ``                               
+*                     
 * `+/:::::::/-`     :/                 -+                              
 * `o:       `-+:    ``                 :o                              
 * `o:         .o-   -:    `-::::::.    :o     `-:::::-`     `.:::::.`:.

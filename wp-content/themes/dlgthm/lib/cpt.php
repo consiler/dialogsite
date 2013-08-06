@@ -180,7 +180,6 @@ function create_post_types()
     register_post_type($post_type['labels']['name'], $post_type);
   }
 }
-
 //bind our function to the init hook
 add_action('init', 'create_post_types');
 
