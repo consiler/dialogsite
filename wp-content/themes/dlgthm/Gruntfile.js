@@ -8,8 +8,8 @@ module.exports = function(grunt) {
           compile: true
         },
         files: {
-          'css/main.min.css': [
-            'css/less/app.less'
+          'css/main.css': [
+            'css/less/main.less'
           ]
         }
       }
