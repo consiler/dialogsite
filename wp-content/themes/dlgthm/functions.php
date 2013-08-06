@@ -59,7 +59,7 @@ function dialog_setup() {
 	// to output valid HTML5.
 	add_theme_support( 'html5', array( 'search-form', 'comment-form', 'comment-list' ) );
 
-	register_nav_menu( 'primary', __( 'Navigation Menu', 'dialog' ) );
+	register_nav_menu( 'primary', 'Navigation Menu');
 	
 	//custom img size for featured img, disp. on std. posts/pages.
 	add_theme_support( 'post-thumbnails' );
@@ -366,7 +366,7 @@ function dialog_content_width() {
 	elseif ( has_post_format( 'audio' ) )
 		$content_width = 484;
 }
-add_action( 'template_redirect', 'twentythirteen_content_width' );
+add_action( 'template_redirect', 'dialog_content_width' );
 
 $libdir = "lib/";
 require_once(locate_template($libdir.'template-wrapper.php'));
