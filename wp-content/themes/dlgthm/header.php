@@ -18,7 +18,6 @@
     <?php wp_head(); ?>
   </head>
 <?php
-
 $defaults = array(
   'theme_location'  => 'Navigation Menu',
   'menu'            => '.menu',
@@ -38,18 +37,18 @@ $defaults = array(
   'walker'          => ''
 );
 ?>
-<div id="body-wrap">
-  <div class="header-wrap">
-    <div class="menu-wrap">
-      <img class="menu-logo" src="<?php bloginfo('template_url'); ?>/images/dialog-logo-brown.png">
-      <?php
-      wp_nav_menu( $defaults );
-      ?>
-      <div class="clearfix"></div>
-    </div>
-    <div class="sub-menu-wrap">
-      <div class="sub-menu">
+  <body <?php body_class(); ?>>
+    <div id="body-wrap">
+      <div class="header-wrap">
+        <div class="menu-wrap">
+          <img class="menu-logo" src="<?php bloginfo('template_url'); ?>/images/dialog-logo-brown.png">
+          <?php
+          wp_nav_menu( $defaults );
+          ?>
+          <div class="clearfix"></div>
+        </div>
+        <div class="sub-menu-wrap">
+          <div class="sub-menu">
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-    <body <?php body_class(); ?>>

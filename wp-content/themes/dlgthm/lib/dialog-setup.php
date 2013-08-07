@@ -1,4 +1,4 @@
-<?php
+x<?php
 /**
  * Sets max width for page content like images, etc.
  * @see twentythirteen_content_width() for template-specific adjustments.
