@@ -35,7 +35,7 @@ $libfiles = array(
   'get-link-url',
   'body-class',
   'content-width',
-  'template-wrapper',
+  'wrapper',
   'cpt'
   );
 $libdir = "lib/";
