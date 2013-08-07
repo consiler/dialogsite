@@ -44,6 +44,7 @@ $defaults = array(
     <?php
     wp_nav_menu( $defaults );
     ?>
+    <div class="clearfix"></div>
   </div>
   <div class="sub-menu-wrap">
     <div class="sub-menu">

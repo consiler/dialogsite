@@ -205,7 +205,6 @@ a:visited {
 .menu-wrap {
   width: @layout_width;
   margin: 0 auto;
-  overflow: auto;
 }
 .menu {
   float: right;
@@ -217,10 +216,10 @@ a:visited {
   padding: 0;
 }
 .menu > ul:after {
-  display: block;
-  content: " ";
-  height: 0;
   clear: both;
+  content: " ";
+  display: block;
+  height: 0;
   overflow: hidden;
 }
 .menu > ul > li {
