@@ -1,3 +1,155 @@
+/******************************************************************************
+ * Major Settings
+ *****************************************************************************/
+
+/******************************************************************************
+ * Color
+ *****************************************************************************/
+
+/******************************************************************************
+ * Browser Default Style Reset
+ *****************************************************************************/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+  border: 0;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/******************************************************************************
+ * Media Queries
+ *****************************************************************************/
+
+@media only screen and (min-width: 35em) {
+  
+}
+
+@media print, (-o-min-device-pixel-ratio: 5/4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
+  
+}
+
 /*
 * 
 *               .-://:-`       `:+oso+-`       `-://:-.                
@@ -83,8 +235,6 @@ dl,
 dt,
 dd,
 ol,
-ul,
-li,
 fieldset,
 form,
 label,
@@ -171,7 +321,7 @@ table {
  *****************************************************************************/
 
 body {
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", HelveticaNeue, Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 20px;
   color: #333333;
@@ -191,15 +341,31 @@ h2 {
 }
 
 h3 {
-  font-size: 36px;
+  font-size: 32px;
   line-height: 36px;
   color: #6d6e71;
 }
 
 h4 {
-  font-size: 36px;
+  font-size: 28px;
   line-height: 36px;
   color: #6d6e71;
+}
+
+p {
+  line-height: 22px;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: disc;
+}
+
+ul li {
+  padding: 0;
+  margin: 0;
+  margin-left: 20px;
 }
 
 ::-moz-selection {
@@ -315,4 +481,159 @@ textarea {
 
 .clearfix {
   *zoom: 1;
+}
+
+/******************************************************************************
+ * Helper Styles - Alignment, etc.
+ *****************************************************************************/
+
+.ir {
+  overflow: hidden;
+  *text-indent: -9999px;
+  background-color: transparent;
+  border: 0;
+}
+
+.ir:before {
+  display: block;
+  width: 0;
+  height: 150%;
+  content: "";
+}
+
+.hidden {
+  display: none !important;
+  visibility: hidden;
+}
+
+.visuallyhidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  border: 0;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: " ";
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+
+/******************************************************************************
+ * Primary Stylesheet
+ *****************************************************************************/
+
+body {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  color: #333333;
+  background-color: #ffffff;
+}
+
+h1 {
+  font-size: 40px;
+  line-height: 40px;
+  color: #6d6e71;
+}
+
+h2 {
+  font-size: 36px;
+  line-height: 36px;
+  color: #6d6e71;
+}
+
+h3 {
+  font-size: 32px;
+  line-height: 36px;
+  color: #6d6e71;
+}
+
+h4 {
+  font-size: 28px;
+  line-height: 36px;
+  color: #6d6e71;
+}
+
+p {
+  line-height: 22px;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: disc;
+}
+
+ul li {
+  padding: 0;
+  margin: 0;
+  margin-left: 20px;
+}
+
+::-moz-selection {
+  text-shadow: none;
+  background: #b3d4fc;
+}
+
+::selection {
+  color: #fff;
+  text-shadow: none;
+  background: #c5c19d;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  padding: 0;
+  margin: 1em 0;
+  border: 0;
+  border-top: 1px solid #ccc;
+}
+
+img {
+  vertical-align: middle;
+}
+
+fieldset {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.chromeframe {
+  padding: 0.2em 0;
+  margin: 0.2em 0;
+  color: #000;
+  background: #ccc;
 }

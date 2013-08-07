@@ -1,7 +1,24 @@
 /******************************************************************************
  * Primary Stylesheet
  *****************************************************************************/
-@sans: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", HelveticaNeue, Helvetica, Arial, "Lucida Grande", sans-serif;
+@dialogblue: #518fcc;
+@dialogbrown: #572700;
+
+@red: #b42d38;
+@orange: #e47f26;
+@yellow: #f4c017;
+@green: #becb31;
+@blue: #007489;
+
+@grey: #6d6e71;
+@greyy: #939598;
+@greyyy: #bcbec0;
+@greyyyy: #e6e7e8;
+@beige: #c5c19d;
+@beigee: #e1dcc9;
+@beigeee: #f4f1e9;
+
+@sans: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif;
 @std_background_color: #fff;
 @std_color: #333;
 @std_copy_size: 16px;
@@ -41,15 +58,29 @@ h2 {
 }
 
 h3 {
-  font-size: @std_h2_size;
+  font-size: @std_h3_size;
   line-height: @std_h2_line_height;
   color: @grey;
 }
 
 h4 {
-  font-size: @std_h2_size;
+  font-size: @std_h4_size;
   line-height: @std_h2_line_height;
   color: @grey;
+}
+
+p {
+  line-height: @std_line_height*1.1;
+}
+ul {
+  list-style-type: disc;
+  margin: 0;
+  padding: 0;
+  li {
+    padding: 0;
+    margin-left: 20px;
+    margin: 0;
+  }
 }
 
 ::-moz-selection {

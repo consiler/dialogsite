@@ -9,30 +9,15 @@ module.exports = function(grunt) {
         },
         files: {
           'css/main.css': [
-            'css/main.less'
+            'css/lib/*.less'
           ]
         }
       }
     },
-    //jade: {
-    //  compile: {
-    //      options: {
-    //        pretty: true,
-    //        data: {
-    //          debug: false
-    //        }
-    //      },
-    //      files: {
-    //        "front-page.php": ["jade/front-page.jade"],
-    //        "header.php": ["jade/header.jade"]
-    //      }
-    //    }
-    //  },
     watch: {
       less: {
         files: [
-          'css/less/*',
-          'css/main.less'
+          'css/lib/*.less'
         ],
         tasks: ['recess']
       },
@@ -41,7 +26,6 @@ module.exports = function(grunt) {
 
   grunt.loadTasks('tasks');
   grunt.loadNpmTasks('grunt-recess');
-  //grunt.loadNpmTasks('grunt-contrib-jade');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.registerTask('default', ['recess']);
   grunt.registerTask('dev', ['watch']);
