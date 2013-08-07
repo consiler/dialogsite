@@ -19,6 +19,3 @@
   </head>
 
   <body <?php body_class(); ?>>
-    <div id="page" class="hfeed site">
-
-      <div id="main" class="site-main">
