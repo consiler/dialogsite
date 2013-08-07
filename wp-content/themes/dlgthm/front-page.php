@@ -8,3 +8,20 @@
   <li>Element 2</li>
   <li>Element 3</li>
 </ul>
+<ul id="top-menu">
+  <li class="active">
+    <a href="#">Top</a>
+  </li>
+  <li>
+    <a href="#foo">Foo</a>
+  </li>
+  <li>
+    <a href="#bar">Bar</a>
+  </li>
+  <li>
+    <a href="#baz">Baz</a>
+  </li>
+</ul>
+<a id="foo">Foo</a>
+<a id="bar">Bar</a>
+<a id="baz">Baz</a>

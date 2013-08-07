@@ -317,7 +317,52 @@ table {
 }
 
 /******************************************************************************
- * Primary Stylesheet
+ * Sitewide
+ *****************************************************************************/
+
+::-moz-selection {
+  text-shadow: none;
+  background: #b3d4fc;
+}
+
+::selection {
+  color: #fff;
+  text-shadow: none;
+  background: #c5c19d;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  padding: 0;
+  margin: 1em 0;
+  border: 0;
+  border-top: 1px solid #ccc;
+}
+
+img {
+  vertical-align: middle;
+}
+
+fieldset {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.chromeframe {
+  padding: 0.2em 0;
+  margin: 0.2em 0;
+  color: #000;
+  background: #ccc;
+}
+
+/******************************************************************************
+ * Basic Styles
  *****************************************************************************/
 
 body {
@@ -369,45 +414,73 @@ ul li {
   margin-left: 15px;
 }
 
-::-moz-selection {
-  text-shadow: none;
-  background: #b3d4fc;
+a {
+  color: #518fcc;
+  text-decoration: none;
 }
 
-::selection {
-  color: #fff;
-  text-shadow: none;
-  background: #c5c19d;
+a:hover {
+  color: #2f69a1;
 }
 
-hr {
+a:active {
+  color: #518fcc;
+}
+
+a:visited {
+  color: #b42d38;
+}
+
+#top-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1;
+  background: white;
+}
+
+#top-menu li {
+  float: left;
+}
+
+#top-menu a {
   display: block;
-  height: 1px;
-  padding: 0;
-  margin: 1em 0;
-  border: 0;
-  border-top: 1px solid #ccc;
+  padding: 5px 25px 7px 25px;
+  color: #666;
+  text-decoration: none;
+  border-top: 3px solid white;
+  -webkit-transition: 1s all ease;
+     -moz-transition: 1s all ease;
+          transition: 1s all ease;
 }
 
-img {
-  vertical-align: middle;
-}
-
-fieldset {
-  padding: 0;
-  margin: 0;
-  border: 0;
-}
-
-textarea {
-  resize: vertical;
-}
-
-.chromeframe {
-  padding: 0.2em 0;
-  margin: 0.2em 0;
+#top-menu a:hover {
   color: #000;
-  background: #ccc;
+}
+
+#top-menu li.active a {
+  font-weight: bold;
+  color: #333;
+  border-top: 3px solid #333;
+}
+
+#foo {
+  display: block;
+  width: 600px;
+  height: 600px;
+}
+
+#bar {
+  display: block;
+  width: 600px;
+  height: 600px;
+}
+
+#baz {
+  display: block;
+  width: 600px;
+  height: 600px;
 }
 
 /******************************************************************************
@@ -547,7 +620,52 @@ textarea {
 }
 
 /******************************************************************************
- * Primary Stylesheet
+ * Sitewide
+ *****************************************************************************/
+
+::-moz-selection {
+  text-shadow: none;
+  background: #b3d4fc;
+}
+
+::selection {
+  color: #fff;
+  text-shadow: none;
+  background: #c5c19d;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  padding: 0;
+  margin: 1em 0;
+  border: 0;
+  border-top: 1px solid #ccc;
+}
+
+img {
+  vertical-align: middle;
+}
+
+fieldset {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.chromeframe {
+  padding: 0.2em 0;
+  margin: 0.2em 0;
+  color: #000;
+  background: #ccc;
+}
+
+/******************************************************************************
+ * Basic Styles
  *****************************************************************************/
 
 body {
@@ -599,43 +717,71 @@ ul li {
   margin-left: 15px;
 }
 
-::-moz-selection {
-  text-shadow: none;
-  background: #b3d4fc;
+a {
+  color: #518fcc;
+  text-decoration: none;
 }
 
-::selection {
-  color: #fff;
-  text-shadow: none;
-  background: #c5c19d;
+a:hover {
+  color: #2f69a1;
 }
 
-hr {
+a:active {
+  color: #518fcc;
+}
+
+a:visited {
+  color: #b42d38;
+}
+
+#top-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1;
+  background: white;
+}
+
+#top-menu li {
+  float: left;
+}
+
+#top-menu a {
   display: block;
-  height: 1px;
-  padding: 0;
-  margin: 1em 0;
-  border: 0;
-  border-top: 1px solid #ccc;
+  padding: 5px 25px 7px 25px;
+  color: #666;
+  text-decoration: none;
+  border-top: 3px solid white;
+  -webkit-transition: 1s all ease;
+     -moz-transition: 1s all ease;
+          transition: 1s all ease;
 }
 
-img {
-  vertical-align: middle;
-}
-
-fieldset {
-  padding: 0;
-  margin: 0;
-  border: 0;
-}
-
-textarea {
-  resize: vertical;
-}
-
-.chromeframe {
-  padding: 0.2em 0;
-  margin: 0.2em 0;
+#top-menu a:hover {
   color: #000;
-  background: #ccc;
+}
+
+#top-menu li.active a {
+  font-weight: bold;
+  color: #333;
+  border-top: 3px solid #333;
+}
+
+#foo {
+  display: block;
+  width: 600px;
+  height: 600px;
+}
+
+#bar {
+  display: block;
+  width: 600px;
+  height: 600px;
+}
+
+#baz {
+  display: block;
+  width: 600px;
+  height: 600px;
 }
