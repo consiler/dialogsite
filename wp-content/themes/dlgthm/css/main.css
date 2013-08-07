@@ -431,56 +431,187 @@ a:visited {
   color: #b42d38;
 }
 
+/*
 #top-menu {
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  z-index: 1;
-  background: white;
+    position: fixed;
+    z-index: 1;
+    background: white;
+    left: 0;
+    right: 0;
+    top: 0;
 }
 
 #top-menu li {
-  float: left;
+    float: left;
 }
 
 #top-menu a {
-  display: block;
-  padding: 5px 25px 7px 25px;
-  color: #666;
-  text-decoration: none;
-  border-top: 3px solid white;
-  -webkit-transition: 1s all ease;
-     -moz-transition: 1s all ease;
-          transition: 1s all ease;
+    display: block;
+    padding: 5px 25px 7px 25px;
+    -webkit-transition: 1s all ease;
+    -moz-transition: 1s all ease;
+    transition: 1s all ease;
+    border-top: 3px solid white;
+    color: #666;
+    text-decoration: none;
 }
 
 #top-menu a:hover {
-  color: #000;
+    color: #000;
 }
 
 #top-menu li.active a {
-  font-weight: bold;
-  color: #333;
-  border-top: 3px solid #333;
+    border-top: 3px solid #333;
+    color: #333;
+    font-weight: bold;
 }
 
 #foo {
-  display: block;
-  width: 600px;
-  height: 600px;
+    display: block;
+    height: 600px;
+    width: 600px;
 }
 
 #bar {
-  display: block;
-  width: 600px;
-  height: 600px;
+    display: block;
+    height: 600px;
+    width: 600px;
 }
 
 #baz {
+    display: block;
+    height: 600px;
+    width: 600px;
+}
+*/
+
+/******************************************************************************
+ * Navigation
+ *****************************************************************************/
+
+.header-wrap {
+  background-color: #518fcc;
+}
+
+.menu-wrap {
+  width: 960px;
+  margin: 0 auto;
+  overflow: auto;
+}
+
+.menu {
+  float: right;
+}
+
+.menu > ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  background-color: #518fcc;
+}
+
+.menu > ul:after {
   display: block;
-  width: 600px;
-  height: 600px;
+  height: 0;
+  overflow: hidden;
+  clear: both;
+  content: " ";
+}
+
+.menu > ul > li {
+  position: relative;
+  float: left;
+  padding: 0;
+  margin: 0;
+}
+
+.menu > ul > li > a {
+  display: block;
+  padding: 0 15px;
+  line-height: 60px;
+  color: #fff;
+  background-color: #518fcc;
+}
+
+.menu > ul > li:hover > .children {
+  display: block;
+}
+
+.children {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  z-index: 99;
+  display: none;
+  width: 400px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.children > li {
+  padding: 0;
+  margin: 0;
+}
+
+.children > li > a {
+  display: block;
+  padding: 5px;
+  margin: 0;
+  background-color: #ccc;
+}
+
+.children > li > a:hover {
+  background-color: #ddd;
+}
+
+/* Sub Menu */
+
+.sub-menu-wrap {
+  position: relative;
+  background-color: #bcbec0;
+}
+
+.sub-menu {
+  position: relative;
+  left: -18px;
+  width: 960px;
+  height: 25px;
+  margin: 0 auto;
+  line-height: 25px;
+}
+
+.sub-menu-horizontal {
+  position: static;
+  z-index: 9;
+  display: block;
+  width: 100%;
+  margin-left: 20px;
+  overflow: hidden;
+}
+
+.sub-menu-horizontal > li {
+  float: right;
+}
+
+.sub-menu-horizontal > li > a {
+  display: block;
+  height: 25px;
+  padding: 0 15px;
+  font-size: 12.8px;
+  line-height: 25px;
+  color: #fff;
+  background-color: transparent;
+}
+
+.sub-menu-horizontal > li > a:hover {
+  background-color: transparent;
+}
+
+.menu-logo {
+  position: absolute;
+  z-index: 100;
+  width: 100px;
 }
 
 /******************************************************************************
@@ -734,54 +865,185 @@ a:visited {
   color: #b42d38;
 }
 
+/*
 #top-menu {
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  z-index: 1;
-  background: white;
+    position: fixed;
+    z-index: 1;
+    background: white;
+    left: 0;
+    right: 0;
+    top: 0;
 }
 
 #top-menu li {
-  float: left;
+    float: left;
 }
 
 #top-menu a {
-  display: block;
-  padding: 5px 25px 7px 25px;
-  color: #666;
-  text-decoration: none;
-  border-top: 3px solid white;
-  -webkit-transition: 1s all ease;
-     -moz-transition: 1s all ease;
-          transition: 1s all ease;
+    display: block;
+    padding: 5px 25px 7px 25px;
+    -webkit-transition: 1s all ease;
+    -moz-transition: 1s all ease;
+    transition: 1s all ease;
+    border-top: 3px solid white;
+    color: #666;
+    text-decoration: none;
 }
 
 #top-menu a:hover {
-  color: #000;
+    color: #000;
 }
 
 #top-menu li.active a {
-  font-weight: bold;
-  color: #333;
-  border-top: 3px solid #333;
+    border-top: 3px solid #333;
+    color: #333;
+    font-weight: bold;
 }
 
 #foo {
-  display: block;
-  width: 600px;
-  height: 600px;
+    display: block;
+    height: 600px;
+    width: 600px;
 }
 
 #bar {
-  display: block;
-  width: 600px;
-  height: 600px;
+    display: block;
+    height: 600px;
+    width: 600px;
 }
 
 #baz {
+    display: block;
+    height: 600px;
+    width: 600px;
+}
+*/
+
+/******************************************************************************
+ * Navigation
+ *****************************************************************************/
+
+.header-wrap {
+  background-color: #518fcc;
+}
+
+.menu-wrap {
+  width: 960px;
+  margin: 0 auto;
+  overflow: auto;
+}
+
+.menu {
+  float: right;
+}
+
+.menu > ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  background-color: #518fcc;
+}
+
+.menu > ul:after {
   display: block;
-  width: 600px;
-  height: 600px;
+  height: 0;
+  overflow: hidden;
+  clear: both;
+  content: " ";
+}
+
+.menu > ul > li {
+  position: relative;
+  float: left;
+  padding: 0;
+  margin: 0;
+}
+
+.menu > ul > li > a {
+  display: block;
+  padding: 0 15px;
+  line-height: 60px;
+  color: #fff;
+  background-color: #518fcc;
+}
+
+.menu > ul > li:hover > .children {
+  display: block;
+}
+
+.children {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  z-index: 99;
+  display: none;
+  width: 400px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.children > li {
+  padding: 0;
+  margin: 0;
+}
+
+.children > li > a {
+  display: block;
+  padding: 5px;
+  margin: 0;
+  background-color: #ccc;
+}
+
+.children > li > a:hover {
+  background-color: #ddd;
+}
+
+/* Sub Menu */
+
+.sub-menu-wrap {
+  position: relative;
+  background-color: #bcbec0;
+}
+
+.sub-menu {
+  position: relative;
+  left: -18px;
+  width: 960px;
+  height: 25px;
+  margin: 0 auto;
+  line-height: 25px;
+}
+
+.sub-menu-horizontal {
+  position: static;
+  z-index: 9;
+  display: block;
+  width: 100%;
+  margin-left: 20px;
+  overflow: hidden;
+}
+
+.sub-menu-horizontal > li {
+  float: right;
+}
+
+.sub-menu-horizontal > li > a {
+  display: block;
+  height: 25px;
+  padding: 0 15px;
+  font-size: 12.8px;
+  line-height: 25px;
+  color: #fff;
+  background-color: transparent;
+}
+
+.sub-menu-horizontal > li > a:hover {
+  background-color: transparent;
+}
+
+.menu-logo {
+  position: absolute;
+  z-index: 100;
+  width: 100px;
 }

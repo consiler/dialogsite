@@ -21,10 +21,10 @@
 
 $defaults = array(
   'theme_location'  => 'Navigation Menu',
-  'menu'            => '',
+  'menu'            => '.menu',
   'container'       => 'div',
-  'container_class' => '',
-  'container_id'    => '',
+  'container_class' => 'dialog-menu',
+  'container_id'    => 'dialog-menu',
   'menu_class'      => 'menu',
   'menu_id'         => '',
   'echo'            => true,
@@ -37,8 +37,17 @@ $defaults = array(
   'depth'           => 0,
   'walker'          => ''
 );
-
-wp_nav_menu( $defaults );
-
 ?>
+<div class="header-wrap">
+  <div class="menu-wrap">
+    <img class="menu-logo" src="<?php bloginfo('template_url'); ?>/images/dialog-logo-brown.png">
+    <?php
+    wp_nav_menu( $defaults );
+    ?>
+  </div>
+  <div class="sub-menu-wrap">
+    <div class="sub-menu">
+    </div>
+  </div>
+</div>
   <body <?php body_class(); ?>>

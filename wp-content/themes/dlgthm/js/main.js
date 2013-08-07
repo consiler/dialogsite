@@ -1,4 +1,12 @@
 (function($) {
+  $(document).ready(function(){
+    var new_menu = $('li.current_page_item > .children').clone().addClass('sub-menu-horizontal').appendTo('.sub-menu');
+    console.log($('.sub-menu').children());
+  });
+  /****************************************
+   * ScrollSpy
+   ****************************************/
+
   // Cache selectors
   var lastId,
       topMenu = $("#top-menu"),
