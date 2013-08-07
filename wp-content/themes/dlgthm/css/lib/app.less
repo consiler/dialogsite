@@ -1,4 +1,93 @@
 /******************************************************************************
  * Primary Stylesheet
  *****************************************************************************/
- 
+@sans: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", HelveticaNeue, Helvetica, Arial, "Lucida Grande", sans-serif;
+@std_background_color: #fff;
+@std_color: #333;
+@std_copy_size: 16px;
+@std_line_height: 20px;
+
+@std_h1_line_height: 40px;
+@std_h2_line_height: 36px;
+@std_h3_line_height: 32px;
+@std_h4_line_height: 28px;
+
+@std_h1_size: 40px;
+@std_h2_size: 36px;
+@std_h3_size: 32px;
+@std_h4_size: 28px;
+
+@layout_width: 940px;
+@navheight: 58px;
+
+body {
+  background-color: @std_background_color;
+  color: @std_color;
+  font-family: @sans;
+  font-size: @std_copy_size;
+  line-height: @std_line_height;
+}
+
+h1 {
+  font-size: @std_h1_size;
+  line-height: @std_h1_line_height;
+  color: @grey;
+}
+
+h2 {
+  font-size: @std_h2_size;
+  line-height: @std_h2_line_height;
+  color: @grey;
+}
+
+h3 {
+  font-size: @std_h2_size;
+  line-height: @std_h2_line_height;
+  color: @grey;
+}
+
+h4 {
+  font-size: @std_h2_size;
+  line-height: @std_h2_line_height;
+  color: @grey;
+}
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    color: #fff;
+    background: @beige;
+    text-shadow: none;
+}
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+img {
+    vertical-align: middle;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.chromeframe {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}

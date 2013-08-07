@@ -9,7 +9,7 @@ module.exports = function(grunt) {
         },
         files: {
           'css/main.css': [
-            'css/less/main.less'
+            'css/main.less'
           ]
         }
       }
@@ -31,7 +31,8 @@ module.exports = function(grunt) {
     watch: {
       less: {
         files: [
-          'css/less/*.less'
+          'css/less/*',
+          'css/main.less'
         ],
         tasks: ['recess']
       },

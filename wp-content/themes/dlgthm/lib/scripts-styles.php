@@ -1,9 +1,6 @@
 <?php
 /**
  * Enqueues scripts and styles for front end.
- *
- * @since Twenty Thirteen 1.0
- *
  * @return void
  */
 
