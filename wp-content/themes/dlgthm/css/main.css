@@ -357,15 +357,16 @@ p {
 }
 
 ul {
-  padding: 0;
+  padding: 15px;
+  padding-left: 15px;
   margin: 0;
   list-style-type: disc;
 }
 
 ul li {
-  padding: 0;
+  padding: 5px;
   margin: 0;
-  margin-left: 20px;
+  margin-left: 15px;
 }
 
 ::-moz-selection {
@@ -586,15 +587,16 @@ p {
 }
 
 ul {
-  padding: 0;
+  padding: 15px;
+  padding-left: 15px;
   margin: 0;
   list-style-type: disc;
 }
 
 ul li {
-  padding: 0;
+  padding: 5px;
   margin: 0;
-  margin-left: 20px;
+  margin-left: 15px;
 }
 
 ::-moz-selection {
