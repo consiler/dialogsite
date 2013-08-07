@@ -1,39 +1,5 @@
-@dialogblue: #518fcc;
-@dialogbrown: #572700;
+@import url('settings.less');
 
-@red: #b42d38;
-@orange: #e47f26;
-@yellow: #f4c017;
-@green: #becb31;
-@blue: #007489;
-
-@grey: #6d6e71;
-@greyy: #939598;
-@greyyy: #bcbec0;
-@greyyyy: #e6e7e8;
-@beige: #c5c19d;
-@beigee: #e1dcc9;
-@beigeee: #f4f1e9;
-
-@sans: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif;
-@std_background_color: #fff;
-@std_color: #333;
-@std_font_size: 16px;
-@std_line_height: 20px;
-
-@std_h1_line_height: 40px;
-@std_h2_line_height: 36px;
-@std_h3_line_height: 32px;
-@std_h4_line_height: 28px;
-
-@std_h1_size: 40px;
-@std_h2_size: 36px;
-@std_h3_size: 32px;
-@std_h4_size: 28px;
-
-@layout_width: 960px;
-@menu_height: 60px;
-@sub_menu_height: 25px;
 /******************************************************************************
  * Sitewide
  *****************************************************************************/
@@ -143,177 +109,42 @@ a:active {
 a:visited {
   color: @red;
 }
-/*
-#top-menu {
-    position: fixed;
-    z-index: 1;
-    background: white;
-    left: 0;
-    right: 0;
-    top: 0;
-}
 
-#top-menu li {
-    float: left;
-}
 
-#top-menu a {
-    display: block;
-    padding: 5px 25px 7px 25px;
-    -webkit-transition: 1s all ease;
-    -moz-transition: 1s all ease;
-    transition: 1s all ease;
-    border-top: 3px solid white;
-    color: #666;
-    text-decoration: none;
-}
-
-#top-menu a:hover {
-    color: #000;
-}
-
-#top-menu li.active a {
-    border-top: 3px solid #333;
-    color: #333;
-    font-weight: bold;
-}
-
-#foo {
-    display: block;
-    height: 600px;
-    width: 600px;
-}
-
-#bar {
-    display: block;
-    height: 600px;
-    width: 600px;
-}
-
-#baz {
-    display: block;
-    height: 600px;
-    width: 600px;
-}
-*/
 /******************************************************************************
- * Navigation
+ * Scaffolding
  *****************************************************************************/
+#body-wrap {
+  background-color: #fff;
+}
+.block-wrap {
+
+}
+.block-center {
+  width: @layout_width;
+  margin: 0 auto;
+}
+
+/******************************************************************************
+ * Header
+ *****************************************************************************/
+
 .header-wrap {
   background-color: @dialogblue;
 }
-.menu-wrap {
-  width: @layout_width;
-  margin: 0 auto;
-}
-.menu {
-  float: right;
-}
-.menu > ul {
-  list-style: none;
-  background-color: @dialogblue;
-  margin: 0;
-  padding: 0;
-}
-.menu > ul:after {
-  clear: both;
-  content: " ";
-  display: block;
-  height: 0;
-  overflow: hidden;
-}
-.menu > ul > li {
-  float: left;
-  position: relative;
-  margin: 0;
-  padding: 0;
-}
-.menu > ul > li.current_page_item {
-  
-}
-.menu > ul > li > a {
-  padding: 0 15px;
-  line-height: @menu_height;
-  display: block;
-  background-color: @dialogblue;
-  color: #fff;
-}
-.menu > ul > li > a:hover {
-
-}
-.menu > ul > li.current_page_item > a {
-
-}
-.menu > ul > li.current_page_item > a:hover {
-
-}
-.menu > ul > li:hover > .children {
-  display: block;
-}
-.children {
-  list-style: none;
-  display: none;
-  position: absolute;
-  width: 400px;
-  top: @menu_height;
-  left: 0;
-  margin: 0;
-  padding: 0;
-  z-index: 99;
-}
-.children > li {
-  margin: 0;
-  padding: 0;
-}
-.children > li > a {
-  display: block;
-  margin: 0;
-  padding: 5px;
-  background-color: #ccc;
-}
-.children > li > a:hover {
-  background-color: #ddd;
-}
-
-/* Sub Menu */
-.sub-menu-wrap {
-  background-color: @greyyy;
-  position:relative;
-}
-.sub-menu {
-  height: @sub_menu_height;
-  line-height: @sub_menu_height;
-  margin: 0 auto;
-  width: @layout_width;
-  position: relative;
-  left: -18px;
-}
-.sub-menu-horizontal {
-  display: block;
-  overflow: hidden;
-  position: static;
-  margin-left: 20px;
-  width: 100%;
-  z-index: 9;
-}
-.sub-menu-horizontal > li {
-  float: right;
-}
-.sub-menu-horizontal > li > a {
-  color: #fff;
-  display: block;
-  font-size: @std_font_size*0.8;
-  height: @sub_menu_height;
-  line-height: @sub_menu_height;
-  padding: 0 15px;
-  background-color: transparent;
-}
-.sub-menu-horizontal > li > a:hover {
-  background-color: transparent;
-}
-
 .menu-logo {
   position: absolute;
   width: 100px;
   z-index: 100;
+}
+
+/******************************************************************************
+ * Front Page
+ *****************************************************************************/
+
+#purpose-strategy-execution-wrap {
+  background-color: @greyy;
+}
+#purpose-strategy-execution {
+  height: 400px;
 }

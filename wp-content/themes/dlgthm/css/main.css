@@ -1,9 +1,67 @@
 /******************************************************************************
- * Major Settings
+ * Settings
  *****************************************************************************/
 
 /******************************************************************************
- * Color
+ * Settings
+ *****************************************************************************/
+
+/*
+#top-menu {
+    position: fixed;
+    z-index: 1;
+    background: white;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+
+#top-menu li {
+    float: left;
+}
+
+#top-menu a {
+    display: block;
+    padding: 5px 25px 7px 25px;
+    -webkit-transition: 1s all ease;
+    -moz-transition: 1s all ease;
+    transition: 1s all ease;
+    border-top: 3px solid white;
+    color: #666;
+    text-decoration: none;
+}
+
+#top-menu a:hover {
+    color: #000;
+}
+
+#top-menu li.active a {
+    border-top: 3px solid #333;
+    color: #333;
+    font-weight: bold;
+}
+
+#foo {
+    display: block;
+    height: 600px;
+    width: 600px;
+}
+
+#bar {
+    display: block;
+    height: 600px;
+    width: 600px;
+}
+
+#baz {
+    display: block;
+    height: 600px;
+    width: 600px;
+}
+*/
+
+/******************************************************************************
+ * Settings
  *****************************************************************************/
 
 /******************************************************************************
@@ -137,6 +195,158 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+
+/******************************************************************************
+ * Settings
+ *****************************************************************************/
+
+/******************************************************************************
+ * Navigation
+ *****************************************************************************/
+
+.menu-wrap {
+  width: 960px;
+  margin: 0 auto;
+}
+
+.menu {
+  float: right;
+}
+
+.menu > ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  background-color: #518fcc;
+}
+
+.menu > ul:after {
+  display: block;
+  height: 0;
+  overflow: hidden;
+  clear: both;
+  content: " ";
+}
+
+.menu > ul > li {
+  position: relative;
+  float: left;
+  padding: 0;
+  margin: 0;
+}
+
+.menu > ul > li.current_page_item > a {
+  background-color: #3576b5;
+}
+
+.menu > ul > li > a {
+  display: block;
+  padding: 0 15px;
+  line-height: 60px;
+  color: #fff;
+  background-color: #518fcc;
+}
+
+.menu > ul > li:hover > .children {
+  display: block;
+}
+
+.children {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  z-index: 99;
+  display: none;
+  width: 200px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  border-left: #f4c017 5px solid;
+}
+
+.children > li {
+  padding: 0;
+  margin: 0;
+}
+
+.children > li > a {
+  display: block;
+  padding: 5px;
+  margin: 0;
+  color: #6d6e71;
+  background-color: #fff;
+}
+
+.children > li > a:hover {
+  background-color: #efefef;
+}
+
+.children-red {
+  border-left: #b42d38 5px solid;
+}
+
+.children-orange {
+  border-left: #e47f26 5px solid;
+}
+
+.children-yellow {
+  border-left: #f4c017 5px solid;
+}
+
+.children-green {
+  border-left: #becb31 5px solid;
+}
+
+.children-blue {
+  border-left: #007489 5px solid;
+}
+
+/* Sub Menu */
+
+.sub-menu-wrap {
+  position: relative;
+  background-color: #bcbec0;
+}
+
+.sub-menu {
+  position: relative;
+  left: -18px;
+  width: 960px;
+  height: 25px;
+  margin: 0 auto;
+  line-height: 25px;
+}
+
+.sub-menu-horizontal {
+  position: static;
+  z-index: 9;
+  display: block;
+  width: 100%;
+  margin-left: 20px;
+  overflow: hidden;
+}
+
+.sub-menu-horizontal > li {
+  float: right;
+}
+
+.sub-menu-horizontal > li > a {
+  display: block;
+  height: 25px;
+  padding: 0 15px;
+  font-size: 12.8px;
+  line-height: 25px;
+  color: #fff;
+  background-color: transparent;
+}
+
+.sub-menu-horizontal > li > a:hover {
+  background-color: transparent;
+}
+
+/******************************************************************************
+ * Settings
+ *****************************************************************************/
 
 /******************************************************************************
  * Media Queries
@@ -177,11 +387,11 @@ table {
 */
 
 /******************************************************************************
- * Major Settings
+ * Styles
  *****************************************************************************/
 
 /******************************************************************************
- * Color
+ * Settings
  *****************************************************************************/
 
 /******************************************************************************
@@ -317,6 +527,10 @@ table {
 }
 
 /******************************************************************************
+ * Settings
+ *****************************************************************************/
+
+/******************************************************************************
  * Sitewide
  *****************************************************************************/
 
@@ -431,6 +645,197 @@ a:visited {
   color: #b42d38;
 }
 
+/******************************************************************************
+ * Scaffolding
+ *****************************************************************************/
+
+#body-wrap {
+  background-color: #fff;
+}
+
+.block-center {
+  width: 960px;
+  margin: 0 auto;
+}
+
+/******************************************************************************
+ * Header
+ *****************************************************************************/
+
+.header-wrap {
+  background-color: #518fcc;
+}
+
+.menu-logo {
+  position: absolute;
+  z-index: 100;
+  width: 100px;
+}
+
+/******************************************************************************
+ * Front Page
+ *****************************************************************************/
+
+#purpose-strategy-execution-wrap {
+  background-color: #939598;
+}
+
+#purpose-strategy-execution {
+  height: 400px;
+}
+
+/******************************************************************************
+ * Settings
+ *****************************************************************************/
+
+/******************************************************************************
+ * Navigation
+ *****************************************************************************/
+
+.menu-wrap {
+  width: 960px;
+  margin: 0 auto;
+}
+
+.menu {
+  float: right;
+}
+
+.menu > ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  background-color: #518fcc;
+}
+
+.menu > ul:after {
+  display: block;
+  height: 0;
+  overflow: hidden;
+  clear: both;
+  content: " ";
+}
+
+.menu > ul > li {
+  position: relative;
+  float: left;
+  padding: 0;
+  margin: 0;
+}
+
+.menu > ul > li.current_page_item > a {
+  background-color: #3576b5;
+}
+
+.menu > ul > li > a {
+  display: block;
+  padding: 0 15px;
+  line-height: 60px;
+  color: #fff;
+  background-color: #518fcc;
+}
+
+.menu > ul > li:hover > .children {
+  display: block;
+}
+
+.children {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  z-index: 99;
+  display: none;
+  width: 200px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  border-left: #f4c017 5px solid;
+}
+
+.children > li {
+  padding: 0;
+  margin: 0;
+}
+
+.children > li > a {
+  display: block;
+  padding: 5px;
+  margin: 0;
+  color: #6d6e71;
+  background-color: #fff;
+}
+
+.children > li > a:hover {
+  background-color: #efefef;
+}
+
+.children-red {
+  border-left: #b42d38 5px solid;
+}
+
+.children-orange {
+  border-left: #e47f26 5px solid;
+}
+
+.children-yellow {
+  border-left: #f4c017 5px solid;
+}
+
+.children-green {
+  border-left: #becb31 5px solid;
+}
+
+.children-blue {
+  border-left: #007489 5px solid;
+}
+
+/* Sub Menu */
+
+.sub-menu-wrap {
+  position: relative;
+  background-color: #bcbec0;
+}
+
+.sub-menu {
+  position: relative;
+  left: -18px;
+  width: 960px;
+  height: 25px;
+  margin: 0 auto;
+  line-height: 25px;
+}
+
+.sub-menu-horizontal {
+  position: static;
+  z-index: 9;
+  display: block;
+  width: 100%;
+  margin-left: 20px;
+  overflow: hidden;
+}
+
+.sub-menu-horizontal > li {
+  float: right;
+}
+
+.sub-menu-horizontal > li > a {
+  display: block;
+  height: 25px;
+  padding: 0 15px;
+  font-size: 12.8px;
+  line-height: 25px;
+  color: #fff;
+  background-color: transparent;
+}
+
+.sub-menu-horizontal > li > a:hover {
+  background-color: transparent;
+}
+
+/******************************************************************************
+ * Settings
+ *****************************************************************************/
+
 /*
 #top-menu {
     position: fixed;
@@ -484,134 +889,9 @@ a:visited {
     width: 600px;
 }
 */
-
 /******************************************************************************
- * Navigation
+ * Settings
  *****************************************************************************/
-
-.header-wrap {
-  background-color: #518fcc;
-}
-
-.menu-wrap {
-  width: 960px;
-  margin: 0 auto;
-}
-
-.menu {
-  float: right;
-}
-
-.menu > ul {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  background-color: #518fcc;
-}
-
-.menu > ul:after {
-  display: block;
-  height: 0;
-  overflow: hidden;
-  clear: both;
-  content: " ";
-}
-
-.menu > ul > li {
-  position: relative;
-  float: left;
-  padding: 0;
-  margin: 0;
-}
-
-.menu > ul > li > a {
-  display: block;
-  padding: 0 15px;
-  line-height: 60px;
-  color: #fff;
-  background-color: #518fcc;
-}
-
-.menu > ul > li:hover > .children {
-  display: block;
-}
-
-.children {
-  position: absolute;
-  top: 60px;
-  left: 0;
-  z-index: 99;
-  display: none;
-  width: 400px;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-
-.children > li {
-  padding: 0;
-  margin: 0;
-}
-
-.children > li > a {
-  display: block;
-  padding: 5px;
-  margin: 0;
-  background-color: #ccc;
-}
-
-.children > li > a:hover {
-  background-color: #ddd;
-}
-
-/* Sub Menu */
-
-.sub-menu-wrap {
-  position: relative;
-  background-color: #bcbec0;
-}
-
-.sub-menu {
-  position: relative;
-  left: -18px;
-  width: 960px;
-  height: 25px;
-  margin: 0 auto;
-  line-height: 25px;
-}
-
-.sub-menu-horizontal {
-  position: static;
-  z-index: 9;
-  display: block;
-  width: 100%;
-  margin-left: 20px;
-  overflow: hidden;
-}
-
-.sub-menu-horizontal > li {
-  float: right;
-}
-
-.sub-menu-horizontal > li > a {
-  display: block;
-  height: 25px;
-  padding: 0 15px;
-  font-size: 12.8px;
-  line-height: 25px;
-  color: #fff;
-  background-color: transparent;
-}
-
-.sub-menu-horizontal > li > a:hover {
-  background-color: transparent;
-}
-
-.menu-logo {
-  position: absolute;
-  z-index: 100;
-  width: 100px;
-}
 
 /******************************************************************************
  * Media Queries
@@ -626,66 +906,8 @@ a:visited {
 }
 
 /******************************************************************************
- * Helper Styles - Alignment, etc.
+ * Settings
  *****************************************************************************/
-
-.ir {
-  overflow: hidden;
-  *text-indent: -9999px;
-  background-color: transparent;
-  border: 0;
-}
-
-.ir:before {
-  display: block;
-  width: 0;
-  height: 150%;
-  content: "";
-}
-
-.hidden {
-  display: none !important;
-  visibility: hidden;
-}
-
-.visuallyhidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  border: 0;
-}
-
-.visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus {
-  position: static;
-  width: auto;
-  height: auto;
-  margin: 0;
-  overflow: visible;
-  clip: auto;
-}
-
-.invisible {
-  visibility: hidden;
-}
-
-.clearfix:before,
-.clearfix:after {
-  display: table;
-  content: " ";
-}
-
-.clearfix:after {
-  clear: both;
-}
-
-.clearfix {
-  *zoom: 1;
-}
 
 /******************************************************************************
  * Helper Styles - Alignment, etc.
@@ -748,6 +970,76 @@ a:visited {
 .clearfix {
   *zoom: 1;
 }
+
+/******************************************************************************
+ * Settings
+ *****************************************************************************/
+
+/******************************************************************************
+ * Helper Styles - Alignment, etc.
+ *****************************************************************************/
+
+.ir {
+  overflow: hidden;
+  *text-indent: -9999px;
+  background-color: transparent;
+  border: 0;
+}
+
+.ir:before {
+  display: block;
+  width: 0;
+  height: 150%;
+  content: "";
+}
+
+.hidden {
+  display: none !important;
+  visibility: hidden;
+}
+
+.visuallyhidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  border: 0;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: " ";
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+
+/******************************************************************************
+ * Settings
+ *****************************************************************************/
 
 /******************************************************************************
  * Sitewide
@@ -864,184 +1156,41 @@ a:visited {
   color: #b42d38;
 }
 
-/*
-#top-menu {
-    position: fixed;
-    z-index: 1;
-    background: white;
-    left: 0;
-    right: 0;
-    top: 0;
+/******************************************************************************
+ * Scaffolding
+ *****************************************************************************/
+
+#body-wrap {
+  background-color: #fff;
 }
 
-#top-menu li {
-    float: left;
+.block-center {
+  width: 960px;
+  margin: 0 auto;
 }
-
-#top-menu a {
-    display: block;
-    padding: 5px 25px 7px 25px;
-    -webkit-transition: 1s all ease;
-    -moz-transition: 1s all ease;
-    transition: 1s all ease;
-    border-top: 3px solid white;
-    color: #666;
-    text-decoration: none;
-}
-
-#top-menu a:hover {
-    color: #000;
-}
-
-#top-menu li.active a {
-    border-top: 3px solid #333;
-    color: #333;
-    font-weight: bold;
-}
-
-#foo {
-    display: block;
-    height: 600px;
-    width: 600px;
-}
-
-#bar {
-    display: block;
-    height: 600px;
-    width: 600px;
-}
-
-#baz {
-    display: block;
-    height: 600px;
-    width: 600px;
-}
-*/
 
 /******************************************************************************
- * Navigation
+ * Header
  *****************************************************************************/
 
 .header-wrap {
   background-color: #518fcc;
 }
 
-.menu-wrap {
-  width: 960px;
-  margin: 0 auto;
-}
-
-.menu {
-  float: right;
-}
-
-.menu > ul {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  background-color: #518fcc;
-}
-
-.menu > ul:after {
-  display: block;
-  height: 0;
-  overflow: hidden;
-  clear: both;
-  content: " ";
-}
-
-.menu > ul > li {
-  position: relative;
-  float: left;
-  padding: 0;
-  margin: 0;
-}
-
-.menu > ul > li > a {
-  display: block;
-  padding: 0 15px;
-  line-height: 60px;
-  color: #fff;
-  background-color: #518fcc;
-}
-
-.menu > ul > li:hover > .children {
-  display: block;
-}
-
-.children {
-  position: absolute;
-  top: 60px;
-  left: 0;
-  z-index: 99;
-  display: none;
-  width: 400px;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-
-.children > li {
-  padding: 0;
-  margin: 0;
-}
-
-.children > li > a {
-  display: block;
-  padding: 5px;
-  margin: 0;
-  background-color: #ccc;
-}
-
-.children > li > a:hover {
-  background-color: #ddd;
-}
-
-/* Sub Menu */
-
-.sub-menu-wrap {
-  position: relative;
-  background-color: #bcbec0;
-}
-
-.sub-menu {
-  position: relative;
-  left: -18px;
-  width: 960px;
-  height: 25px;
-  margin: 0 auto;
-  line-height: 25px;
-}
-
-.sub-menu-horizontal {
-  position: static;
-  z-index: 9;
-  display: block;
-  width: 100%;
-  margin-left: 20px;
-  overflow: hidden;
-}
-
-.sub-menu-horizontal > li {
-  float: right;
-}
-
-.sub-menu-horizontal > li > a {
-  display: block;
-  height: 25px;
-  padding: 0 15px;
-  font-size: 12.8px;
-  line-height: 25px;
-  color: #fff;
-  background-color: transparent;
-}
-
-.sub-menu-horizontal > li > a:hover {
-  background-color: transparent;
-}
-
 .menu-logo {
   position: absolute;
   z-index: 100;
   width: 100px;
+}
+
+/******************************************************************************
+ * Front Page
+ *****************************************************************************/
+
+#purpose-strategy-execution-wrap {
+  background-color: #939598;
+}
+
+#purpose-strategy-execution {
+  height: 400px;
 }
