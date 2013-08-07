@@ -580,12 +580,17 @@ textarea {
  * Basic Styles
  *****************************************************************************/
 
+html {
+  height: 100%;
+}
+
 body {
+  height: 100%;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 20px;
   color: #333333;
-  background-color: #ffffff;
+  background: #333;
 }
 
 h1 {
@@ -651,12 +656,42 @@ a:visited {
  *****************************************************************************/
 
 #body-wrap {
-  background-color: #fff;
+  /* background-image: linear-gradient(@grey 25%, @greyy 75%);*/
+
+  /* background-repeat: no-repeat;*/
+
+  height: 100%;
 }
 
 .block-center {
   width: 960px;
   margin: 0 auto;
+}
+
+/******************************************************************************
+   * Pages
+   *****************************************************************************/
+
+.content-wrap {
+  width: 960px;
+  margin: 0 auto;
+  margin-top: 200px;
+  overflow: hidden;
+}
+
+.content-scrollspy {
+  float: left;
+  width: 199px;
+  height: 500px;
+  background-color: #fff;
+  border-right: 1px #efefef solid;
+}
+
+.content-body {
+  float: right;
+  width: 760px;
+  height: 1000px;
+  background-color: #fff;
 }
 
 /******************************************************************************
@@ -1092,12 +1127,17 @@ textarea {
  * Basic Styles
  *****************************************************************************/
 
+html {
+  height: 100%;
+}
+
 body {
+  height: 100%;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 20px;
   color: #333333;
-  background-color: #ffffff;
+  background: #333;
 }
 
 h1 {
@@ -1163,12 +1203,42 @@ a:visited {
  *****************************************************************************/
 
 #body-wrap {
-  background-color: #fff;
+  /* background-image: linear-gradient(@grey 25%, @greyy 75%);*/
+
+  /* background-repeat: no-repeat;*/
+
+  height: 100%;
 }
 
 .block-center {
   width: 960px;
   margin: 0 auto;
+}
+
+/******************************************************************************
+   * Pages
+   *****************************************************************************/
+
+.content-wrap {
+  width: 960px;
+  margin: 0 auto;
+  margin-top: 200px;
+  overflow: hidden;
+}
+
+.content-scrollspy {
+  float: left;
+  width: 199px;
+  height: 500px;
+  background-color: #fff;
+  border-right: 1px #efefef solid;
+}
+
+.content-body {
+  float: right;
+  width: 760px;
+  height: 1000px;
+  background-color: #fff;
 }
 
 /******************************************************************************

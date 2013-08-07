@@ -1,8 +1,8 @@
 <?php get_header( global_template_base() ); ?>
-<div class=".content-wrap">
-  <div class=".content-scrollspy">
+<div class="content-wrap">
+  <div class="content-scrollspy">
   </div>
-  <div class=".content-body">
+  <div class="content-body">
     <?php include global_template_path(); ?>
   </div>
 </div>

@@ -47,13 +47,16 @@ textarea {
 /******************************************************************************
  * Basic Styles
  *****************************************************************************/
-
+html {
+  height: 100%;
+}
 body {
-  background-color: @std_background_color;
+  background: #333;
   color: @std_color;
   font-family: @sans;
   font-size: @std_font_size;
   line-height: @std_line_height;
+  height: 100%;
 }
 
 h1 {
@@ -115,15 +118,39 @@ a:visited {
  * Scaffolding
  *****************************************************************************/
 #body-wrap {
-  background-color: #fff;
+  /* background-image: linear-gradient(@grey 25%, @greyy 75%);*/
+  /* background-repeat: no-repeat;*/
+  height: 100%;
 }
 .block-wrap {
-
 }
 .block-center {
   width: @layout_width;
   margin: 0 auto;
 }
+  /******************************************************************************
+   * Pages
+   *****************************************************************************/
+    .content-wrap {
+      width: @layout_width;
+      margin: 0 auto;
+      margin-top: 200px;
+      overflow: hidden;
+    }
+    .content-scrollspy {
+      float: left;
+      width: 199px;
+      height: 500px;
+      background-color: #fff;
+      border-right: 1px #efefef solid;
+    }
+    .content-body {
+      float: right;
+      width: 760px;
+      background-color: #fff;
+      height: 1000px;
+    }
+
 
 /******************************************************************************
  * Header
