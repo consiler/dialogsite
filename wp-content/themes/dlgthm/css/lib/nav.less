@@ -6,6 +6,8 @@
 .menu-wrap {
   width: @layout_width;
   margin: 0 auto;
+  -webkit-box-shadow:  0px 2px 8px 2px rgba(0, 0, 0, .7);
+  box-shadow:  0px 2px 8px 2px rgba(0, 0, 0, .7);
 }
 .menu {
   float: right;
@@ -32,17 +34,23 @@
 .menu > ul > li.current_page_item {
 }
 .menu > ul > li.current_page_item > a {
-  background-color: darken(@dialogblue, 10%);
+  background-color: white;
+  padding-bottom: 0;
+  border-bottom: @red 5px solid;
+  color: @grey;
 }
 .menu > ul > li > a {
   padding: 0 15px;
-  line-height: @menu_height;
+  padding-top: 20px;
+  line-height: (@menu_height - 25);
+  padding-bottom: 5px;
   display: block;
   background-color: @dialogblue;
   color: #fff;
 }
 .menu > ul > li > a:hover {
-
+  padding-bottom: 0;
+  border-bottom: @red 5px solid;
 }
 .menu > ul > li.current_page_item > a {
 
@@ -63,7 +71,7 @@
   margin: 0;
   padding: 0;
   z-index: 99;
-  border-left: @yellow 5px solid;
+  border-left: @red 5px solid;
 }
 .children > li {
   margin: 0;
@@ -76,7 +84,7 @@
   background-color: #fff;
   color: @grey;
 }
-.children > li > a:hover {
+/*.children > li > a:hover {
   background-color: #efefef;
 }
 .page-item-11 > .children {
@@ -93,7 +101,7 @@
 }
 .page-item-34 > .children {
   border-left: @blue 5px solid;
-}
+}*/
 
 /* Sub Menu */
 .sub-menu-wrap {
