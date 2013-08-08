@@ -760,7 +760,7 @@ a:visited {
   /* background-repeat: no-repeat;*/
 
   height: 100%;
-  padding-top: 65px;
+  padding-top: 95px;
 }
 
 .block-center {
@@ -797,6 +797,7 @@ a:visited {
 .content-scrollspy ul {
   padding: 0;
   margin: 0;
+  list-style: none;
 }
 
 .content-scrollspy li {
@@ -878,20 +879,31 @@ a:visited {
 #banner {
   position: relative;
   width: 960px;
-  height: 100px;
-  padding-top: 300px;
+  height: 250px;
+  padding-top: 50px;
   margin: 0 auto;
   background-image: url(http://fc00.deviantart.net/fs71/i/2013/219/c/9/linked_to_our_world_by_barbaraofbruno-d6h01q9.jpg);
   background-position: 0 500px;
 }
 
 #banner > h1 {
-  position: absolute;
+  position: fixed;
+  z-index: 1;
+  width: 960px;
   padding: 0;
   margin: 0;
   font-size: 60px;
   line-height: 70px;
-  color: #666;
+  color: #6d6e71;
+  text-align: center;
+}
+
+#banner-white-fade {
+  position: absolute;
+  bottom: 0;
+  width: 960px;
+  height: 400px;
+  background-image: linear-gradient(rgba(255, 255, 255, 0), #ffffff);
 }
 
 /******************************************************************************
@@ -1497,7 +1509,7 @@ a:visited {
   /* background-repeat: no-repeat;*/
 
   height: 100%;
-  padding-top: 65px;
+  padding-top: 95px;
 }
 
 .block-center {
@@ -1534,6 +1546,7 @@ a:visited {
 .content-scrollspy ul {
   padding: 0;
   margin: 0;
+  list-style: none;
 }
 
 .content-scrollspy li {
@@ -1615,20 +1628,31 @@ a:visited {
 #banner {
   position: relative;
   width: 960px;
-  height: 100px;
-  padding-top: 300px;
+  height: 250px;
+  padding-top: 50px;
   margin: 0 auto;
   background-image: url(http://fc00.deviantart.net/fs71/i/2013/219/c/9/linked_to_our_world_by_barbaraofbruno-d6h01q9.jpg);
   background-position: 0 500px;
 }
 
 #banner > h1 {
-  position: absolute;
+  position: fixed;
+  z-index: 1;
+  width: 960px;
   padding: 0;
   margin: 0;
   font-size: 60px;
   line-height: 70px;
-  color: #666;
+  color: #6d6e71;
+  text-align: center;
+}
+
+#banner-white-fade {
+  position: absolute;
+  bottom: 0;
+  width: 960px;
+  height: 400px;
+  background-image: linear-gradient(rgba(255, 255, 255, 0), #ffffff);
 }
 
 /******************************************************************************
