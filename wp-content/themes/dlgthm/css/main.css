@@ -855,7 +855,18 @@ a:visited {
   position: absolute;
   top: 0;
   z-index: 100;
-  width: 109px;
+  width: 100px;
+}
+
+.logo-top {
+  height: 65px;
+  background-color: #572700;
+}
+
+.logo-bottom {
+  height: 65px;
+  -webkit-box-shadow: 0 8px 10px -3px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 8px 10px -3px rgba(0, 0, 0, 0.5);
 }
 
 /******************************************************************************
@@ -1579,7 +1590,18 @@ a:visited {
   position: absolute;
   top: 0;
   z-index: 100;
-  width: 109px;
+  width: 100px;
+}
+
+.logo-top {
+  height: 65px;
+  background-color: #572700;
+}
+
+.logo-bottom {
+  height: 65px;
+  -webkit-box-shadow: 0 8px 10px -3px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 8px 10px -3px rgba(0, 0, 0, 0.5);
 }
 
 /******************************************************************************

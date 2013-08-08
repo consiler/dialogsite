@@ -41,7 +41,10 @@ $defaults = array(
     <div class="header-wrap">
         <div class="header-inner">
           <div class="menu-wrap">
-            <img class="menu-logo" src="<?php bloginfo('template_url'); ?>/images/dialog-logo-brown.png">
+            <div class="menu-logo">
+              <div class="logo-top"></div>
+              <img class="logo-bottom" src="<?php bloginfo('template_url'); ?>/images/dialog-logo.png">
+            </div>
             <?php
             wp_nav_menu( $defaults );
             ?>
