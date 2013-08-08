@@ -1,5 +1,6 @@
 <?php get_header( global_template_base() ); ?>
 <div id="banner" data-stellar-background-ratio="0.5">
+  <h1>Team</h1>
 </div>
 <div class="content-wrap">
   <div class="content-scrollspy">

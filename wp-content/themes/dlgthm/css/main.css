@@ -234,7 +234,8 @@ table {
   margin: 0;
 }
 
-.menu > ul > li.current_page_item > a {
+.menu > ul > li.current_page_item > a,
+.menu > ul > li.current_page_parent > a {
   padding-bottom: 0;
   font-weight: bold;
   color: #6d6e71;
@@ -242,7 +243,8 @@ table {
   background-color: #e6e7e8;
 }
 
-.menu > ul > li.current_page_item:hover > a {
+.menu > ul > li.current_page_item:hover > a,
+.menu > ul > li.current_page_parent:hover > a {
   padding-left: 25px;
   border-left: none!important;
 }
@@ -864,6 +866,16 @@ a:visited {
   background-image: url(http://fc00.deviantart.net/fs71/i/2013/219/c/9/linked_to_our_world_by_barbaraofbruno-d6h01q9.jpg);
 }
 
+#banner > h1 {
+  padding: 40px;
+  margin: 0;
+  margin-left: 160px;
+  font-size: 70px;
+  font-weight: bold;
+  line-height: 70px;
+  color: #fff;
+}
+
 /******************************************************************************
  * Front Page
  *****************************************************************************/
@@ -918,7 +930,8 @@ a:visited {
   margin: 0;
 }
 
-.menu > ul > li.current_page_item > a {
+.menu > ul > li.current_page_item > a,
+.menu > ul > li.current_page_parent > a {
   padding-bottom: 0;
   font-weight: bold;
   color: #6d6e71;
@@ -926,7 +939,8 @@ a:visited {
   background-color: #e6e7e8;
 }
 
-.menu > ul > li.current_page_item:hover > a {
+.menu > ul > li.current_page_item:hover > a,
+.menu > ul > li.current_page_parent:hover > a {
   padding-left: 25px;
   border-left: none!important;
 }
@@ -1569,6 +1583,16 @@ a:visited {
   padding-top: 300px;
   margin: 0 auto;
   background-image: url(http://fc00.deviantart.net/fs71/i/2013/219/c/9/linked_to_our_world_by_barbaraofbruno-d6h01q9.jpg);
+}
+
+#banner > h1 {
+  padding: 40px;
+  margin: 0;
+  margin-left: 160px;
+  font-size: 70px;
+  font-weight: bold;
+  line-height: 70px;
+  color: #fff;
 }
 
 /******************************************************************************
