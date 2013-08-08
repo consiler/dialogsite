@@ -1,8 +1,16 @@
 (function($) {
   /******DOC READY ****/
   $(document).ready(function(){
-    //this line takes the dropdown menu associated with the current section and moves it to the silver menu
-    $('li.current_page_item > .children').addClass('second-menu-horizontal').appendTo('.second-menu');
+    //this takes the dropdown menu associated with the current section and moves it to the silver menu
+    var men = $('li.current_page_item > .children');
+    console.log(men.length);
+    if(men.length != 0)
+    {
+        men.addClass('second-menu-horizontal').appendTo('.second-menu');
+    } else {
+      //uncomment this to hide the second menu bar when there is no dropdown menu on the current page nav element
+      //$('.second-menu-wrap').css({'display' : 'none'});
+    }
     //this loop assigns classes to nav menu elements so they can be styled with different colors sustainably
     var colors = ['blue', 'red', 'orange', 'yellow', 'green', 'beige', 'beigee', 'beigeee'];
     $(".menu > ul > li").each(function(i) {

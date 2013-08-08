@@ -758,6 +758,8 @@ a:visited {
 
 .block-center {
   width: 960px;
+  height: 500px;
+  padding-top: 15px;
   margin: 0 auto;
 }
 
@@ -796,11 +798,6 @@ a:visited {
   border-bottom: 1px solid #efefef;
 }
 
-.content-scrollspy li.active > a {
-  color: #becb31;
-  border-right: 5px solid #becb31;
-}
-
 .content-scrollspy a {
   display: block;
   line-height: 50px;
@@ -810,7 +807,14 @@ a:visited {
 }
 
 .content-scrollspy a:hover {
-  background-color: #efefef;
+  background-color: #fff;
+  -webkit-box-shadow: inset 0 0px 10px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: inset 0 0px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+.content-scrollspy li.active > a {
+  color: #007489;
+  border-right: 5px #007489 solid;
 }
 
 .content-body {
@@ -828,6 +832,10 @@ a:visited {
   position: fixed;
   z-index: 101;
   width: 100%;
+}
+
+.home > .header-wrap {
+  position: static;
 }
 
 .header-inner {
@@ -850,10 +858,10 @@ a:visited {
 
 #banner {
   width: 960px;
-  height: 340px;
+  height: 100px;
   padding-top: 300px;
   margin: 0 auto;
-  background-image: url(http://fc06.deviantart.net/fs71/f/2011/153/5/2/fractal_broccoli_by_streak-d3hx0dm.png);
+  background-image: url(http://fc00.deviantart.net/fs71/i/2013/219/c/9/linked_to_our_world_by_barbaraofbruno-d6h01q9.jpg);
 }
 
 /******************************************************************************
@@ -861,11 +869,15 @@ a:visited {
  *****************************************************************************/
 
 #purpose-strategy-execution-wrap {
-  background-color: #939598;
+  background-color: #f4c017;
 }
 
-#purpose-strategy-execution {
-  height: 400px;
+#purpose-strategy-execution h1 {
+  font-size: 100px;
+  font-weight: bold;
+  line-height: 400px;
+  color: #572700;
+  text-align: center;
 }
 
 /******************************************************************************
@@ -1453,6 +1465,8 @@ a:visited {
 
 .block-center {
   width: 960px;
+  height: 500px;
+  padding-top: 15px;
   margin: 0 auto;
 }
 
@@ -1491,11 +1505,6 @@ a:visited {
   border-bottom: 1px solid #efefef;
 }
 
-.content-scrollspy li.active > a {
-  color: #becb31;
-  border-right: 5px solid #becb31;
-}
-
 .content-scrollspy a {
   display: block;
   line-height: 50px;
@@ -1505,7 +1514,14 @@ a:visited {
 }
 
 .content-scrollspy a:hover {
-  background-color: #efefef;
+  background-color: #fff;
+  -webkit-box-shadow: inset 0 0px 10px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: inset 0 0px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+.content-scrollspy li.active > a {
+  color: #007489;
+  border-right: 5px #007489 solid;
 }
 
 .content-body {
@@ -1523,6 +1539,10 @@ a:visited {
   position: fixed;
   z-index: 101;
   width: 100%;
+}
+
+.home > .header-wrap {
+  position: static;
 }
 
 .header-inner {
@@ -1545,10 +1565,10 @@ a:visited {
 
 #banner {
   width: 960px;
-  height: 340px;
+  height: 100px;
   padding-top: 300px;
   margin: 0 auto;
-  background-image: url(http://fc06.deviantart.net/fs71/f/2011/153/5/2/fractal_broccoli_by_streak-d3hx0dm.png);
+  background-image: url(http://fc00.deviantart.net/fs71/i/2013/219/c/9/linked_to_our_world_by_barbaraofbruno-d6h01q9.jpg);
 }
 
 /******************************************************************************
@@ -1556,9 +1576,13 @@ a:visited {
  *****************************************************************************/
 
 #purpose-strategy-execution-wrap {
-  background-color: #939598;
+  background-color: #f4c017;
 }
 
-#purpose-strategy-execution {
-  height: 400px;
+#purpose-strategy-execution h1 {
+  font-size: 100px;
+  font-weight: bold;
+  line-height: 400px;
+  color: #572700;
+  text-align: center;
 }

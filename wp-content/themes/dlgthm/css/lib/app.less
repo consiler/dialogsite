@@ -122,16 +122,21 @@ a:visited {
   /* background-image: linear-gradient(@grey 25%, @greyy 75%);*/
   /* background-repeat: no-repeat;*/
   height: 100%;
+  // padding-top: @nav_height;
 }
 .block-wrap {
+
 }
 .block-center {
   width: @layout_width;
   margin: 0 auto;
+  padding-top: 15px;
+  height: 500px;
 }
   /******************************************************************************
    * Pages
    *****************************************************************************/
+   @theme_primary_color: @blue;
     .content-wrap {
       width: @layout_width;
       margin: 0 auto;
@@ -159,10 +164,6 @@ a:visited {
         margin: 0;
         padding: 0;
       }
-      li.active > a {
-        color: @green;
-        border-right: 5px solid @green;
-      }
       a {
         line-height: 50px;
         text-align: center;
@@ -171,7 +172,13 @@ a:visited {
         color: @grey;
       }
       a:hover {
-        background-color: #efefef;
+        background-color: #fff;
+        -webkit-box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+        box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+      }
+      li.active > a {
+        border-right: 5px @theme_primary_color solid;
+        color: @theme_primary_color;
       }
     }
     .content-body {
@@ -190,6 +197,9 @@ a:visited {
   width: 100%;
   z-index: 101;
 }
+.home > .header-wrap {
+  position: static;
+}
 .header-inner {
   background-color: @dialogblue;
   width: 100%;
@@ -207,9 +217,9 @@ a:visited {
  * Banner
  *****************************************************************************/
 #banner {
-  background-image: url(http://fc06.deviantart.net/fs71/f/2011/153/5/2/fractal_broccoli_by_streak-d3hx0dm.png);
+  background-image: url(http://fc00.deviantart.net/fs71/i/2013/219/c/9/linked_to_our_world_by_barbaraofbruno-d6h01q9.jpg);
   width: @layout_width;
-  height: 340px;
+  height: 100px;
   padding-top: 300px;
   margin: 0 auto;
 }
@@ -219,8 +229,14 @@ a:visited {
  *****************************************************************************/
 
 #purpose-strategy-execution-wrap {
-  background-color: @greyy;
+  background-color: @yellow;
 }
 #purpose-strategy-execution {
-  height: 400px;
+}
+#purpose-strategy-execution h1 {
+  font-size: 100px;
+  text-align: center;
+  line-height: 400px;
+  color: @dialogbrown;
+  font-weight: bold;
 }
