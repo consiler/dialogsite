@@ -774,6 +774,7 @@ a:visited {
 
 .content-scrollspy li.active > a {
   color: #becb31;
+  border-right: 5px solid #becb31;
 }
 
 .content-scrollspy a {
@@ -1444,6 +1445,7 @@ a:visited {
 
 .content-scrollspy li.active > a {
   color: #becb31;
+  border-right: 5px solid #becb31;
 }
 
 .content-scrollspy a {
