@@ -287,6 +287,18 @@ table {
   border-left: 5px solid #007489;
 }
 
+.menu > ul > li.menu-top-level-beige:hover > a {
+  border-left: 5px solid #c5c19d;
+}
+
+.menu > ul > li.menu-top-level-beigee:hover > a {
+  border-left: 5px solid #e1dcc9;
+}
+
+.menu > ul > li.menu-top-level-beigeee:hover > a {
+  border-left: 5px solid #f4f1e9;
+}
+
 .menu > ul > li:hover > .children {
   display: block;
 }
@@ -355,6 +367,18 @@ table {
 
 .menu-top-level-blue > ul {
   border-left: 5px solid #007489;
+}
+
+.menu-top-level-beige > ul {
+  border-left: 5px solid #c5c19d;
+}
+
+.menu-top-level-beigee > ul {
+  border-left: 5px solid #e1dcc9;
+}
+
+.menu-top-level-beigeee > ul {
+  border-left: 5px solid #f4f1e9;
 }
 
 /* Sub Menu */
@@ -935,6 +959,18 @@ a:visited {
   border-left: 5px solid #007489;
 }
 
+.menu > ul > li.menu-top-level-beige:hover > a {
+  border-left: 5px solid #c5c19d;
+}
+
+.menu > ul > li.menu-top-level-beigee:hover > a {
+  border-left: 5px solid #e1dcc9;
+}
+
+.menu > ul > li.menu-top-level-beigeee:hover > a {
+  border-left: 5px solid #f4f1e9;
+}
+
 .menu > ul > li:hover > .children {
   display: block;
 }
@@ -1003,6 +1039,18 @@ a:visited {
 
 .menu-top-level-blue > ul {
   border-left: 5px solid #007489;
+}
+
+.menu-top-level-beige > ul {
+  border-left: 5px solid #c5c19d;
+}
+
+.menu-top-level-beigee > ul {
+  border-left: 5px solid #e1dcc9;
+}
+
+.menu-top-level-beigeee > ul {
+  border-left: 5px solid #f4f1e9;
 }
 
 /* Sub Menu */
