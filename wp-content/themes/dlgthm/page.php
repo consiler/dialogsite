@@ -1,20 +1,37 @@
+<div id="banner" data-stellar-background-ratio="0.5">
+  <h1>Team</h1>
+</div>
 <?php
-// The Query
-$i = 0;
-$args = array('post_type' => 'leadership_people');
-$query = new WP_Query( $args );
-?>
-<div class="spyOnMe" id="div<?php echo $i; ?>">
-<?php
-// The Loop
-if ( $query->have_posts() ) {
-  while ( $query->have_posts() ) {
-    $i++;
+  $args = array('post_type' => 'leadership_people', 'orderby' => 'time', 'order' => 'ASC');
+  $cpts = get_posts($args);
+  $cpt_store = array();
+  foreach($cpts as $post)
+  {
+    setup_postdata($post);
+    $cpt_store[] = array('title' => get_the_title(), 'content' => get_the_content());
   }
-} else {
-  echo "No posts found.";
-}
-/* Restore original Post Data */
-wp_reset_postdata();
+  wp_reset_postdata();
 ?>
+<div class="content-wrap">
+  <div class="content-scrollspy">
+    <ul id="spyMenu">
+      <?php
+      foreach($cpt_store as $cpt) {
+      ?>
+      <li>
+        <a href="#content-section-<?php echo $cpt['title']; ?>"><?php echo $cpt['title']; ?></a>
+      </li>
+      <?php } ?>
+    </ul>
+  </div>
+  <div class="content-body">
+    <?php
+    foreach($cpt_store as $cpt2) {
+    ?>
+    <div class="spyOnMe" id="">
+      <h1><?php echo $cpt2['title']; ?></h1>
+      <?php echo $cpt2['content']; ?>
+    </div>
+    <?php } ?>
+  </div>
 </div>
