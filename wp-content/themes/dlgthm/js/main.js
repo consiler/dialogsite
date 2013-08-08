@@ -1,12 +1,8 @@
-console.log('go');
 (function($) {
-  console.log('go');
   /******DOC READY ****/
   $(document).ready(function(){
-    console.log('go');
     //this takes the dropdown menu associated with the current section and moves it to the silver menu
     var men = $('li.current_page_item > .children');
-    console.log("checkpoint");
     if(men.length != 0)
     {
         men.addClass('second-menu-horizontal').appendTo('.second-menu');
@@ -17,11 +13,9 @@ console.log('go');
         men2.addClass('second-menu-horizontal').appendTo('.second-menu');
       }
     }
-    console.log("checkpoint");
     //this loop assigns classes to nav menu elements so they can be styled with different colors sustainably
     var colors = ['blue', 'red', 'orange', 'yellow', 'green', 'beige', 'beigee', 'beigeee'];
     $(".menu > ul > li").each(function(i) {
-      console.log("assigning color "+i);
      $(this).addClass("menu-top-level-"+colors[(i % colors.length)]);
     });
 
@@ -77,8 +71,8 @@ var lastId,
 // Bind click handler to menu items
 // so we can get a fancy scroll animation
 menuItems.click(function(e){
-  var href = $(this).attr("href"),
-      offsetTop = href === "#" ? 0 : $(href).offset().top-topMenuHeight+1;
+  var href = $(this).attr("href");
+  var offsetTop = href === "#" ? 0 : $(href).offset().top-topMenuHeight+1;
   $('html, body').stop().animate({ 
       scrollTop: offsetTop
   }, 300);

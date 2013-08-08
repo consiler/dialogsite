@@ -760,6 +760,7 @@ a:visited {
   /* background-repeat: no-repeat;*/
 
   height: 100%;
+  padding-top: 65px;
 }
 
 .block-center {
@@ -777,6 +778,7 @@ a:visited {
   width: 960px;
   margin: 0 auto;
   overflow: hidden;
+  background-color: #fff;
 }
 
 .content-scrollspy {
@@ -784,7 +786,6 @@ a:visited {
   z-index: 98;
   float: left;
   width: 199px;
-  background-color: #fff;
   border-right: 1px #efefef solid;
 }
 
@@ -827,6 +828,7 @@ a:visited {
   float: right;
   width: 680px;
   padding: 40px;
+  padding-bottom: 1000px;
   background-color: #fff;
 }
 
@@ -863,22 +865,22 @@ a:visited {
  *****************************************************************************/
 
 #banner {
+  position: relative;
   width: 960px;
   height: 100px;
   padding-top: 300px;
   margin: 0 auto;
   background-image: url(http://fc00.deviantart.net/fs71/i/2013/219/c/9/linked_to_our_world_by_barbaraofbruno-d6h01q9.jpg);
+  background-position: 0 500px;
 }
 
 #banner > h1 {
-  padding: 40px;
+  position: absolute;
+  padding: 0;
   margin: 0;
-  margin-top: 2px;
-  margin-left: 160px;
-  font-size: 70px;
-  font-weight: bold;
+  font-size: 60px;
   line-height: 70px;
-  color: #fff;
+  color: #666;
 }
 
 /******************************************************************************
@@ -1484,6 +1486,7 @@ a:visited {
   /* background-repeat: no-repeat;*/
 
   height: 100%;
+  padding-top: 65px;
 }
 
 .block-center {
@@ -1501,6 +1504,7 @@ a:visited {
   width: 960px;
   margin: 0 auto;
   overflow: hidden;
+  background-color: #fff;
 }
 
 .content-scrollspy {
@@ -1508,7 +1512,6 @@ a:visited {
   z-index: 98;
   float: left;
   width: 199px;
-  background-color: #fff;
   border-right: 1px #efefef solid;
 }
 
@@ -1551,6 +1554,7 @@ a:visited {
   float: right;
   width: 680px;
   padding: 40px;
+  padding-bottom: 1000px;
   background-color: #fff;
 }
 
@@ -1587,22 +1591,22 @@ a:visited {
  *****************************************************************************/
 
 #banner {
+  position: relative;
   width: 960px;
   height: 100px;
   padding-top: 300px;
   margin: 0 auto;
   background-image: url(http://fc00.deviantart.net/fs71/i/2013/219/c/9/linked_to_our_world_by_barbaraofbruno-d6h01q9.jpg);
+  background-position: 0 500px;
 }
 
 #banner > h1 {
-  padding: 40px;
+  position: absolute;
+  padding: 0;
   margin: 0;
-  margin-top: 2px;
-  margin-left: 160px;
-  font-size: 70px;
-  font-weight: bold;
+  font-size: 60px;
   line-height: 70px;
-  color: #fff;
+  color: #666;
 }
 
 /******************************************************************************
