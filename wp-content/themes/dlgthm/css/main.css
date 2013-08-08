@@ -205,7 +205,7 @@ table {
  *****************************************************************************/
 
 .menu-wrap {
-  width: 960px;
+  width: 959px;
   margin: 0 auto;
 }
 
@@ -395,7 +395,7 @@ table {
 
 .second-menu {
   position: relative;
-  left: 97px;
+  left: 155px;
   width: 960px;
   height: 29px;
   margin: 0 auto;
@@ -688,7 +688,7 @@ body {
   font-size: 16px;
   line-height: 20px;
   color: #333333;
-  background: #333;
+  background: linear-gradient(to bottom, #dbdbdb 3%, #a5a5a5 99%);
 }
 
 h1 {
@@ -852,6 +852,7 @@ a:visited {
   background-color: #518fcc;
   background-image: linear-gradient(#518fcc 80%, #3576b5 100%);
   background-repeat: no-repeat;
+  border-bottom: 1px #cfe0f1 solid;
 }
 
 .menu-logo {
@@ -859,6 +860,7 @@ a:visited {
   top: 0;
   z-index: 100;
   width: 100px;
+  margin-left: 15px;
 }
 
 .logo-top {
@@ -931,7 +933,7 @@ a:visited {
  *****************************************************************************/
 
 .menu-wrap {
-  width: 960px;
+  width: 959px;
   margin: 0 auto;
 }
 
@@ -1121,7 +1123,7 @@ a:visited {
 
 .second-menu {
   position: relative;
-  left: 97px;
+  left: 155px;
   width: 960px;
   height: 29px;
   margin: 0 auto;
@@ -1437,7 +1439,7 @@ body {
   font-size: 16px;
   line-height: 20px;
   color: #333333;
-  background: #333;
+  background: linear-gradient(to bottom, #dbdbdb 3%, #a5a5a5 99%);
 }
 
 h1 {
@@ -1601,6 +1603,7 @@ a:visited {
   background-color: #518fcc;
   background-image: linear-gradient(#518fcc 80%, #3576b5 100%);
   background-repeat: no-repeat;
+  border-bottom: 1px #cfe0f1 solid;
 }
 
 .menu-logo {
@@ -1608,6 +1611,7 @@ a:visited {
   top: 0;
   z-index: 100;
   width: 100px;
+  margin-left: 15px;
 }
 
 .logo-top {

@@ -51,7 +51,7 @@ html {
   height: 100%;
 }
 body {
-  background: #333;
+  background: linear-gradient(to bottom,  #dbdbdb 3%,#a5a5a5 99%); /* W3C */
   color: @std_color;
   font-family: @sans;
   font-size: @std_font_size;
@@ -198,6 +198,7 @@ a:visited {
   position: fixed;
   width: 100%;
   z-index: 101;
+
 }
 .home > .header-wrap {
   position: static;
@@ -207,12 +208,14 @@ a:visited {
   width: 100%;
   background-image: linear-gradient(@dialogblue 80%, darken(@dialogblue, 10%) 100%);
   background-repeat: no-repeat;
+  border-bottom: 1px lighten(@dialogblue, 32%) solid;
 }
 .menu-logo {
   position: absolute;
   width: 100px;
   top: 0;
   z-index: 100;
+  margin-left: 15px;
 }
 .logo-top {
   height:@menu_height;
