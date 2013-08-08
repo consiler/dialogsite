@@ -18,6 +18,9 @@ function dialog_scripts_styles() {
   // Loads Boilerplate plugins JS
   wp_enqueue_script('dialog-boilerplate-js', get_template_directory_uri() . '/js/plugins.js', array('jquery'), '0.1', true);
 
+  //Loads Stellar, a lib we use to do parallax effects
+  wp_enqueue_script('stellar-js', get_template_directory_uri() . '/js/bower_components/jquery.stellar/jquery.stellar.js', array('jquery'), '0.1', true);
+
   //Loads main JS
   wp_enqueue_script('dialog-main-js', get_template_directory_uri() . '/js/main.js', array('jquery'), '0.1', true);
 
