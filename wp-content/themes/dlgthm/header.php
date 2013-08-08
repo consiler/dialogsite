@@ -33,22 +33,24 @@ $defaults = array(
   'link_before'     => '',
   'link_after'      => '',
   'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-  'depth'           => 0,
+  'depth'           => 2,
   'walker'          => ''
 );
 ?>
   <body <?php body_class(); ?>>
-    <div id="body-wrap">
-      <div class="header-wrap">
-        <div class="menu-wrap">
-          <img class="menu-logo" src="<?php bloginfo('template_url'); ?>/images/dialog-logo-brown.png">
-          <?php
-          wp_nav_menu( $defaults );
-          ?>
-          <div class="clearfix"></div>
+    <div class="header-wrap">
+        <div class="header-inner">
+          <div class="menu-wrap">
+            <img class="menu-logo" src="<?php bloginfo('template_url'); ?>/images/dialog-logo-brown.png">
+            <?php
+            wp_nav_menu( $defaults );
+            ?>
+            <div class="clearfix"></div>
+          </div>
         </div>
-        <div class="sub-menu-wrap">
-          <div class="sub-menu">
+        <div class="second-menu-wrap">
+          <div class="second-menu">
           </div>
         </div>
       </div>
+    <div id="body-wrap">

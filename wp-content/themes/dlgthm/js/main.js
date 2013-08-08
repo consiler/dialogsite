@@ -1,8 +1,36 @@
 (function($) {
   $(document).ready(function(){
-    var new_menu = $('li.current_page_item > .children').clone().addClass('sub-menu-horizontal').appendTo('.sub-menu');
-    console.log($('.sub-menu').children());
+    $('li.current_page_item > .children').addClass('second-menu-horizontal').appendTo('.second-menu');
+    var colors = ['blue', 'red', 'orange', 'yellow', 'green'];
+    $(".menu > ul > li").each(function(i) {
+     $(this).addClass("menu-top-level-"+colors[(i % colors.length)]);
+    });
   });
+  // Cache selectors
+  var contentScrollspy = $(".content-scrollspy"),
+      scrollspyHeight = contentScrollspy.outerHeight();
+  var ssFromTop = contentScrollspy.offset().top;
+  var areWeStatic = true;
+  $(window).scroll(function(){
+    // Get container scroll position
+    var fromTop = $(this).scrollTop()+topMenuHeight;
+    if(fromTop > ssFromTop-80){
+      if(areWeStatic)
+      {
+        contentScrollspy.addClass('stuck');
+        contentScrollspy.css({'position' : 'fixed'});
+        areWeStatic = false;
+      }
+    } else {
+      if(!areWeStatic)
+      {
+          contentScrollspy.removeClass('stuck');
+          contentScrollspy.css({'position' : 'static'});
+          areWeStatic = true;
+      }
+    }
+  });
+
   /****************************************
    * ScrollSpy
    ****************************************/

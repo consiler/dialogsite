@@ -63,6 +63,7 @@ h1 {
   font-size: @std_h1_size;
   line-height: @std_h1_line_height;
   color: @grey;
+  margin: 15px 0;
 }
 
 h2 {
@@ -134,7 +135,6 @@ a:visited {
     .content-wrap {
       width: @layout_width;
       margin: 0 auto;
-      margin-top: 200px;
       overflow: hidden;
     }
     .content-scrollspy {
@@ -143,27 +143,51 @@ a:visited {
       height: 500px;
       background-color: #fff;
       border-right: 1px #efefef solid;
+      top: 0;
+      z-index: 98;
+    }
+    .content-scrollspy.stuck {
+      float: none;
+      top: 95px;
     }
     .content-body {
       float: right;
-      width: 760px;
+      width: 680px;
+      padding: 40px;
       background-color: #fff;
-      height: 1000px;
     }
 
 
 /******************************************************************************
  * Header
  *****************************************************************************/
-
 .header-wrap {
+  position: fixed;
+  width: 100%;
+  z-index: 101;
+}
+.header-inner {
   background-color: @dialogblue;
+  width: 100%;
+  background-image: linear-gradient(@dialogblue 80%, darken(@dialogblue, 10%) 100%);
+  background-repeat: no-repeat;
 }
 .menu-logo {
   position: absolute;
-  width: 140px;
-  top: 9px;
+  width: 90px;
+  top: 0;
   z-index: 100;
+}
+
+/******************************************************************************
+ * Banner
+ *****************************************************************************/
+#banner {
+  background-image: url(http://fc06.deviantart.net/fs71/f/2011/153/5/2/fractal_broccoli_by_streak-d3hx0dm.png);
+  width: @layout_width;
+  height: 340px;
+  padding-top: 300px;
+  margin: 0 auto;
 }
 
 /******************************************************************************

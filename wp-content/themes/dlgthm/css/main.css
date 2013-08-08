@@ -207,8 +207,6 @@ table {
 .menu-wrap {
   width: 960px;
   margin: 0 auto;
-  -webkit-box-shadow: 0 2px 8px 2px rgba(0, 0, 0, 0.7);
-          box-shadow: 0 2px 8px 2px rgba(0, 0, 0, 0.7);
 }
 
 .menu {
@@ -219,7 +217,6 @@ table {
   padding: 0;
   margin: 0;
   list-style: none;
-  background-color: #518fcc;
 }
 
 .menu > ul:after {
@@ -239,24 +236,55 @@ table {
 
 .menu > ul > li.current_page_item > a {
   padding-bottom: 0;
+  font-weight: bold;
   color: #6d6e71;
-  background-color: white;
-  border-bottom: #b42d38 5px solid;
+  text-shadow: 0px 1px 0px #fff;
+  background-color: #e6e7e8;
+}
+
+.menu > ul > li.current_page_item:hover > a {
+  padding-left: 25px;
+  border-left: none!important;
 }
 
 .menu > ul > li > a {
   display: block;
-  padding: 0 15px;
-  padding-top: 20px;
-  padding-bottom: 5px;
-  line-height: 40px;
+  padding: 0 25px;
+  padding-top: 10px;
+  font-size: 14px;
+  line-height: 55px;
   color: #fff;
-  background-color: #518fcc;
+  text-shadow: 1px 1px 0px #295c8e;
+  background-color: transparent;
 }
 
-.menu > ul > li > a:hover {
+.menu > ul > li:hover > a {
   padding-bottom: 0;
-  border-bottom: #b42d38 5px solid;
+  padding-left: 20px;
+  color: #6d6e71;
+  text-shadow: 0px 1px 0px #fff;
+  background-color: #e6e7e8;
+  border-left: 5px solid #6d6e71;
+}
+
+.menu > ul > li.menu-top-level-red:hover > a {
+  border-left: 5px solid #b42d38;
+}
+
+.menu > ul > li.menu-top-level-orange:hover > a {
+  border-left: 5px solid #e47f26;
+}
+
+.menu > ul > li.menu-top-level-yellow:hover > a {
+  border-left: 5px solid #f4c017;
+}
+
+.menu > ul > li.menu-top-level-green:hover > a {
+  border-left: 5px solid #becb31;
+}
+
+.menu > ul > li.menu-top-level-blue:hover > a {
+  border-left: 5px solid #007489;
 }
 
 .menu > ul > li:hover > .children {
@@ -274,6 +302,7 @@ table {
   margin: 0;
   list-style: none;
   border-left: #b42d38 5px solid;
+  box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.3);
 }
 
 .children > li {
@@ -284,71 +313,100 @@ table {
 .children > li > a {
   display: block;
   padding: 5px;
+  padding-left: 20px;
   margin: 0;
+  font-size: 14px;
   color: #6d6e71;
+  text-shadow: 0px 1px 0px #fff;
+  background-color: #e6e7e8;
+  border-bottom: 1px #d9dadc solid;
+  -webkit-transition: background 300ms ease-in;
+     -moz-transition: background 300ms ease-in;
+      -ms-transition: background 300ms ease-in;
+       -o-transition: background 300ms ease-in;
+          transition: background 300ms ease-in;
+}
+
+.children > li > a:hover {
   background-color: #fff;
 }
 
-/*.children > li > a:hover {
+.children > li > a:hover {
   background-color: #efefef;
 }
-.page-item-11 > .children {
-  border-left: @red 5px solid;
+
+.menu-top-level-red > ul {
+  border-left: 5px solid #b42d38;
 }
-.page-item-30 > .children {
-  border-left: @orange 5px solid;
+
+.menu-top-level-orange > ul {
+  border-left: 5px solid #e47f26;
 }
-.page-item-36 > .children {
-  border-left: @yellow 5px solid;
+
+.menu-top-level-yellow > ul {
+  border-left: 5px solid #f4c017;
 }
-.page-item-13 > .children {
-  border-left: @green 5px solid;
+
+.menu-top-level-green > ul {
+  border-left: 5px solid #becb31;
 }
-.page-item-34 > .children {
-  border-left: @blue 5px solid;
-}*/
+
+.menu-top-level-blue > ul {
+  border-left: 5px solid #007489;
+}
 
 /* Sub Menu */
 
-.sub-menu-wrap {
+.second-menu-wrap {
   position: relative;
   background-color: #bcbec0;
+  background-image: linear-gradient(#e6e7e8 25%, #bcbec0 75%);
+  background-repeat: no-repeat;
 }
 
-.sub-menu {
+.second-menu {
   position: relative;
-  left: -18px;
+  left: 97px;
   width: 960px;
-  height: 25px;
+  height: 30px;
   margin: 0 auto;
-  line-height: 25px;
+  line-height: 30px;
 }
 
-.sub-menu-horizontal {
+.second-menu-horizontal {
   position: static;
   z-index: 9;
   display: block;
   width: 100%;
-  margin-left: 20px;
   overflow: hidden;
   border-left: none;
+  box-shadow: none;
 }
 
-.sub-menu-horizontal > li {
-  float: right;
+.second-menu-horizontal > li {
+  float: left;
 }
 
-.sub-menu-horizontal > li > a {
+.second-menu-horizontal > li > a {
   display: block;
-  height: 25px;
+  height: 30px;
   padding: 0 15px;
   font-size: 12.8px;
-  line-height: 25px;
-  color: #fff;
+  font-weight: bold;
+  line-height: 30px;
+  color: #6d6e71;
+  text-shadow: 0px 1px 0px #fff;
   background-color: transparent;
+  border: none;
+  -webkit-transition: color 300ms ease-in;
+     -moz-transition: color 300ms ease-in;
+      -ms-transition: color 300ms ease-in;
+       -o-transition: color 300ms ease-in;
+          transition: color 300ms ease-in;
 }
 
-.sub-menu-horizontal > li > a:hover {
+.second-menu-horizontal > li > a:hover {
+  color: #572700;
   background-color: transparent;
 }
 
@@ -601,6 +659,7 @@ body {
 }
 
 h1 {
+  margin: 15px 0;
   font-size: 40px;
   line-height: 40px;
   color: #6d6e71;
@@ -682,11 +741,12 @@ a:visited {
 .content-wrap {
   width: 960px;
   margin: 0 auto;
-  margin-top: 200px;
   overflow: hidden;
 }
 
 .content-scrollspy {
+  top: 0;
+  z-index: 98;
   float: left;
   width: 199px;
   height: 500px;
@@ -694,10 +754,15 @@ a:visited {
   border-right: 1px #efefef solid;
 }
 
+.content-scrollspy.stuck {
+  top: 95px;
+  float: none;
+}
+
 .content-body {
   float: right;
-  width: 760px;
-  height: 1000px;
+  width: 680px;
+  padding: 40px;
   background-color: #fff;
 }
 
@@ -706,14 +771,35 @@ a:visited {
  *****************************************************************************/
 
 .header-wrap {
+  position: fixed;
+  z-index: 101;
+  width: 100%;
+}
+
+.header-inner {
+  width: 100%;
   background-color: #518fcc;
+  background-image: linear-gradient(#518fcc 80%, #3576b5 100%);
+  background-repeat: no-repeat;
 }
 
 .menu-logo {
   position: absolute;
-  top: 9px;
+  top: 0;
   z-index: 100;
-  width: 140px;
+  width: 90px;
+}
+
+/******************************************************************************
+ * Banner
+ *****************************************************************************/
+
+#banner {
+  width: 960px;
+  height: 340px;
+  padding-top: 300px;
+  margin: 0 auto;
+  background-image: url(http://fc06.deviantart.net/fs71/f/2011/153/5/2/fractal_broccoli_by_streak-d3hx0dm.png);
 }
 
 /******************************************************************************
@@ -739,8 +825,6 @@ a:visited {
 .menu-wrap {
   width: 960px;
   margin: 0 auto;
-  -webkit-box-shadow: 0 2px 8px 2px rgba(0, 0, 0, 0.7);
-          box-shadow: 0 2px 8px 2px rgba(0, 0, 0, 0.7);
 }
 
 .menu {
@@ -751,7 +835,6 @@ a:visited {
   padding: 0;
   margin: 0;
   list-style: none;
-  background-color: #518fcc;
 }
 
 .menu > ul:after {
@@ -771,24 +854,55 @@ a:visited {
 
 .menu > ul > li.current_page_item > a {
   padding-bottom: 0;
+  font-weight: bold;
   color: #6d6e71;
-  background-color: white;
-  border-bottom: #b42d38 5px solid;
+  text-shadow: 0px 1px 0px #fff;
+  background-color: #e6e7e8;
+}
+
+.menu > ul > li.current_page_item:hover > a {
+  padding-left: 25px;
+  border-left: none!important;
 }
 
 .menu > ul > li > a {
   display: block;
-  padding: 0 15px;
-  padding-top: 20px;
-  padding-bottom: 5px;
-  line-height: 40px;
+  padding: 0 25px;
+  padding-top: 10px;
+  font-size: 14px;
+  line-height: 55px;
   color: #fff;
-  background-color: #518fcc;
+  text-shadow: 1px 1px 0px #295c8e;
+  background-color: transparent;
 }
 
-.menu > ul > li > a:hover {
+.menu > ul > li:hover > a {
   padding-bottom: 0;
-  border-bottom: #b42d38 5px solid;
+  padding-left: 20px;
+  color: #6d6e71;
+  text-shadow: 0px 1px 0px #fff;
+  background-color: #e6e7e8;
+  border-left: 5px solid #6d6e71;
+}
+
+.menu > ul > li.menu-top-level-red:hover > a {
+  border-left: 5px solid #b42d38;
+}
+
+.menu > ul > li.menu-top-level-orange:hover > a {
+  border-left: 5px solid #e47f26;
+}
+
+.menu > ul > li.menu-top-level-yellow:hover > a {
+  border-left: 5px solid #f4c017;
+}
+
+.menu > ul > li.menu-top-level-green:hover > a {
+  border-left: 5px solid #becb31;
+}
+
+.menu > ul > li.menu-top-level-blue:hover > a {
+  border-left: 5px solid #007489;
 }
 
 .menu > ul > li:hover > .children {
@@ -806,6 +920,7 @@ a:visited {
   margin: 0;
   list-style: none;
   border-left: #b42d38 5px solid;
+  box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.3);
 }
 
 .children > li {
@@ -816,71 +931,100 @@ a:visited {
 .children > li > a {
   display: block;
   padding: 5px;
+  padding-left: 20px;
   margin: 0;
+  font-size: 14px;
   color: #6d6e71;
+  text-shadow: 0px 1px 0px #fff;
+  background-color: #e6e7e8;
+  border-bottom: 1px #d9dadc solid;
+  -webkit-transition: background 300ms ease-in;
+     -moz-transition: background 300ms ease-in;
+      -ms-transition: background 300ms ease-in;
+       -o-transition: background 300ms ease-in;
+          transition: background 300ms ease-in;
+}
+
+.children > li > a:hover {
   background-color: #fff;
 }
 
-/*.children > li > a:hover {
+.children > li > a:hover {
   background-color: #efefef;
 }
-.page-item-11 > .children {
-  border-left: @red 5px solid;
+
+.menu-top-level-red > ul {
+  border-left: 5px solid #b42d38;
 }
-.page-item-30 > .children {
-  border-left: @orange 5px solid;
+
+.menu-top-level-orange > ul {
+  border-left: 5px solid #e47f26;
 }
-.page-item-36 > .children {
-  border-left: @yellow 5px solid;
+
+.menu-top-level-yellow > ul {
+  border-left: 5px solid #f4c017;
 }
-.page-item-13 > .children {
-  border-left: @green 5px solid;
+
+.menu-top-level-green > ul {
+  border-left: 5px solid #becb31;
 }
-.page-item-34 > .children {
-  border-left: @blue 5px solid;
-}*/
+
+.menu-top-level-blue > ul {
+  border-left: 5px solid #007489;
+}
 
 /* Sub Menu */
 
-.sub-menu-wrap {
+.second-menu-wrap {
   position: relative;
   background-color: #bcbec0;
+  background-image: linear-gradient(#e6e7e8 25%, #bcbec0 75%);
+  background-repeat: no-repeat;
 }
 
-.sub-menu {
+.second-menu {
   position: relative;
-  left: -18px;
+  left: 97px;
   width: 960px;
-  height: 25px;
+  height: 30px;
   margin: 0 auto;
-  line-height: 25px;
+  line-height: 30px;
 }
 
-.sub-menu-horizontal {
+.second-menu-horizontal {
   position: static;
   z-index: 9;
   display: block;
   width: 100%;
-  margin-left: 20px;
   overflow: hidden;
   border-left: none;
+  box-shadow: none;
 }
 
-.sub-menu-horizontal > li {
-  float: right;
+.second-menu-horizontal > li {
+  float: left;
 }
 
-.sub-menu-horizontal > li > a {
+.second-menu-horizontal > li > a {
   display: block;
-  height: 25px;
+  height: 30px;
   padding: 0 15px;
   font-size: 12.8px;
-  line-height: 25px;
-  color: #fff;
+  font-weight: bold;
+  line-height: 30px;
+  color: #6d6e71;
+  text-shadow: 0px 1px 0px #fff;
   background-color: transparent;
+  border: none;
+  -webkit-transition: color 300ms ease-in;
+     -moz-transition: color 300ms ease-in;
+      -ms-transition: color 300ms ease-in;
+       -o-transition: color 300ms ease-in;
+          transition: color 300ms ease-in;
 }
 
-.sub-menu-horizontal > li > a:hover {
+.second-menu-horizontal > li > a:hover {
+  color: #572700;
   background-color: transparent;
 }
 
@@ -1156,6 +1300,7 @@ body {
 }
 
 h1 {
+  margin: 15px 0;
   font-size: 40px;
   line-height: 40px;
   color: #6d6e71;
@@ -1237,11 +1382,12 @@ a:visited {
 .content-wrap {
   width: 960px;
   margin: 0 auto;
-  margin-top: 200px;
   overflow: hidden;
 }
 
 .content-scrollspy {
+  top: 0;
+  z-index: 98;
   float: left;
   width: 199px;
   height: 500px;
@@ -1249,10 +1395,15 @@ a:visited {
   border-right: 1px #efefef solid;
 }
 
+.content-scrollspy.stuck {
+  top: 95px;
+  float: none;
+}
+
 .content-body {
   float: right;
-  width: 760px;
-  height: 1000px;
+  width: 680px;
+  padding: 40px;
   background-color: #fff;
 }
 
@@ -1261,14 +1412,35 @@ a:visited {
  *****************************************************************************/
 
 .header-wrap {
+  position: fixed;
+  z-index: 101;
+  width: 100%;
+}
+
+.header-inner {
+  width: 100%;
   background-color: #518fcc;
+  background-image: linear-gradient(#518fcc 80%, #3576b5 100%);
+  background-repeat: no-repeat;
 }
 
 .menu-logo {
   position: absolute;
-  top: 9px;
+  top: 0;
   z-index: 100;
-  width: 140px;
+  width: 90px;
+}
+
+/******************************************************************************
+ * Banner
+ *****************************************************************************/
+
+#banner {
+  width: 960px;
+  height: 340px;
+  padding-top: 300px;
+  margin: 0 auto;
+  background-image: url(http://fc06.deviantart.net/fs71/f/2011/153/5/2/fractal_broccoli_by_streak-d3hx0dm.png);
 }
 
 /******************************************************************************
