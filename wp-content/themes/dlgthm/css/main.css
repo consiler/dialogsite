@@ -688,7 +688,9 @@ body {
   font-size: 16px;
   line-height: 20px;
   color: #333333;
-  background: linear-gradient(to bottom, #dbdbdb 3%, #a5a5a5 99%);
+  background-color: #dbdbdb;
+  background-image: linear-gradient(#a5a5a5 0%, #dbdbdb 100%);
+  background-repeat: no-repeat;
 }
 
 h1 {
@@ -1439,7 +1441,9 @@ body {
   font-size: 16px;
   line-height: 20px;
   color: #333333;
-  background: linear-gradient(to bottom, #dbdbdb 3%, #a5a5a5 99%);
+  background-color: #dbdbdb;
+  background-image: linear-gradient(#a5a5a5 0%, #dbdbdb 100%);
+  background-repeat: no-repeat;
 }
 
 h1 {
