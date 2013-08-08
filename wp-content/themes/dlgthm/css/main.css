@@ -335,20 +335,16 @@ table {
   text-shadow: 0px 1px 0px #fff;
   background-color: #e6e7e8;
   border-bottom: 1px #d9dadc solid;
-  -webkit-transition: all 300ms ease-in;
-     -moz-transition: all 300ms ease-in;
-      -ms-transition: all 300ms ease-in;
-       -o-transition: all 300ms ease-in;
-          transition: all 300ms ease-in;
+  -webkit-transition: all 0.2s ease-in;
+     -moz-transition: all 0.2s ease-in;
+      -ms-transition: all 0.2s ease-in;
+       -o-transition: all 0.2s ease-in;
+          transition: all 0.2s ease-in;
 }
 
 .children > li > a:hover {
   color: #000;
   background-color: #fff;
-}
-
-.children > li > a:hover {
-  background-color: #efefef;
 }
 
 .menu-top-level-red > ul {
@@ -1064,20 +1060,16 @@ a:visited {
   text-shadow: 0px 1px 0px #fff;
   background-color: #e6e7e8;
   border-bottom: 1px #d9dadc solid;
-  -webkit-transition: all 300ms ease-in;
-     -moz-transition: all 300ms ease-in;
-      -ms-transition: all 300ms ease-in;
-       -o-transition: all 300ms ease-in;
-          transition: all 300ms ease-in;
+  -webkit-transition: all 0.2s ease-in;
+     -moz-transition: all 0.2s ease-in;
+      -ms-transition: all 0.2s ease-in;
+       -o-transition: all 0.2s ease-in;
+          transition: all 0.2s ease-in;
 }
 
 .children > li > a:hover {
   color: #000;
   background-color: #fff;
-}
-
-.children > li > a:hover {
-  background-color: #efefef;
 }
 
 .menu-top-level-red > ul {
