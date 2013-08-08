@@ -50,11 +50,38 @@
   });
   /****** SCROLLSPY STATIC/FIXED SWITCHING LOOP ****/
 
+  /****** PAGE HEADER S/F SWITCHING LOOP ****/
+  var contentHeader = $("#banner > h1");
+  var contentHeaderHeight = contentHeader.outerHeight();
+  var contentHeaderFromTop = contentHeader.offset().top+100;
+  var isWeStatic = false;
+  $(window).scroll(function(){
+    // Get container scroll position
+    var fromTop = $(this).scrollTop()+95;
+    console.log(fromTop);
+    if(fromTop < contentHeaderFromTop){
+      if(isWeStatic)
+      {
+        contentHeader.addClass('stuck');
+        contentHeader.css({'position' : 'fixed'});
+        isWeStatic = false;
+      }
+    } else {
+      if(!isWeStatic)
+      {
+          contentHeader.removeClass('stuck');
+          contentHeader.css({'position' : 'static'});
+          isWeStatic = true;
+      }
+    }
+  });
+
+  /****** PAGE HEADER S/F SWITCHING LOOP ****/
+
   /****************************************
    * ScrollSpy
    ****************************************/
 
-  // Cache selectors
   // Cache selectors
 var lastId,
     topMenu = $(".header-wrap"),

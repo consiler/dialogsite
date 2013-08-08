@@ -1,5 +1,6 @@
 <div id="banner" data-stellar-background-ratio="0.5">
   <h1>Team</h1>
+  <div id="banner-white-fade"></div>
 </div>
 <?php
   $args = array('post_type' => 'leadership_people', 'orderby' => 'time', 'order' => 'ASC');
