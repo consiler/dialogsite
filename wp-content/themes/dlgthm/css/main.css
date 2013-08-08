@@ -395,7 +395,7 @@ table {
 
 .second-menu {
   position: relative;
-  left: 97px;
+  left: 155px;
   width: 960px;
   height: 29px;
   margin: 0 auto;
@@ -858,6 +858,7 @@ a:visited {
   top: 0;
   z-index: 100;
   width: 100px;
+  margin-left: 15px;
 }
 
 .logo-top {
@@ -1109,7 +1110,7 @@ a:visited {
 
 .second-menu {
   position: relative;
-  left: 97px;
+  left: 155px;
   width: 960px;
   height: 29px;
   margin: 0 auto;
@@ -1595,6 +1596,7 @@ a:visited {
   top: 0;
   z-index: 100;
   width: 100px;
+  margin-left: 15px;
 }
 
 .logo-top {
