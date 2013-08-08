@@ -1,13 +1,20 @@
-<?php for($i = 0; $i < 10; $i++) {
-  ?>
-<div class="spyOnMe" id="div<?php echo $i; ?>">
-<h1>Example Text <?php echo $i; ?></h1>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin consectetur erat in suscipit mattis. Nunc gravida nisl nec tincidunt laoreet. Vivamus vel magna mi. Proin lectus urna, iaculis et neque nec, tristique semper nunc. Vivamus leo massa, condimentum vitae ligula consectetur, blandit bibendum orci. Quisque vel ante lobortis, convallis nisi at, elementum ligula. Cras accumsan, nibh vitae sodales bibendum, enim felis malesuada elit, ultricies lobortis turpis metus nec leo. Vivamus mollis quam mollis neque feugiat pretium. Phasellus quis nunc odio. Cras varius sollicitudin ligula elementum laoreet. Suspendisse potenti. Suspendisse dignissim aliquam urna sed sagittis. Fusce tellus purus, varius at felis sit amet, facilisis aliquet massa. Nulla auctor nunc eu nunc luctus, ut porttitor risus blandit.</p>
-<p>Vivamus non sem enim. Morbi pellentesque fermentum bibendum. Nullam augue est, sodales ac est a, convallis consectetur nibh. Vivamus quis enim in lorem convallis mollis quis in sapien. Quisque congue dui tellus, at bibendum erat mollis in. Donec aliquam libero et mi commodo consectetur. Cras a urna a sapien varius semper. Mauris accumsan metus a urna dignissim malesuada. Morbi sit amet libero at dolor ultrices placerat. Suspendisse non mauris lectus. Suspendisse potenti. Integer convallis mollis neque eu porttitor. Phasellus velit eros, venenatis eu interdum sed, ornare ac leo.</p>
-<p>In id metus ac magna consectetur volutpat. Curabitur ipsum mi, venenatis vitae placerat vitae, congue eu sem. Nam at leo auctor, blandit libero ac, volutpat sapien. Donec tempor ipsum ut elit eleifend, in vestibulum magna gravida. Morbi in mi nisi. Nunc iaculis lorem sed augue imperdiet euismod. Nullam sit amet nisi fringilla, pulvinar eros nec, laoreet felis. Ut hendrerit sodales odio, non porta nisi tempus sit amet. Mauris ac leo eu eros aliquet laoreet.</p>
-<p>Donec suscipit malesuada ligula sit amet condimentum. Sed massa tellus, pretium id viverra ac, egestas at dui. Vestibulum dignissim sem et congue pretium. In interdum, diam quis viverra dignissim, sem mauris interdum tortor, ac mattis nisi leo quis quam. Aenean nec hendrerit diam. Sed in rhoncus turpis, ac cursus metus. Suspendisse ac vulputate eros. Nullam non metus risus. Nulla convallis a mauris dictum varius. Proin ut nunc eget lacus congue semper at sed tellus. Duis orci sem, ornare vitae neque sit amet, pulvinar pharetra est. Vivamus lacinia, tellus et commodo fermentum, neque tortor tempus nibh, eget convallis arcu enim in turpis. Nunc et dictum ante.</p>
-<p>Mauris tincidunt id nisl id porta. Phasellus sollicitudin purus nec ullamcorper lacinia. Aenean ac dolor risus. Etiam ut sagittis magna. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nunc a gravida ligula. Praesent eget tortor sit amet nisi placerat malesuada. Morbi id accumsan risus, ut ornare leo.</p>
-</div>
 <?php
-}
+// The Query
+$i = 0;
+$args = array('post_type' => 'leadership_people');
+$query = new WP_Query( $args );
 ?>
+<div class="spyOnMe" id="div<?php echo $i; ?>">
+<?php
+// The Loop
+if ( $query->have_posts() ) {
+  while ( $query->have_posts() ) {
+    $i++;
+  }
+} else {
+  echo "No posts found.";
+}
+/* Restore original Post Data */
+wp_reset_postdata();
+?>
+</div>

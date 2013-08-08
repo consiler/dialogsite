@@ -1,21 +1,29 @@
 (function($) {
   /******DOC READY ****/
   $(document).ready(function(){
+
     //this takes the dropdown menu associated with the current section and moves it to the silver menu
     var men = $('li.current_page_item > .children');
-    console.log(men.length);
+
     if(men.length != 0)
     {
         men.addClass('second-menu-horizontal').appendTo('.second-menu');
     } else {
       //uncomment this to hide the second menu bar when there is no dropdown menu on the current page nav element
       //$('.second-menu-wrap').css({'display' : 'none'});
+      var men2 = $('li.current_page_parent > .children');
+      if(men2.length != 0)
+      {
+        men2.addClass('second-menu-horizontal').appendTo('.second-menu');
+      }
     }
+
     //this loop assigns classes to nav menu elements so they can be styled with different colors sustainably
     var colors = ['blue', 'red', 'orange', 'yellow', 'green', 'beige', 'beigee', 'beigeee'];
     $(".menu > ul > li").each(function(i) {
      $(this).addClass("menu-top-level-"+colors[(i % colors.length)]);
     });
+
     //this adds parallax scrolling library
     $.stellar();
   });

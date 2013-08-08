@@ -177,7 +177,7 @@ function dialog_create_post_types()
   global $post_types;
   foreach($post_types as $post_type)
   {
-    register_post_type($post_type['labels']['name'], $post_type);
+    register_post_type(str_replace(" ", "_", strtolower($post_type['labels']['name'])), $post_type);
   }
 }
 //bind our function to the init hook
