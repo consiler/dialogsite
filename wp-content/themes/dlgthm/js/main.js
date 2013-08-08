@@ -68,7 +68,7 @@ menuItems.click(function(e){
   e.preventDefault();
 });
 
-/*// Bind to scroll
+// Bind to scroll
 $(window).scroll(function(){
    // Get container scroll position
    var fromTop = $(this).scrollTop()+topMenuHeight;
@@ -89,7 +89,7 @@ $(window).scroll(function(){
          .parent().removeClass("active")
          .end().filter("[href=#"+id+"]").parent().addClass("active");
    }                   
-});*/
+});
 
     /**
    * 

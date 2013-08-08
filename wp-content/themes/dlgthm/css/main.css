@@ -772,9 +772,14 @@ a:visited {
   border-bottom: 1px solid #efefef;
 }
 
+.content-scrollspy li.active > a {
+  color: #becb31;
+}
+
 .content-scrollspy a {
   display: block;
-  line-height: 40px;
+  line-height: 50px;
+  color: #6d6e71;
   text-align: center;
   background-color: transparent;
 }
@@ -1437,9 +1442,14 @@ a:visited {
   border-bottom: 1px solid #efefef;
 }
 
+.content-scrollspy li.active > a {
+  color: #becb31;
+}
+
 .content-scrollspy a {
   display: block;
-  line-height: 40px;
+  line-height: 50px;
+  color: #6d6e71;
   text-align: center;
   background-color: transparent;
 }
