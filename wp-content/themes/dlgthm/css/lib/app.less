@@ -140,7 +140,6 @@ a:visited {
     .content-scrollspy {
       float: left;
       width: 199px;
-      height: 500px;
       background-color: #fff;
       border-right: 1px #efefef solid;
       top: 0;
@@ -149,6 +148,26 @@ a:visited {
     .content-scrollspy.stuck {
       float: none;
       top: 95px;
+    }
+    .content-scrollspy {
+      ul {
+        margin: 0;
+        padding: 0;
+      }
+      li {
+        border-bottom: 1px solid #efefef;
+        margin: 0;
+        padding: 0;
+      }
+      a {
+        line-height: 40px;
+        text-align: center;
+        display: block;
+        background-color: transparent;
+      }
+      a:hover {
+        background-color: #efefef;
+      }
     }
     .content-body {
       float: right;

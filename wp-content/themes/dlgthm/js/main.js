@@ -1,11 +1,18 @@
 (function($) {
+  /******DOC READY ****/
   $(document).ready(function(){
+    //this line takes the dropdown menu associated with the current section and moves it to the silver menu
     $('li.current_page_item > .children').addClass('second-menu-horizontal').appendTo('.second-menu');
+    //this loop assigns classes to nav menu elements so they can be styled with different colors sustainably
     var colors = ['blue', 'red', 'orange', 'yellow', 'green'];
     $(".menu > ul > li").each(function(i) {
      $(this).addClass("menu-top-level-"+colors[(i % colors.length)]);
     });
+    //this adds parallax scrolling library
+    $.stellar();
   });
+  /******DOC READY ****/
+  /****** SCROLLSPY STATIC/FIXED SWITCHING LOOP ****/
   // Cache selectors
   var contentScrollspy = $(".content-scrollspy"),
       scrollspyHeight = contentScrollspy.outerHeight();
@@ -13,8 +20,8 @@
   var areWeStatic = true;
   $(window).scroll(function(){
     // Get container scroll position
-    var fromTop = $(this).scrollTop()+topMenuHeight;
-    if(fromTop > ssFromTop-80){
+    var fromTop = $(this).scrollTop()+95;
+    if(fromTop > ssFromTop){
       if(areWeStatic)
       {
         contentScrollspy.addClass('stuck');
@@ -29,58 +36,60 @@
           areWeStatic = true;
       }
     }
-    $.stellar();
   });
+  /****** SCROLLSPY STATIC/FIXED SWITCHING LOOP ****/
 
   /****************************************
    * ScrollSpy
    ****************************************/
 
   // Cache selectors
-  var lastId,
-      topMenu = $("#top-menu"),
-      topMenuHeight = topMenu.outerHeight()+15,
-      // All list items
-      menuItems = topMenu.find("a"),
-      // Anchors corresponding to menu items
-      scrollItems = menuItems.map(function(){
-        var item = $($(this).attr("href"));
-        if (item.length) { return item; }
-      });
+  // Cache selectors
+var lastId,
+    topMenu = $(".header-wrap"),
+    spyMenu = $("#spyMenu"),
+    topMenuHeight = topMenu.outerHeight(),
+    // All list items
+    menuItems = spyMenu.find("a"),
+    // Anchors corresponding to menu items
+    scrollItems = menuItems.map(function(){
+      var item = $($(this).attr("href"));
+      if (item.length) { return item; }
+    });
 
-  // Bind click handler to menu items
-  // so we can get a fancy scroll animation
-  menuItems.click(function(e){
-    var href = $(this).attr("href"),
-        offsetTop = href === "#" ? 0 : $(href).offset().top-topMenuHeight+1;
-    $('html, body').stop().animate({ 
-        scrollTop: offsetTop
-    }, 300);
-    e.preventDefault();
-  });
+// Bind click handler to menu items
+// so we can get a fancy scroll animation
+menuItems.click(function(e){
+  var href = $(this).attr("href"),
+      offsetTop = href === "#" ? 0 : $(href).offset().top-topMenuHeight+1;
+  $('html, body').stop().animate({ 
+      scrollTop: offsetTop
+  }, 300);
+  e.preventDefault();
+});
 
-  // Bind to scroll
-  $(window).scroll(function(){
-     // Get container scroll position
-     var fromTop = $(this).scrollTop()+topMenuHeight;
-     
-     // Get id of current scroll item
-     var cur = scrollItems.map(function(){
-       if ($(this).offset().top < fromTop)
-         return this;
-     });
-     // Get the id of the current element
-     cur = cur[cur.length-1];
-     var id = cur && cur.length ? cur[0].id : "";
-     
-     if (lastId !== id) {
-         lastId = id;
-         // Set/remove active class
-         menuItems
-           .parent().removeClass("active")
-           .end().filter("[href=#"+id+"]").parent().addClass("active");
-     }                   
-  });
+/*// Bind to scroll
+$(window).scroll(function(){
+   // Get container scroll position
+   var fromTop = $(this).scrollTop()+topMenuHeight;
+   
+   // Get id of current scroll item
+   var cur = scrollItems.map(function(){
+     if ($(this).offset().top < fromTop)
+       return this;
+   });
+   // Get the id of the current element
+   cur = cur[cur.length-1];
+   var id = cur && cur.length ? cur[0].id : "";
+   
+   if (lastId !== id) {
+       lastId = id;
+       // Set/remove active class
+       menuItems
+         .parent().removeClass("active")
+         .end().filter("[href=#"+id+"]").parent().addClass("active");
+   }                   
+});*/
 
     /**
    * 

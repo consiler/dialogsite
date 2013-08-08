@@ -1,6 +1,6 @@
 <?php for($i = 0; $i < 10; $i++) {
   ?>
-<div id="div<?php echo $i; ?>">
+<div class="spyOnMe" id="div<?php echo $i; ?>">
 <h1>Example Text <?php echo $i; ?></h1>
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin consectetur erat in suscipit mattis. Nunc gravida nisl nec tincidunt laoreet. Vivamus vel magna mi. Proin lectus urna, iaculis et neque nec, tristique semper nunc. Vivamus leo massa, condimentum vitae ligula consectetur, blandit bibendum orci. Quisque vel ante lobortis, convallis nisi at, elementum ligula. Cras accumsan, nibh vitae sodales bibendum, enim felis malesuada elit, ultricies lobortis turpis metus nec leo. Vivamus mollis quam mollis neque feugiat pretium. Phasellus quis nunc odio. Cras varius sollicitudin ligula elementum laoreet. Suspendisse potenti. Suspendisse dignissim aliquam urna sed sagittis. Fusce tellus purus, varius at felis sit amet, facilisis aliquet massa. Nulla auctor nunc eu nunc luctus, ut porttitor risus blandit.</p>
 <p>Vivamus non sem enim. Morbi pellentesque fermentum bibendum. Nullam augue est, sodales ac est a, convallis consectetur nibh. Vivamus quis enim in lorem convallis mollis quis in sapien. Quisque congue dui tellus, at bibendum erat mollis in. Donec aliquam libero et mi commodo consectetur. Cras a urna a sapien varius semper. Mauris accumsan metus a urna dignissim malesuada. Morbi sit amet libero at dolor ultrices placerat. Suspendisse non mauris lectus. Suspendisse potenti. Integer convallis mollis neque eu porttitor. Phasellus velit eros, venenatis eu interdum sed, ornare ac leo.</p>
