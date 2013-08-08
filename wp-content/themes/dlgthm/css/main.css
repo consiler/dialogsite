@@ -335,11 +335,11 @@ table {
   text-shadow: 0px 1px 0px #fff;
   background-color: #e6e7e8;
   border-bottom: 1px #d9dadc solid;
-  -webkit-transition: all 0.2s ease-in;
-     -moz-transition: all 0.2s ease-in;
-      -ms-transition: all 0.2s ease-in;
-       -o-transition: all 0.2s ease-in;
-          transition: all 0.2s ease-in;
+  -webkit-transition: all 0.1s ease-in;
+     -moz-transition: all 0.1s ease-in;
+      -ms-transition: all 0.1s ease-in;
+       -o-transition: all 0.1s ease-in;
+          transition: all 0.1s ease-in;
 }
 
 .children > li > a:hover {
@@ -423,20 +423,20 @@ table {
   text-shadow: 0px 1px 0px #efefef;
   background-color: transparent;
   border: none;
-  -webkit-transition: color 300ms ease-in;
-     -moz-transition: color 300ms ease-in;
-      -ms-transition: color 300ms ease-in;
-       -o-transition: color 300ms ease-in;
-          transition: color 300ms ease-in;
+  -webkit-transition: color 0.1s ease-in;
+     -moz-transition: color 0.1s ease-in;
+      -ms-transition: color 0.1s ease-in;
+       -o-transition: color 0.1s ease-in;
+          transition: color 0.1s ease-in;
 }
 
 .second-menu-horizontal > li > a:hover {
-  color: #572700;
+  color: #a02832;
   background-color: transparent;
 }
 
 .second-menu-horizontal > li.current_page_item > a {
-  color: #572700;
+  color: #a02832;
 }
 
 /******************************************************************************
@@ -1060,11 +1060,11 @@ a:visited {
   text-shadow: 0px 1px 0px #fff;
   background-color: #e6e7e8;
   border-bottom: 1px #d9dadc solid;
-  -webkit-transition: all 0.2s ease-in;
-     -moz-transition: all 0.2s ease-in;
-      -ms-transition: all 0.2s ease-in;
-       -o-transition: all 0.2s ease-in;
-          transition: all 0.2s ease-in;
+  -webkit-transition: all 0.1s ease-in;
+     -moz-transition: all 0.1s ease-in;
+      -ms-transition: all 0.1s ease-in;
+       -o-transition: all 0.1s ease-in;
+          transition: all 0.1s ease-in;
 }
 
 .children > li > a:hover {
@@ -1148,20 +1148,20 @@ a:visited {
   text-shadow: 0px 1px 0px #efefef;
   background-color: transparent;
   border: none;
-  -webkit-transition: color 300ms ease-in;
-     -moz-transition: color 300ms ease-in;
-      -ms-transition: color 300ms ease-in;
-       -o-transition: color 300ms ease-in;
-          transition: color 300ms ease-in;
+  -webkit-transition: color 0.1s ease-in;
+     -moz-transition: color 0.1s ease-in;
+      -ms-transition: color 0.1s ease-in;
+       -o-transition: color 0.1s ease-in;
+          transition: color 0.1s ease-in;
 }
 
 .second-menu-horizontal > li > a:hover {
-  color: #572700;
+  color: #a02832;
   background-color: transparent;
 }
 
 .second-menu-horizontal > li.current_page_item > a {
-  color: #572700;
+  color: #a02832;
 }
 
 /******************************************************************************
