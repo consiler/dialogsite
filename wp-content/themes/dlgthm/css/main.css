@@ -841,12 +841,19 @@ a:visited {
 }
 
 .header-inner {
+  position: relative;
   z-index: 100;
   width: 100%;
-  background-color: #518fcc;
+  background: #518fcc;
+  background: -moz-linear-gradient(top, #518fcc 40%, #457aaf 98%, #70a1cc 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(40%, #518fcc), color-stop(98%, #457aaf), color-stop(100%, #70a1cc));
+  background: -webkit-linear-gradient(top, #518fcc 40%, #457aaf 98%, #70a1cc 100%);
+  background: -o-linear-gradient(top, #518fcc 40%, #457aaf 98%, #70a1cc 100%);
+  background: -ms-linear-gradient(top, #518fcc 40%, #457aaf 98%, #70a1cc 100%);
+  background: linear-gradient(to bottom, #518fcc 40%, #457aaf 98%, #70a1cc 100%);
   background-repeat: no-repeat;
-  -webkit-box-shadow: 0 3px 6px 5px rgba(0, 0, 0, 0.3);
-          box-shadow: 0 3px 6px 5px rgba(0, 0, 0, 0.3);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#518fcc', endColorstr='#70a1cc', GradientType=0);
+  box-shadow: 0 1px 8px 1px #6D6B6B;
 }
 
 .menu-logo {
@@ -1591,12 +1598,19 @@ a:visited {
 }
 
 .header-inner {
+  position: relative;
   z-index: 100;
   width: 100%;
-  background-color: #518fcc;
+  background: #518fcc;
+  background: -moz-linear-gradient(top, #518fcc 40%, #457aaf 98%, #70a1cc 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(40%, #518fcc), color-stop(98%, #457aaf), color-stop(100%, #70a1cc));
+  background: -webkit-linear-gradient(top, #518fcc 40%, #457aaf 98%, #70a1cc 100%);
+  background: -o-linear-gradient(top, #518fcc 40%, #457aaf 98%, #70a1cc 100%);
+  background: -ms-linear-gradient(top, #518fcc 40%, #457aaf 98%, #70a1cc 100%);
+  background: linear-gradient(to bottom, #518fcc 40%, #457aaf 98%, #70a1cc 100%);
   background-repeat: no-repeat;
-  -webkit-box-shadow: 0 3px 6px 5px rgba(0, 0, 0, 0.3);
-          box-shadow: 0 3px 6px 5px rgba(0, 0, 0, 0.3);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#518fcc', endColorstr='#70a1cc', GradientType=0);
+  box-shadow: 0 1px 8px 1px #6D6B6B;
 }
 
 .menu-logo {
