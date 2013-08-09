@@ -383,16 +383,17 @@ table {
 
 .second-menu-wrap {
   position: relative;
-  background: #858789;
-  background: -moz-linear-gradient(top, #858789 49%, #5d5e60 99%, #8e8f93 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(49%, #858789), color-stop(99%, #5d5e60), color-stop(100%, #8e8f93));
-  background: -webkit-linear-gradient(top, #858789 49%, #5d5e60 99%, #8e8f93 100%);
-  background: -o-linear-gradient(top, #858789 49%, #5d5e60 99%, #8e8f93 100%);
-  background: -ms-linear-gradient(top, #858789 49%, #5d5e60 99%, #8e8f93 100%);
-  background: linear-gradient(to bottom, #858789 49%, #5d5e60 99%, #8e8f93 100%);
+  background: #e6e7e8;
+  background: -moz-linear-gradient(top, #e6e7e8 0%, #bcbec0 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #e6e7e8), color-stop(100%, #bcbec0));
+  background: -webkit-linear-gradient(top, #e6e7e8 0%, #bcbec0 100%);
+  background: -o-linear-gradient(top, #e6e7e8 0%, #bcbec0 100%);
+  background: -ms-linear-gradient(top, #e6e7e8 0%, #bcbec0 100%);
+  background: linear-gradient(to bottom, #e6e7e8 0%, #bcbec0 100%);
   background-color: #bcbec0;
   background-repeat: no-repeat;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#858789', endColorstr='#8e8f93', GradientType=0);
+  border-bottom: 1px #bcbec0 solid;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e6e7e8', endColorstr='#bcbec0', GradientType=0);
 }
 
 .second-menu {
@@ -1114,16 +1115,17 @@ a:visited {
 
 .second-menu-wrap {
   position: relative;
-  background: #858789;
-  background: -moz-linear-gradient(top, #858789 49%, #5d5e60 99%, #8e8f93 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(49%, #858789), color-stop(99%, #5d5e60), color-stop(100%, #8e8f93));
-  background: -webkit-linear-gradient(top, #858789 49%, #5d5e60 99%, #8e8f93 100%);
-  background: -o-linear-gradient(top, #858789 49%, #5d5e60 99%, #8e8f93 100%);
-  background: -ms-linear-gradient(top, #858789 49%, #5d5e60 99%, #8e8f93 100%);
-  background: linear-gradient(to bottom, #858789 49%, #5d5e60 99%, #8e8f93 100%);
+  background: #e6e7e8;
+  background: -moz-linear-gradient(top, #e6e7e8 0%, #bcbec0 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #e6e7e8), color-stop(100%, #bcbec0));
+  background: -webkit-linear-gradient(top, #e6e7e8 0%, #bcbec0 100%);
+  background: -o-linear-gradient(top, #e6e7e8 0%, #bcbec0 100%);
+  background: -ms-linear-gradient(top, #e6e7e8 0%, #bcbec0 100%);
+  background: linear-gradient(to bottom, #e6e7e8 0%, #bcbec0 100%);
   background-color: #bcbec0;
   background-repeat: no-repeat;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#858789', endColorstr='#8e8f93', GradientType=0);
+  border-bottom: 1px #bcbec0 solid;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e6e7e8', endColorstr='#bcbec0', GradientType=0);
 }
 
 .second-menu {
