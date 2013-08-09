@@ -21,6 +21,8 @@
 
     //this adds parallax scrolling library
     $.stellar();
+
+    $('li.current_page_item').append('<div id="shadow-cover"></div>');
   });
   /******DOC READY ****/
   /****** SCROLLSPY STATIC/FIXED SWITCHING LOOP ****/
