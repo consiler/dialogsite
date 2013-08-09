@@ -36,10 +36,10 @@ class Global_Wrapping {
     if ( 'index' == self::$base )
       self::$base = false;
 
-    $templates = array( 'wrapper.php' );
+    $templates = array( 'docs/wrapper/wrapper.php' );
 
     if ( self::$base )
-      array_unshift( $templates, sprintf( 'wrapper-%s.php', self::$base ) );
+      array_unshift( $templates, sprintf( 'docs/wrapper/wrapper-%s.php', self::$base ) );
 
     return locate_template( $templates );
   }
