@@ -200,15 +200,17 @@ a:visited {
   position: fixed;
   width: 100%;
   z-index: 101;
-
 }
 .home > .header-wrap {
   position: static;
 }
 .header-inner {
   background-color: @dialogblue;
+  -webkit-box-shadow:  0px 3px 6px 5px rgba(0, 0, 0, .3);
+  box-shadow:  0px 3px 6px 5px rgba(0, 0, 0, .3);
   width: 100%;
   background-repeat: no-repeat;
+  z-index:100;
 }
 .menu-logo {
   position: absolute;
@@ -281,4 +283,7 @@ a:visited {
   box-shadow:         @style @c;
   -webkit-box-shadow: @style @c;
   -moz-box-shadow:    @style @c;
+}
+#dontexist {
+  /*.box-shadow(0 0 5px);*/
 }

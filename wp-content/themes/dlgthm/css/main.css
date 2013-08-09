@@ -382,17 +382,7 @@ table {
 /* Sub Menu */
 
 .second-menu-wrap {
-  position: relative;
-  background: #e6e7e8;
-  background: -moz-linear-gradient(top, #e6e7e8 0%, #bcbec0 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #e6e7e8), color-stop(100%, #bcbec0));
-  background: -webkit-linear-gradient(top, #e6e7e8 0%, #bcbec0 100%);
-  background: -o-linear-gradient(top, #e6e7e8 0%, #bcbec0 100%);
-  background: -ms-linear-gradient(top, #e6e7e8 0%, #bcbec0 100%);
-  background: linear-gradient(to bottom, #e6e7e8 0%, #bcbec0 100%);
-  background-color: #bcbec0;
-  background-repeat: no-repeat;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e6e7e8', endColorstr='#bcbec0', GradientType=0);
+  background: #727272 url('../images/background-pattern.jpg') repeat-x top;
 }
 
 .second-menu {
@@ -406,7 +396,6 @@ table {
 
 .second-menu-horizontal {
   position: static;
-  z-index: 9;
   display: block;
   width: 100%;
   overflow: hidden;
@@ -852,9 +841,12 @@ a:visited {
 }
 
 .header-inner {
+  z-index: 100;
   width: 100%;
   background-color: #518fcc;
   background-repeat: no-repeat;
+  -webkit-box-shadow: 0 3px 6px 5px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 3px 6px 5px rgba(0, 0, 0, 0.3);
 }
 
 .menu-logo {
@@ -924,6 +916,11 @@ a:visited {
   line-height: 400px;
   color: #572700;
   text-align: center;
+}
+
+#dontexist {
+  /*.box-shadow(0 0 5px);*/
+
 }
 
 /******************************************************************************
@@ -1112,17 +1109,7 @@ a:visited {
 /* Sub Menu */
 
 .second-menu-wrap {
-  position: relative;
-  background: #e6e7e8;
-  background: -moz-linear-gradient(top, #e6e7e8 0%, #bcbec0 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #e6e7e8), color-stop(100%, #bcbec0));
-  background: -webkit-linear-gradient(top, #e6e7e8 0%, #bcbec0 100%);
-  background: -o-linear-gradient(top, #e6e7e8 0%, #bcbec0 100%);
-  background: -ms-linear-gradient(top, #e6e7e8 0%, #bcbec0 100%);
-  background: linear-gradient(to bottom, #e6e7e8 0%, #bcbec0 100%);
-  background-color: #bcbec0;
-  background-repeat: no-repeat;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e6e7e8', endColorstr='#bcbec0', GradientType=0);
+  background: #727272 url('../images/background-pattern.jpg') repeat-x top;
 }
 
 .second-menu {
@@ -1136,7 +1123,6 @@ a:visited {
 
 .second-menu-horizontal {
   position: static;
-  z-index: 9;
   display: block;
   width: 100%;
   overflow: hidden;
@@ -1605,9 +1591,12 @@ a:visited {
 }
 
 .header-inner {
+  z-index: 100;
   width: 100%;
   background-color: #518fcc;
   background-repeat: no-repeat;
+  -webkit-box-shadow: 0 3px 6px 5px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 3px 6px 5px rgba(0, 0, 0, 0.3);
 }
 
 .menu-logo {
@@ -1677,4 +1666,9 @@ a:visited {
   line-height: 400px;
   color: #572700;
   text-align: center;
+}
+
+#dontexist {
+  /*.box-shadow(0 0 5px);*/
+
 }
