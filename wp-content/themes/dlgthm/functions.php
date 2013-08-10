@@ -36,8 +36,7 @@ $libfiles = array(
   'body-class',
   'content-width',
   'wrapper',
-  'cpt-content-admin-menu',
-  'walker'
+  'cpt-content-admin-menu'
   );
 $libdir = "lib/";
 //Must be loaded in order.
