@@ -171,4 +171,5 @@
 
 /*
 Go to 2013 theme, look at how they do their footer
-Do a similar footer
+Do a similar footer 
+*/
