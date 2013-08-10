@@ -61,7 +61,18 @@ body {
   height: 100%;
   min-width: @layout_width;
 }
-
+body.sepia {
+  -webkit-filter: sepia(100%);
+}
+body.black-and-white {
+  -webkit-filter: grayscale(100%);
+}
+body.inverted {
+  -webkit-filter: invert(100%);
+}
+body.contrast {
+  -webkit-filter: contrast(200%);
+}
 h1 {
   font-size: @std_h1_size;
   line-height: @std_h1_line_height;

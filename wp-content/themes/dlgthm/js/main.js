@@ -59,7 +59,7 @@
     // Spybar container positioning set up (stick to top menu on scroll down)
     var spyBarHeight = spyBar.outerHeight(),
         // pixels from top of page to bounding box excluding margin/padding
-        spyBarYPosition = contentScrollspy.offset.top,
+        spyBarYPosition = spyBar.offset.top,
         // state variable to track whether the spy bar is static (moves with page) or fixed (does not move with page)
         isTheSpyBarStaticRightNow = true,
     // Spybar page section tracking set up
@@ -129,6 +129,42 @@
           scrollTop: offsetTop
       }, 300);
       e.preventDefault();
+    });
+
+    //Add filter Easter Eggs.
+    // 'body_class' : 'key sequence'
+    //@requires 'key sequence'.length < 30
+    var easter_eggs = {'sepia': 'toyourpoint',
+                      'black-and-white': 'goingforward',
+                      'inverted': 'reachingout',
+                      'contrast': 'crushingit'};
+    var key_history = "";
+    var key_memory = 0;
+    for(var egg_key in easter_eggs)
+    {
+      if(easter_eggs[egg_key].length > key_memory)
+      {
+        key_memory = easter_eggs[egg_key].length;
+      }
+    }
+    $('body').bind('keypress', function(e) {
+      var code = (e.keyCode ? e.keyCode : e.which);
+      var letter = String.fromCharCode(code);
+      key_history += letter;
+      while(key_history.length > key_memory){
+        key_history = key_history.substr(1);
+      }
+      for(var egg_key in easter_eggs)
+      {
+        if(key_history.indexOf(easter_eggs[egg_key]) != -1)
+        {
+          for(var egg_key_2 in easter_eggs)
+          {
+            $('body').removeClass(egg_key_2);
+          }
+          $('body').addClass(egg_key);
+        }
+      }
     });
   });
 })(jQuery);
