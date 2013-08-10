@@ -42,7 +42,7 @@ $defaults = array(
         <div class="header-inner">
           <div class="menu-wrap">
             <div class="menu-logo">
-              <a href="<?php bloginfo('template_url'); ?>"></a>
+              <a href=""/></a>
               <div class="logo-top"></div>
               <img class="logo-bottom" src="<?php bloginfo('template_url'); ?>/images/dialog-logo.png">
             </div>
