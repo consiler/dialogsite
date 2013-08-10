@@ -1,31 +1,5 @@
 <?php
-/*
- *-------------------------------------------------------
- *
- *                    Custom Post Types
- *
- *-------------------------------------------------------
-*/
-
-//generate an array of options for a CPT based on a "most used" profile template
-//(only allows names)
-//(requires unique name)
-function dialog_new_default_CPT($name, $singlular_name)
-{
-  $default_post_type = array(
-    'labels' => array(
-      'name' => $name,
-      'singular_name' => $singular_name
-    ),
-    'public' => true,
-    'has_archive' => true,
-    'show_ui' => true,
-    'show_in_menu' => 'content-manager'
-  );
-  return $default_post_type;
-}
-
-//The names and singular names of every CPT we want to use in the theme, in order
+//keeping until nav menu overhaul
 $CPT_name_list = array(
   //About Us
     //Team
@@ -159,35 +133,10 @@ $CPT_singular_name_list = array(
       //Our Story
   );
 
-//Actual specification of CPTs
-$post_types = array();
-
-//Test to make sure we have a valid list of name, singular_name pairs.
-if(!assert(count($CPT_name_list) == count($CPT_singular_name_list))) die('Corrupt CPT definitions. Check line 681 of functions.php.');
-
-//create a complete array containing all of our CPT options
-for($i = 0; $i < count($CPT_name_list); $i++)
-{
-  $post_types[] = dialog_new_default_CPT($CPT_name_list[$i], $CPT_singular_name_list[$i]);
-}
-
-//actually define a function to create the CPTs
-function dialog_create_post_types()
-{
-  global $post_types;
-  foreach($post_types as $post_type)
-  {
-    register_post_type(str_replace(" ", "_", strtolower($post_type['labels']['name'])), $post_type);
-  }
-}
-//bind our function to the init hook
-add_action('init', 'dialog_create_post_types');
-
-
 /*
  *-------------------------------------------------------
  *
- *              Top Level Content Admin Menu
+ *         Top Level Content Admin Menu for CPTs
  *
  *-------------------------------------------------------
 */

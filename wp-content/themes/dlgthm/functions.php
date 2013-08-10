@@ -36,7 +36,7 @@ $libfiles = array(
   'body-class',
   'content-width',
   'wrapper',
-  'cpt',
+  'cpt-content-admin-menu',
   'walker'
   );
 $libdir = "lib/";

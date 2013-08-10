@@ -1,214 +1,134 @@
+/*              ,i1i:        ,tLfi.       .;ii;.                                  
+ *            ittttttt1.   1GGGGGGGG,   ,tttttttt:                                
+ *           ;ttttttttt1  iGGGGGGGGGG. .tttttttttt,                               
+ *           itttttttttt  1GGGGGGGGGG, ,tttttttttt:                               
+ *            1tttttttt,   LGGGGGGGGi   ;tttttttt;                                
+ *             .;1tti,      .tCGGLi       :1tt1:                                  
+ *                                                                                
+ *                                                                                
+ *                                                                                
+ * ,111111i:.     ;;              ;;                                :,            
+ * ,t.      ;t,   ..              ;i                                ;,            
+ * ,t.       ,t.  ;;    ;1ttt;    ;i    .it1ti.     .it1t;.1,            .:::.    
+ * ,t.        1:  i;  .t,    :1   ;i   1i     ;1   ii     it,       t: ,t,   :t.  
+ * ,t.        1:  i;     .,,:1t   ;i  :1       1: ,t.     .t,       t: ,ti.       
+ * ,t.       ,t.  i;  ,t:.   ,t   ;i  :1       1: .t.     .t,       t:    ,:it1,  
+ * ,t.      ;t,   i;  ;i     1t   ;i   1;     ;1   ;1.   .1t,       t: 1;     ;t  
+ * ,11111ii:      ;;   :1t11: ;1. ;;    .it1ti,      ,;i;..t,  :t   t:  iti;;1i.  
+ *                                                 ii     ;1        t:            
+ *                                                  ,i1tti,       it;              
+ */
+//Note: The jQuery that comes with Wordpress does not make use of the convenient $ shorthand variable.
+//But we can still use $ with a scriptwide anonymous function.
 (function($) {
-  /******DOC READY ****/
+  //Globals
+  var navMenuWrap = $('.header-inner');
+  var spyBar = $('#spyMenu');
   $(document).ready(function(){
-    //this takes the dropdown menu associated with the current section and moves it to the silver menu
-    var men = $('li.current_page_item > .children');
-    if(men.length != 0)
+    //Top Navigation Menu
+    //Populate the grey sub menu
+    // This takes the dropdown menu associated with the current section and moves it to the silver menu
+    var currentPageCategoryDropDownMenu = $('li.current_page_item > .children');
+    // "Is current page a category page with a dropdown menu containing child pages?"
+    if(currentPageCategoryDropDownMenu.length != 0)
     {
-        men.addClass('second-menu-horizontal').appendTo('.second-menu');
+      // If we found a dropdown menu, we add a class that changes the dropdown menu's look
+      //to a padded horizontal list of links, and add it to the silver bar
+      //directly under the main navigation bar.
+      currentPageCategoryDropDownMenu.addClass('second-menu-horizontal').appendTo('.second-menu');
     } else {
-      var men2 = $('li.current_page_parent > .children');
-      if(men2.length != 0)
+      // If we cannot find a drop down menu, our current section must not have any child pages.
+      // Is the current page a child page? Look for a parent.
+      var parentPageCategoryDropDownMenu = $('li.current_page_parent > .children');
+      if(parentPageCategoryDropDownMenu.length != 0)
       {
-        men2.addClass('second-menu-horizontal').appendTo('.second-menu');
+        // If there is a parent, we just move that parent's list (siblings of the current page) to the
+        //silver sub-navigation bar. Otherwise, we do nothing.
+        parentPageCategoryDropDownMenu.addClass('second-menu-horizontal').appendTo('.second-menu');
       }
     }
-    //this loop assigns classes to nav menu elements so they can be styled with different colors sustainably
-    var colors = ['blue', 'red', 'orange', 'yellow', 'green', 'beige', 'beigee', 'beigeee'];
+    // Assign a theme color to all the main pages
+    var themeColors = ['blue', 'red', 'orange', 'yellow', 'green', 'beige', 'beigee', 'beigeee'];
+    // Iterate over the top level navigation menu links, adding their color class.
     $(".menu > ul > li").each(function(i) {
-     $(this).addClass("menu-top-level-"+colors[(i % colors.length)]);
+     $(this).addClass("menu-top-level-"+themeColors[(i % themeColors.length)]);
     });
-
-    //this adds parallax scrolling library
+    // Initialize parallax scrolling
     $.stellar();
+    // SpyBar
+    // Spybar container positioning set up (stick to top menu on scroll down)
+    var spyBarHeight = spyBar.outerHeight(),
+        // pixels from top of page to bounding box excluding margin/padding
+        spyBarYPosition = contentScrollspy.offset.top,
+        // state variable to track whether the spy bar is static (moves with page) or fixed (does not move with page)
+        isTheSpyBarStaticRightNow = true,
+    // Spybar page section tracking set up
+        // id of spybar link highlighted on the last frame
+        lastId,
+        // top fixed nav height
+        topMenuHeight = navMenuWrap.outerHeight(),
+        // Spy Bar list links
+        menuItems = spyBar.find("a"),
+        // Anchors corresponding to menu items
+        scrollItems = menuItems.map(function(){
+          var item = $($(this).attr("href"));
+          if (item.length) { return item; }
+        });
 
-    $('li.current_page_item').append('<div id="shadow-cover"></div>');
-  });
-  /******DOC READY ****/
-  /****** SCROLLSPY STATIC/FIXED SWITCHING LOOP ****/
-  // Cache selectors
-  var contentScrollspy = $(".content-scrollspy"),
-      scrollspyHeight = contentScrollspy.outerHeight();
-  var ssFromTop = contentScrollspy.offset().top;
-  var areWeStatic = true;
-  $(window).scroll(function(){
-    // Get container scroll position
-    var fromTop = $(this).scrollTop()+95;
-    if(fromTop > ssFromTop){
-      if(areWeStatic)
-      {
-        contentScrollspy.addClass('stuck');
-        contentScrollspy.css({'position' : 'fixed'});
-        areWeStatic = false;
+    //Scroll tracking loop
+    $(window).scroll(function(){
+      // Find out how much the user has scrolled down the page
+      var scrolledOffset = $(this).scrollTop() + topMenuHeight;
+      // If the bottom of the fixed nav menu hits the top of the spy bar...
+      if(scrolledOffset > spyBarYPosition){
+        // no need to make it fixed if it already is
+        if(isTheSpyBarStaticRightNow)
+        {
+          spyBar.addClass('stuck');
+          spyBar.css({'position' : 'fixed'});
+          isTheSpyBarStaticRightNow = false;
+        }
+      } else {
+        // otherwise we have not scrolled the nav menu far down enough to touch the static spybar
+        // check if we need to change the spybar
+        if(!isTheSpyBarStaticRightNow)
+        {
+          spyBar.removeClass('stuck');
+          spyBar.css({'position' : 'static'});
+          isTheSpyBarStaticRightNow = true;
+        }
       }
-    } else {
-      if(!areWeStatic)
+      // Get container scroll position
+      var fromTop = $(this).scrollTop()+topMenuHeight;
+     
+      // Get id of current scroll item
+      var cur = scrollItems.map(function(){
+      if ($(this).offset().top < fromTop)
+        return this;
+      });
+
+      // Get the id of the current element
+      cur = cur[cur.length-1];
+      var id = cur && cur.length ? cur[0].id : "";
+      if (lastId !== id)
       {
-          contentScrollspy.removeClass('stuck');
-          contentScrollspy.css({'position' : 'static'});
-          areWeStatic = true;
-      }
-    }
-  });
-  /****** SCROLLSPY STATIC/FIXED SWITCHING LOOP ****/
+        lastId = id;
+        // Set/remove active class
+        menuItems
+          .parent().removeClass("active")
+          .end().filter("[href=#"+id+"]").parent().addClass("active");
+       }                   
+      });
 
-  /****** PAGE HEADER S/F SWITCHING LOOP ****/
-  var contentHeader = $("#banner > h1");
-  var contentHeaderHeight = contentHeader.outerHeight();
-  var contentHeaderFromTop = contentHeader.offset().top+100;
-  var isWeStatic = false;
-  $(window).scroll(function(){
-    // Get container scroll position
-    var fromTop = $(this).scrollTop()+95;
-    console.log(fromTop);
-    if(fromTop < contentHeaderFromTop){
-      if(isWeStatic)
-      {
-        contentHeader.addClass('stuck');
-        contentHeader.css({'position' : 'fixed'});
-        isWeStatic = false;
-      }
-    } else {
-      if(!isWeStatic)
-      {
-          contentHeader.removeClass('stuck');
-          contentHeader.css({'position' : 'static'});
-          isWeStatic = true;
-      }
-    }
-  });
-
-  /****** PAGE HEADER S/F SWITCHING LOOP ****/
-
-  /****************************************
-   * ScrollSpy
-   ****************************************/
-
-  // Cache selectors
-var lastId,
-    topMenu = $(".header-wrap"),
-    spyMenu = $("#spyMenu"),
-    topMenuHeight = topMenu.outerHeight(),
-    // All list items
-    menuItems = spyMenu.find("a"),
-    // Anchors corresponding to menu items
-    scrollItems = menuItems.map(function(){
-      var item = $($(this).attr("href"));
-      if (item.length) { return item; }
+    // Bind click handler to menu items
+    // so we can get a fancy scroll animation to the desired section on click
+    menuItems.click(function(e){
+      var href = $(this).attr("href");
+      var offsetTop = href === "#" ? 0 : $(href).offset().top-topMenuHeight+1-15;
+      $('html, body').stop().animate({ 
+          scrollTop: offsetTop
+      }, 300);
+      e.preventDefault();
     });
-
-// Bind click handler to menu items
-// so we can get a fancy scroll animation
-menuItems.click(function(e){
-  var href = $(this).attr("href");
-  var offsetTop = href === "#" ? 0 : $(href).offset().top-topMenuHeight+1-15;
-  $('html, body').stop().animate({ 
-      scrollTop: offsetTop
-  }, 300);
-  e.preventDefault();
-});
-
-// Bind to scroll
-$(window).scroll(function(){
-   // Get container scroll position
-   var fromTop = $(this).scrollTop()+topMenuHeight;
-   
-   // Get id of current scroll item
-   var cur = scrollItems.map(function(){
-     if ($(this).offset().top < fromTop)
-       return this;
-   });
-   // Get the id of the current element
-   cur = cur[cur.length-1];
-   var id = cur && cur.length ? cur[0].id : "";
-   
-   if (lastId !== id) {
-       lastId = id;
-       // Set/remove active class
-       menuItems
-         .parent().removeClass("active")
-         .end().filter("[href=#"+id+"]").parent().addClass("active");
-   }                   
-});
-
-    /**
-   * 
-   * Wordpress Default Theme Code
-   * 
-   */
-
-  var body    = $( 'body' ),
-      _window = $( window );
-
-  /**
-   * Adds a top margin to the footer if the sidebar widget area is higher
-   * than the rest of the page, to help the footer always visually clear
-   * the sidebar.
-   */
-  $( function() {
-    if ( body.is( '.sidebar' ) ) {
-      var sidebar   = $( '#secondary .widget-area' ),
-          secondary = ( 0 == sidebar.length ) ? -40 : sidebar.height(),
-          margin    = $( '#tertiary .widget-area' ).height() - $( '#content' ).height() - secondary;
-
-      if ( margin > 0 && _window.innerWidth() > 999 )
-        $( '#colophon' ).css( 'margin-top', margin + 'px' );
-    }
-  } );
-
-  /**
-   * Enables menu toggle for small screens.
-   */
-  ( function() {
-    var nav = $( '#site-navigation' ), button, menu;
-    if ( ! nav )
-      return;
-
-    button = nav.find( '.menu-toggle' );
-    if ( ! button )
-      return;
-
-    // Hide button if menu is missing or empty.
-    menu = nav.find( '.nav-menu' );
-    if ( ! menu || ! menu.children().length ) {
-      button.hide();
-      return;
-    }
-
-    $( '.menu-toggle' ).on( 'click.twentythirteen', function() {
-      nav.toggleClass( 'toggled-on' );
-    } );
-  } )();
-
-  /**
-   * Makes "skip to content" link work correctly in IE9 and Chrome for better
-   * accessibility.
-   *
-   * @link http://www.nczonline.net/blog/2013/01/15/fixing-skip-to-content-links/
-   */
-  _window.on( 'hashchange.twentythirteen', function() {
-    var element = document.getElementById( location.hash.substring( 1 ) );
-
-    if ( element ) {
-      if ( ! /^(?:a|select|input|button|textarea)$/i.test( element.tagName ) )
-        element.tabIndex = -1;
-
-      element.focus();
-    }
-  } );
-
-  /**
-   * Arranges footer widgets vertically.
-   */
-  if ( $.isFunction( $.fn.masonry ) ) {
-    var columnWidth = body.is( '.sidebar' ) ? 228 : 245;
-
-    $( '#secondary .widget-area' ).masonry( {
-      itemSelector: '.widget',
-      columnWidth: columnWidth,
-      gutterWidth: 20,
-      isRTL: body.is( '.rtl' )
-    } );
-  }
-
+  });
 })(jQuery);

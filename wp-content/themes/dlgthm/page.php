@@ -1,5 +1,5 @@
 <?php
-  $args = array('post_type' => 'leadership_people', 'orderby' => 'time', 'order' => 'ASC');
+  $args = array('post_type' => 'movies', 'orderby' => 'time', 'order' => 'ASC');
   $cpts = get_posts($args);
   $cpt_store = array();
   foreach($cpts as $post)
