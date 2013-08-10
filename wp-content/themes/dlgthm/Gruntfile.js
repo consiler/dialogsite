@@ -1,5 +1,4 @@
 module.exports = function(grunt) {
-
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
     recess: {
@@ -14,6 +13,9 @@ module.exports = function(grunt) {
         }
       }
     },
+    jshint: {
+      all: ['Gruntfile.js', 'js/main.js']
+    },
     watch: {
       less: {
         files: [
@@ -21,12 +23,13 @@ module.exports = function(grunt) {
         ],
         tasks: ['recess']
       },
-    },
+    }
   });
 
   grunt.loadTasks('tasks');
   grunt.loadNpmTasks('grunt-recess');
   grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.registerTask('default', ['recess']);
+  grunt.loadNpmTasks('grunt-contrib-jshint');
+  grunt.registerTask('default', ['recess', 'jshint']);
   grunt.registerTask('dev', ['watch']);
 };

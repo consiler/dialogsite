@@ -54,6 +54,8 @@ $defaults = array(
         <div class="second-menu-wrap">
           <div class="second-menu">
           </div>
+          <div class="second-menu-search">
+          </div>
         </div>
       </div>
     <div id="body-wrap">
