@@ -39,7 +39,6 @@ function dialog_scripts_styles() {
 
 
   if ( is_active_sidebar( 'sidebar-1' ) )
-    echo 'active';
     wp_enqueue_script( 'jquery-masonry' );
 
 
