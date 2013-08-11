@@ -68,9 +68,11 @@
 	/**
 	 * Arranges footer widgets vertically.
 	 */
+	 echo 'lolllll';
+	 echo $.isFunction( $.fn.masonry );
 	if ( $.isFunction( $.fn.masonry ) ) {
 		var columnWidth = body.is( '.sidebar' ) ? 228 : 245;
-
+		echo 'columnWidth';
 		$( '#secondary .widget-area' ).masonry( {
 			itemSelector: '.widget',
 			columnWidth: columnWidth,

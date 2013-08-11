@@ -11,7 +11,7 @@
 
 if ( is_active_sidebar( 'sidebar-1' ) ) : ?>
 	<div id="secondary" class="sidebar-container" role="complementary">
-		<div class="widget-area">
+		<div class="widget-area" class='js-masonry' data-masonry-options='{ "columnWidth": 200, "itemSelector": ".widget" }'>
 			<?php dynamic_sidebar( 'sidebar-1' ); ?>
 		</div><!-- .widget-area -->
 	</div><!-- #secondary -->
