@@ -36,6 +36,16 @@ function dialog_scripts_styles() {
   // Loads the Internet Explorer specific stylesheet.
   //wp_enqueue_style( 'twentythirteen-ie', get_template_directory_uri() . '/css/ie.css', array( 'twentythirteen-style' ), '0.1' );
   //wp_style_add_data( 'twentythirteen-ie', 'conditional', 'lt IE 9' );
+
+
+
+
+
+  if ( is_active_sidebar( 'sidebar-1' ) )
+    echo 'active';
+    wp_enqueue_script( 'jquery-masonry' );
+
+
 }
 add_action( 'wp_enqueue_scripts', 'dialog_scripts_styles' );
 ?>
