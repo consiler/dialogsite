@@ -131,6 +131,22 @@
       e.preventDefault();
     });
 
+
+      /**
+       * Arranges footer widgets vertically.
+       */
+      
+      if ( $.isFunction( $.fn.masonry ) ) {
+        var columnWidth = body.is( '.sidebar' ) ? 228 : 245;
+        echo 'columnWidth';
+        $( '#secondary .widget-area' ).masonry( {
+          itemSelector: '.widget',
+          columnWidth: columnWidth,
+          gutterWidth: 20,
+          isRTL: body.is( '.rtl' )
+        } );
+      }
+
     //Add filter Easter Eggs.
     // 'body_class' : 'key sequence'
     //@requires 'key sequence'.length < 30
@@ -167,6 +183,8 @@
       }
     });
   });
+
+
 })(jQuery);
 
 /*

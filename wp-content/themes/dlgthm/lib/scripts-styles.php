@@ -38,9 +38,6 @@ function dialog_scripts_styles() {
   //wp_style_add_data( 'twentythirteen-ie', 'conditional', 'lt IE 9' );
 
 
-
-
-
   if ( is_active_sidebar( 'sidebar-1' ) )
     echo 'active';
     wp_enqueue_script( 'jquery-masonry' );
