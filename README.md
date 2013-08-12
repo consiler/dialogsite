@@ -1,3 +1,18 @@
+This theme was designed for Wordpress 3.6.
+======
+Exercise caution when updating any of your software.
+The theme was built with the following plugins...
+(Bold items were modified by us and should not be updated ever)
+* __Advanced Custom Fields 4.2.1__
+* Akismet 2.5.9
+* Codepress Admin Columns 2.0.1
+* CP Google Maps 1..1
+* __Custom Post Type UI 0.8__
+* Duplicate Post 2.4.1
+* TinyMCE Advanced 3.5.8
+* Wordpress SEO 1.2.13
+* WP Fake Image Replacer 1.5.1
+
 todo: faculty discussion
 Contact Form Plugin
 Alt Layout for Contact Page
@@ -113,18 +128,10 @@ When you come into the site:
         Way to hide content
     consilient design thinking deck - use this deck's content - practicing balance/flow completre philosophy for navigating change in life
 
-------
-Back to reality
-------
-Need to establish a taxonomy for taxonomies
-all content section names = features of CPT
+How to manage Custom Post Types and their templates
+====
 
-Supports Options
-  Editor text
-  Excerpt excerpt
-  Featured Image img
-  Title title
-
-Down to 2^4 different taxonomy types... 16
-Can in theory represent this as a binary string of length 11
-so that would be 0 to 2^(11)-1
+Pages all need to have a custom field where they can specify what CPT to use for the page.
+CPTs use the Content Template Taxonomy. Each CPT instance must be assigned exactly one taxonomy term under "Content Templates" that specifies the path to the CPT instance's assigned PHP template.
+We use a Taxonomy to assign templates in this way to avoid coupling the type of Custom Posts with their custom fields/templates.
+Instead, the custom fields and the template file can be derived purely from their assigned taxonomy term.
