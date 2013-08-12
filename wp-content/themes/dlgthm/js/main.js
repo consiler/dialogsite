@@ -28,7 +28,7 @@
     //Top Navigation Menu
     //Populate the grey sub menu
     // This takes the dropdown menu associated with the current section and moves it to the silver menu
-    var currentPageCategoryDropDownMenu = $('li.current_page_item > .children');
+    var currentPageCategoryDropDownMenu = $('.menu > ul > li.current_page_item > .children');
     // "Is current page a category page with a dropdown menu containing child pages?"
     if(currentPageCategoryDropDownMenu.length !== 0)
     {
@@ -40,7 +40,7 @@
     } else {
       // If we cannot find a drop down menu, our current section must not have any child pages.
       // Is the current page a child page? Look for a parent.
-      var parentPageCategoryDropDownMenu = $('li.current_page_parent > .children');
+      var parentPageCategoryDropDownMenu = $('.menu > ul > li.current_page_parent > .children');
       if(parentPageCategoryDropDownMenu.length !== 0)
       {
         // If there is a parent, we just move that parent's list (siblings of the current page) to the
