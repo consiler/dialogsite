@@ -31,9 +31,9 @@ $defaults = array(
   'before'          => '',
   'after'           => '',
   'link_before'     => '',
-  'link_after'      => '',
+  'link_after'      => ''
   'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-  'depth'           => 1,
+  'depth'           => 0,
   'walker'          => ''
 );
 ?>
