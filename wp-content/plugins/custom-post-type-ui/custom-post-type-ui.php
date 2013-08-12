@@ -51,7 +51,7 @@ function cpt_plugin_menu() {
 	//create submenu items
 	add_submenu_page( 'cpt_main_menu', __( 'Add New', 'cpt-plugin' ), __( 'Add New', 'cpt-plugin' ), 'manage_options', 'cpt_sub_add_new', 'cpt_add_new' );
 	add_submenu_page( 'cpt_main_menu', __( 'Manage Post Types', 'cpt-plugin' ), __( 'Manage Post Types', 'cpt-plugin' ), 'manage_options', 'cpt_sub_manage_cpt', 'cpt_manage_cpt' );
-	add_submenu_page( 'cpt_main_menu', __( 'Manage Taxonomies', 'cpt-plugin' ), __( 'Manage Taxonomies', 'cpt-plugin' ), 'manage_options', 'cpt_sub_manage_taxonomies', 'cpt_manage_taxonomies' );
+	//add_submenu_page( 'cpt_main_menu', __( 'Manage Taxonomies', 'cpt-plugin' ), __( 'Manage Taxonomies', 'cpt-plugin' ), 'manage_options', 'cpt_sub_manage_taxonomies', 'cpt_manage_taxonomies' );
 }
 
 //temp fix, should do: http://planetozh.com/blog/2008/04/how-to-load-javascript-with-your-wordpress-plugin/
@@ -1404,14 +1404,14 @@ function cpt_add_new() {
 							<?php } ?>
 							<?php
 							$args=array(
-							  'public'   => true
+							  'show_ui'   => true
 							);
 							$output = 'objects'; // or objects
 							$post_types=get_post_types($args,$output);
 							foreach ($post_types  as $post_type ) {
 								if ( $post_type->name != 'attachment' ) {
 								?>
-								<input type="checkbox" name="cpt_post_types[]" tabindex="20" value="<?php echo $post_type->name; ?>" <?php if (isset($cpt_post_types) && is_array($cpt_post_types)) { if (in_array($post_type->name, $cpt_post_types)) { echo 'checked="checked"'; } } ?> />&nbsp;<?php echo $post_type->label; ?><br />
+								<input type="checkbox" name="cpt_post_types[]" tabindex="20" value="<?php echo $post_type->name; ?>" <?php if (isset($cpt_post_types) && is_array($cpt_post_types)) { if (in_array($post_type->name, $cpt_post_types)) { echo 'checked="checked"'; } } $postspages = array('post', 'page'); if(!in_array($post_type->name, $postspages)) { echo 'checked="checked"'; } ?> />&nbsp;<?php echo $post_type->label; ?><br />
 								<?php
 								}
 							}
@@ -1543,9 +1543,9 @@ function cpt_add_new() {
 							<th scope="row"><?php _e('Rewrite', 'cpt-plugin') ?> <a href="#" title="<?php esc_attr_e( 'Triggers the handling of rewrites for this taxonomy', 'cpt-plugin' ); ?>" class="help">?</a></th>
 							<td>
 								<select name="cpt_custom_tax[rewrite]" tabindex="28">
-									<option value="0" <?php if (isset($cpt_tax_rewrite)) { if ($cpt_tax_rewrite == 0 && $cpt_tax_rewrite != '') { echo 'selected="selected"'; } } ?>><?php _e( 'False', 'cpt-plugin' ); ?></option>
-									<option value="1" <?php if (isset($cpt_tax_rewrite)) { if ($cpt_tax_rewrite == 1 || is_null($cpt_tax_rewrite)) { echo 'selected="selected"'; } } else { echo 'selected="selected"'; } ?>><?php _e( 'True', 'cpt-plugin' ); ?></option>
-								</select> <?php _e( '(default: True)', 'cpt-plugin' ); ?>
+									<option value="0" <?php if (isset($cpt_tax_rewrite)) { if ($cpt_tax_rewrite == 0 && $cpt_tax_rewrite != '') { echo 'selected="selected"'; } } else { echo 'selected="selected"'; } ?>><?php _e( 'False', 'cpt-plugin' ); ?></option>
+									<option value="1" <?php if (isset($cpt_tax_rewrite)) { if ($cpt_tax_rewrite == 1 || is_null($cpt_tax_rewrite)) { echo 'selected="selected"'; } } ?>><?php _e( 'True', 'cpt-plugin' ); ?></option>
+								</select> <?php _e( '(default: False)', 'cpt-plugin' ); ?>
 							</td>
 							</tr>
 
