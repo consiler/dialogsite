@@ -6,7 +6,7 @@ The theme was built with the following plugins...
 * __Advanced Custom Fields 4.2.1__
 * Akismet 2.5.9
 * Codepress Admin Columns 2.0.1
-* CP Google Maps 1..1
+* CP Google Maps 1.0.1
 * __Custom Post Type UI 0.8__
 * Duplicate Post 2.4.1
 * Ninja Forms 2.2.38

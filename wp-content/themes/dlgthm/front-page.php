@@ -13,3 +13,7 @@ foreach($cpt_posts as $post)
 }
 wp_reset_postdata();
 ?>
+<div id="form-example">
+  <?php
+the_content();?>
+</div>
