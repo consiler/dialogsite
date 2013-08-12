@@ -35,6 +35,7 @@
       // If we found a dropdown menu, we add a class that changes the dropdown menu's look
       //to a padded horizontal list of links, and add it to the silver bar
       //directly under the main navigation bar.
+      console.log(currentPageCategoryDropDownMenu.length);
       currentPageCategoryDropDownMenu.addClass('second-menu-horizontal').appendTo('.second-menu');
     } else {
       // If we cannot find a drop down menu, our current section must not have any child pages.
@@ -130,20 +131,6 @@
       }, 300);
       e.preventDefault();
     });
-
-      /**
-       * Arranges footer widgets vertically.
-       */
-      
-      if ( $.isFunction( $.fn.masonry ) ) {
-        var columnWidth = body.is( '.sidebar' ) ? 228 : 245;
-        $( '#secondary .widget-area' ).masonry( {
-          itemSelector: '.widget',
-          columnWidth: columnWidth,
-          gutterWidth: 20,
-          isRTL: body.is( '.rtl' )
-        } );
-      }
 
     //Add filter Easter Eggs.
     // 'body_class' : 'key sequence'

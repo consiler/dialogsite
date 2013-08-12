@@ -1,14 +1,26 @@
-    
-   <footer id="colophon" class="site-footer" role="contentinfo">
-       <?php get_sidebar( 'footer' ); ?>
-    </footer><!-- #colophon -->
-
-
     <div class="footer-wrap">
       <div class="footer-inner">
         <div class="footer-menu-wrap">
           <?php
-          wp_nav_menu( $defaults );
+          $footer_defaults = array(
+            'theme_location'  => 'Navigation Menu',
+            'menu'            => '.footer-menu',
+            'container'       => 'div',
+            'container_class' => '',
+            'container_id'    => '',
+            'menu_class'      => 'footer-menu',
+            'menu_id'         => '',
+            'echo'            => true,
+            'fallback_cb'     => 'wp_page_menu',
+            'before'          => '',
+            'after'           => '',
+            'link_before'     => '',
+            'link_after'      => '',
+            'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+            'depth'           => 2,
+            'walker'          => ''
+          );
+          wp_nav_menu( $footer_defaults );
           ?>
         </div>
       </div>
