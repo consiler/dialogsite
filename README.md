@@ -1,4 +1,4 @@
-This theme was designed for Wordpress 3.6.
+This theme was designed for Wordpress 3.6
 ======
 Exercise caution when updating any of your software.
 The theme was built with the following plugins...
@@ -9,6 +9,7 @@ The theme was built with the following plugins...
 * CP Google Maps 1..1
 * __Custom Post Type UI 0.8__
 * Duplicate Post 2.4.1
+* Ninja Forms 2.2.38
 * TinyMCE Advanced 3.5.8
 * Wordpress SEO 1.2.13
 * WP Fake Image Replacer 1.5.1
