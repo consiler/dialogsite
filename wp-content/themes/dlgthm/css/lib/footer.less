@@ -7,34 +7,47 @@
 .footer-wrap {
   background-color: #333;
   height: 100%;
+  padding-top: 15px;
 }
 .footer-inner {
   width: @layout_width;
   margin: 0 auto;
+  display: block;
 }
 .footer-menu-wrap ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-.footer-menu-wrap .menu-primary-navigation-container .menu li {
-  margin: 10px;
+.footer-menu-wrap .menu-primary-navigation-container .menu > li {
+  margin-left: 50px;
+  height: 250px;
   padding: 0;
   float: left;
+  position: relative;
+}
+
+.footer-menu-wrap .menu-primary-navigation-container {
+  display: block;
 }
 
 .footer-menu-wrap .sub-menu{
+  margin: 0px;
   position: absolute;
+  width: 200px;
   display: block;
   font-size: 8px;
 }
 
-.footer-menu-wrap .sub-menu li{
+.footer-menu-wrap .sub-menu > li{
+  margin: 0px;
+}
+/*.footer-menu-wrap .sub-menu li{
   position: absolute;
   display: block;
   float: none;
 }
-
+*/
 
 /******************************************************************************
  * WP Footer
