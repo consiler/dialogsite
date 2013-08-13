@@ -81,7 +81,7 @@ add_action( 'init', 'content_templates_taxonomy_init' );
 add_filter('acf/location/rule_types', 'acf_location_rules_types');
 function acf_location_rules_types( $choices )
 {
-    $choices['Basic']['tax'] = 'Taxonomy Term';
+    $choices['Basic']['tax'] = 'Content Template Taxonomy Term';
     return $choices;
 }
 add_filter('acf/location/rule_values/tax', 'acf_location_rules_values_tax');
@@ -114,4 +114,16 @@ function acf_location_rules_match_tax( $match, $rule, $options )
       $match = ( count($post_terms) == 1 && $post_terms[0]->term_id != $selected_term_id );
     }
     return $match;
+}
+
+// Rendering a CPT template
+function render_cpt_template($template_id)
+{
+  if(count($template_id) < 1)
+  {
+    die('Invalid or malformed template name.');
+  } else {
+    $t = get_term($template_id[0], 'content_templates');
+    require_once(locate_template('../docs/content-templates/template-'.$t->name.'.php'));
+  }
 }

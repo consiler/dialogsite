@@ -28,16 +28,8 @@ function dialog_setup() {
   register_nav_menu( 'primary', 'Navigation Menu');
   
   //custom img size for featured img, disp. on std. posts/pages.
-  add_theme_support( 'post-thumbnails' );
-  set_post_thumbnail_size(THUMB_W, THUMB_H, CROP_THUMBS);
-
-  /*
-   * This theme supports all available post formats by default.
-   * See http://codex.wordpress.org/Post_Formats
-   */
-  add_theme_support( 'post-formats', array(
-    'aside', 'audio', 'chat', 'gallery', 'image', 'link', 'quote', 'status', 'video'
-  ) );
+  //add_theme_support( 'post-thumbnails' );
+  //set_post_thumbnail_size(THUMB_W, THUMB_H, CROP_THUMBS);
 }
 add_action('after_setup_theme', 'dialog_setup');
 ?>

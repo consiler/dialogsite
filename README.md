@@ -14,15 +14,12 @@ The theme was built with the following plugins...
 * Wordpress SEO 1.2.13
 * WP Fake Image Replacer 1.5.1
 
-todo: faculty discussion
-Contact Form Plugin
-Alt Layout for Contact Page
-Powerpoint Plugin
-Header for page.php, have transparent header text section for no banner image
-If there is a banner image, have header white background static directly below banner image, then have fade to transparent
-and stick to top upon animation completion, try to integrate some parallax effect
-Custom fields for CPT assignment
-Footer navigation - dynamically rearranges the divs
+Solidify the CPT retrieval mechanism. ***
+Create a system to easily use Theme Colors on Pages.
+Think about whether non-custom fields are necessary. Eliminate the featured image.
+Make everything in ACF and the CPT manager default to the correct values.
+Create a Contact Us Page
+Install a Powerpoint Plugin
 
 intro copy from saleamp!
 -> turn into digital domination practice, multichannel story, how do you win hearts minds and machines, how do you do that across a global organization
@@ -75,7 +72,6 @@ Practice Areas
         Got to control your destiny online in healthcare, great oppurtunities to do so
         Paraphrase of Mark: "Hospital providers get more traffic than any other people in their market and if yhou can own the conversation around specific treatment data you can see the less dominant player actually has the best cardio numbers because they did well onine with it"
 May be getting copy writer soon
-
 
 Notes August 10, 2013
 Normally cons. have PAs where they organize both their content - function and industry
@@ -136,3 +132,5 @@ Pages all need to have a custom field where they can specify what CPT to use for
 CPTs use the Content Template Taxonomy. Each CPT instance must be assigned exactly one taxonomy term under "Content Templates" that specifies the path to the CPT instance's assigned PHP template.
 We use a Taxonomy to assign templates in this way to avoid coupling the type of Custom Posts with their custom fields/templates.
 Instead, the custom fields and the template file can be derived purely from their assigned taxonomy term.
+
+get mom to drop family plan
