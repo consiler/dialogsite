@@ -1,5 +1,12 @@
 @import url('settings.less');
 
+/*
+Please note:
+Regrettably, javascript also influences the css used by the menu.
+If you want to find that JS, go to the main script file and search for "Add colors to the top level page links based on their data-theme-color"
+Everything we change should be determined in those few lines
+*/
+
 /******************************************************************************
  * Navigation
  *****************************************************************************/
@@ -105,38 +112,6 @@
     background-color: #fff;
     color: #000;
   }
-  .menu-top-level-red > ul
-  {
-    border-left: 5px solid @red;
-  }
-  .menu-top-level-orange > ul
-  {
-    border-left: 5px solid @orange;
-  }
-  .menu-top-level-yellow > ul
-  {
-    border-left: 5px solid @yellow;
-  }
-  .menu-top-level-green > ul
-  {
-    border-left: 5px solid @green;
-  }
-  .menu-top-level-blue > ul
-  {
-    border-left: 5px solid @blue;
-  }
-  .menu-top-level-beige > ul
-  {
-    border-left: 5px solid @beige;
-  }
-  .menu-top-level-beigee > ul
-  {
-    border-left: 5px solid @beigee;
-  }
-  .menu-top-level-beigeee > ul
-  {
-    border-left: 5px solid @beigeee;
-  }
 
   /* Sub Menu */
   .second-menu-wrap {
@@ -195,6 +170,7 @@
     color: darken(@red, 10%);
   }
   .second-menu-search {
+    display: none;
     width: 29px;
     height: 29px;
     position: absolute;
