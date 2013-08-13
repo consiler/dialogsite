@@ -44,3 +44,16 @@ $libfiles = array(
 $libdir = "lib/";
 //Must be loaded in order.
 foreach($libfiles as $file) require_once(locate_template($libdir.$file.'.php'));
+
+
+
+class FooterWalker extends Walker_Nav_Menu {
+  //eliminates line breaks between lis in the footer.
+  //allows us to get around whitespace put between inline-blocks
+  function end_el( &$output, $item, $depth = 0, $args = array() ) {
+    $output .= "</li>";
+  }
+}
+class HeaderWalker extends Walker_Nav_Menu {
+  
+}
