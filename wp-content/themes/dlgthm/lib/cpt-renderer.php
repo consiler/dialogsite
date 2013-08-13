@@ -13,9 +13,4 @@ function render_cpt_template($template_id)
     echo '</div>';
   }
 }
-
-function get_current_file_name()
-{
-  return preg_replace('/\.php$/', '', __FILE__);
-}
 ?>

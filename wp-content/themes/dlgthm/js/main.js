@@ -28,7 +28,7 @@
     //Top Navigation Menu
     //Populate the grey sub menu
     // This takes the dropdown menu associated with the current section and moves it to the silver menu
-    var currentPageCategoryDropDownMenu = $('.menu > ul > li.current_page_item > .children');
+    var currentPageCategoryDropDownMenu = $('.menu > ul > li.current_page_item > .sub-menu');
     // "Is current page a category page with a dropdown menu containing child pages?"
     if(currentPageCategoryDropDownMenu.length !== 0)
     {
@@ -40,7 +40,7 @@
     } else {
       // If we cannot find a drop down menu, our current section must not have any child pages.
       // Is the current page a child page? Look for a parent.
-      var parentPageCategoryDropDownMenu = $('.menu > ul > li.current_page_parent > .children');
+      var parentPageCategoryDropDownMenu = $('.menu > ul > li.current_page_parent > .sub-menu');
       if(parentPageCategoryDropDownMenu.length !== 0)
       {
         // If there is a parent, we just move that parent's list (siblings of the current page) to the
@@ -48,12 +48,7 @@
         parentPageCategoryDropDownMenu.addClass('second-menu-horizontal').appendTo('.second-menu');
       }
     }
-    // Assign a theme color to all the main pages
-    var themeColors = ['blue', 'red', 'orange', 'yellow', 'green', 'beige', 'beigee', 'beigeee'];
-    // Iterate over the top level navigation menu links, adding their color class.
-    $(".menu > ul > li").each(function(i) {
-     $(this).addClass("menu-top-level-"+themeColors[(i % themeColors.length)]);
-    });
+
     // Initialize parallax scrolling
     $.stellar();
     // SpyBar
@@ -130,6 +125,14 @@
           scrollTop: offsetTop
       }, 300);
       e.preventDefault();
+    });
+
+    //Add colors to the top level page links based on their data-theme-color
+    $('.menu > ul > li').each(function(index, value)
+    {
+      var thisID = $(value).attr('id');
+      var borderStyle = 'border-left: 5px solid #'+$(value).attr('data-theme-color');
+      $(value).append('<style type="text/css">#'+thisID+':hover > a { '+borderStyle+' } #'+thisID+':hover > .sub-menu { '+borderStyle+' } </style>');
     });
 
     //Add filter Easter Eggs.
