@@ -14,7 +14,9 @@ The theme was built with the following plugins...
 * Wordpress SEO 1.2.13
 * WP Fake Image Replacer 1.5.1
 
-Make everything in ACF and the CPT manager default to the correct values - default to no formatting in all new fields... ACF mod
+Make everything in ACF and the CPT manager default to the correct values
+  default to no formatting in all new fields... ACF mod
+  hide the taxonomy section in new page
 Create a Contact Us Page
 Install a Powerpoint Plugin
 

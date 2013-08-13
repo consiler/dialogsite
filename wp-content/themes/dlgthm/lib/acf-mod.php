@@ -2,13 +2,13 @@
 add_filter('acf/location/rule_types', 'acf_location_rules_types');
 function acf_location_rules_types( $choices )
 {
-    $choices['Basic']['tax'] = 'Content Template Taxonomy Term';
+    $choices['Basic']['tax'] = 'Fieldset Term';
     return $choices;
 }
 add_filter('acf/location/rule_values/tax', 'acf_location_rules_values_tax');
 function acf_location_rules_values_tax( $choices )
 {
-    $terms = get_terms(CPT_TEMPLATE_TAX_NAME);
+    $terms = get_terms(CPT_FIELDSET_TAX_NAME);
  
     if( $terms )
     {
@@ -24,7 +24,7 @@ add_filter('acf/location/rule_match/tax', 'acf_location_rules_match_tax', 10, 3)
 function acf_location_rules_match_tax( $match, $rule, $options )
 {
     $selected_term_id = (int)$rule['value'];
-    $post_terms = wp_get_post_terms( (int)$_GET['post'], CPT_TEMPLATE_TAX_NAME );
+    $post_terms = wp_get_post_terms( (int)$_GET['post'], CPT_FIELDSET_TAX_NAME );
     $match = false;
     if($rule['operator'] == "==")
     {
