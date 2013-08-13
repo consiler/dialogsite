@@ -15,28 +15,9 @@
     <!--[if lt IE 9]>
     <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js"></script>
     <![endif]-->
-    <?php wp_head(); ?>
+    <?php 
+    wp_head(); ?>
   </head>
-<?php
-$defaults = array(
-  'theme_location'  => 'Navigation Menu',
-  'menu'            => '.menu',
-  'container'       => 'div',
-  'container_class' => 'dialog-menu',
-  'container_id'    => 'dialog-menu',
-  'menu_class'      => 'menu',
-  'menu_id'         => '',
-  'echo'            => true,
-  'fallback_cb'     => 'wp_page_menu',
-  'before'          => '',
-  'after'           => '',
-  'link_before'     => '',
-  'link_after'      => ''
-  'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-  'depth'           => 0,
-  'walker'          => ''
-);
-?>
   <body <?php body_class(); ?>>
     <div class="header-wrap">
         <div class="header-inner">
@@ -46,9 +27,29 @@ $defaults = array(
               <div class="logo-top"></div>
               <img class="logo-bottom" src="<?php bloginfo('template_url'); ?>/images/dialog-logo.png">
             </div>
-            <?php
-            wp_nav_menu( $defaults );
-            ?>
+              <div class="menu">
+              <?php
+              $defaults = array(
+                'theme_location'  => 'header-menu',
+                //'menu'            => '.menu',
+                'container'       => false,
+                'container_class' => '',
+                'container_id'    => '',
+                'menu_class'      => '',
+                'menu_id'         => '',
+                'echo'            => true,
+                //'fallback_cb'     => 'wp_page_menu',
+                'before'          => '',
+                'after'           => '',
+                'link_before'     => '',
+                'link_after'      => '',
+                'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+                'depth'           => 0,
+                'walker'          => ''
+              );
+              wp_nav_menu($defaults);
+              ?>
+              </div>
             <div class="clearfix"></div>
           </div>
         </div>
