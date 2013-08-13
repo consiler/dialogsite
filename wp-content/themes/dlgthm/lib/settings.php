@@ -15,4 +15,5 @@ define('CROP_THUMBS', true);
 define('CONTENT_WIDTH', 604);
 define('CONTENT_TEMPLATE_PATH', 'docs/content-templates/');
 define('CPT_TEMPLATE_TAX_NAME', 'content_templates');
+define('CPT_FIELDSET_TAX_NAME', 'content_fieldsets');
 ?>

@@ -9,15 +9,7 @@ function content_templates_taxonomy_init() {
   $labels = array(
     'name'              => _x( 'Content Templates', 'taxonomy general name' ),
     'singular_name'     => _x( 'Content Template', 'taxonomy singular name' ),
-    'search_items'      => __( 'Search Templates' ),
-    'all_items'         => __( 'All Templates' ),
-    'parent_item'       => __( 'Parent Template' ),
-    'parent_item_colon' => __( 'Parent Template:' ),
-    'edit_item'         => __( 'Edit Template' ),
-    'update_item'       => __( 'Update Template' ),
-    'add_new_item'      => __( 'Add New Content Template' ),
-    'new_item_name'     => __( 'New Content Template Name' ),
-    'menu_name'         => __( 'CPT Templates' ),
+    //make this "assignments"
   );
 
   $args = array(

@@ -1345,7 +1345,7 @@ function cpt_add_new() {
 							foreach ($add_taxes  as $add_tax ) {
 								if ( $add_tax->name != 'nav_menu' && $add_tax->name != 'post_format') {
 									?>
-									<input type="checkbox" name="cpt_addon_taxes[]" tabindex="20" value="<?php echo $add_tax->name; ?>" <?php if (isset($cpt_taxes) && is_array($cpt_taxes)) { if (in_array($add_tax->name, $cpt_taxes)) { echo 'checked="checked"'; } } else { if($add_tax->name == "content_templates") { echo 'checked="checked"'; } } ?> />&nbsp;<?php echo $add_tax->label; ?><br />
+									<input type="checkbox" name="cpt_addon_taxes[]" tabindex="20" value="<?php echo $add_tax->name; ?>" <?php if (isset($cpt_taxes) && is_array($cpt_taxes)) { if (in_array($add_tax->name, $cpt_taxes)) { echo 'checked="checked"'; } } else { if(in_array($add_tax->name, array("content_templates", "content_fieldsets"))) { echo 'checked="checked"'; } } ?> />&nbsp;<?php echo $add_tax->label; ?><br />
 									<?php
 								}
 							}

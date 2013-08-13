@@ -37,6 +37,7 @@ $libfiles = array(
   'content-width',
   'wrapper',
   'cpt-content-admin-menu',
+  'fieldset-taxonomy',
   'content-templates-taxonomy',
   'acf-mod',
   'cpt-renderer'
