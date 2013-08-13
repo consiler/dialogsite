@@ -14,10 +14,7 @@ The theme was built with the following plugins...
 * Wordpress SEO 1.2.13
 * WP Fake Image Replacer 1.5.1
 
-Solidify the CPT retrieval mechanism. ***
-Create a system to easily use Theme Colors on Pages.
-Think about whether non-custom fields are necessary. Eliminate the featured image.
-Make everything in ACF and the CPT manager default to the correct values.
+Make everything in ACF and the CPT manager default to the correct values
 Create a Contact Us Page
 Install a Powerpoint Plugin
 
