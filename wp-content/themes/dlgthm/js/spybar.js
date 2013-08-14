@@ -25,9 +25,9 @@ $(window).scroll(function(){
 // Find out how much the user has scrolled down the page
 var heading = $('#page-heading-inner');
 var headingOffset = heading.outerHeight();
-var scrolledOffset = $(this).scrollTop() + topMenuHeight + 70;
+var scrolledOffset = $(this).scrollTop() + topMenuHeight + 70 ;
 // If the bottom of the fixed nav menu hits the top of the spy bar...
-console.log(scrolledOffset);
+//console.log(scrolledOffset);
 if(scrolledOffset > spyBarYPosition){
   if(isTheSpyBarStaticRightNow)
   {

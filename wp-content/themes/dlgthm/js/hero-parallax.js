@@ -3,13 +3,13 @@
     var topMenuHeight = $('.header-wrap').outerHeight();
     var b = false;
     $(window).scroll(function(){
-      var scrolledPos = $(this).scrollTop() + topMenuHeight;
-      if(scrolledPos >= 245 && !b)
+      var scrolledPos = $(this).scrollTop() + topMenuHeight + 70;
+      if(scrolledPos >= 365 && !b)
       {
         $('#banner-parallax-control').show();
         b = true;
       }
-      if(scrolledPos < 245 && b)
+      if(scrolledPos < 365 && b)
       {
         $('#banner-parallax-control').hide();
         b = false;

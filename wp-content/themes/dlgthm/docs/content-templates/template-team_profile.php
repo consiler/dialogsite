@@ -5,7 +5,9 @@ Comment: A template for a short fixed width bio of senior management.
 */
 $required_fields = array(
   'name',
-  'bio');
+  'bio',
+  'title',
+  'headshot');
 $fieldset = verified_fieldset($required_fields);
 if($fieldset) {
 ?>
@@ -13,6 +15,7 @@ if($fieldset) {
   <div class="spyOnMe" id="content-section-<?php the_ID(); ?>">
     <img src= "<?php $headshot = get_field('headshot'); echo $headshot['url']; ?>"></img>
     <h1><?php the_field('name'); ?></h1>
+    <p class="employee-title-field"><?php the_field('title'); ?></p>
     <p><?php the_field('bio'); ?></p>
   </div>
 </div>

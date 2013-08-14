@@ -78,6 +78,8 @@ h1 {
   line-height: @std_h1_line_height;
   color: @grey;
   margin: 15px 0;
+  text-shadow: -1px 0px 0px #ddd;
+  filter: dropshadow(color=#ddd, offx=0, offy=-1);
 }
 
 h2 {
@@ -262,27 +264,17 @@ body.home #body-wrap {
  * Hero Image for Page
  *****************************************************************************/
 #banner {
-  background-image: url(http://fc00.deviantart.net/fs71/i/2013/219/c/9/linked_to_our_world_by_barbaraofbruno-d6h01q9.jpg);
   background-position: 0 515px;
   width: 1280px;
-  height: 250px;
-  padding-top: 50px;
+  height: 400px;
   margin: 0 auto;
   position: relative;
   z-index: 89;
 }
-#banner-white-fade {
-  background-image: linear-gradient(rgba(255,255,255,0) ,#fff);
-  height: 400px;
-  bottom: 0;
-  width: 960px;
-  position: absolute;
-}
 #banner-parallax-control {
   width: @layout_width;
   display: none;
-  height: 250px;
-  padding-top: 50px;
+  height: 400px;
   margin: 0 auto;
   position: relative;
 }
@@ -311,7 +303,7 @@ body.home #body-wrap {
   top: @total_menu_height;
 }
 #banner-bg-filler {
-  height: 80px;
+  height: 300px;
   background-color: #efefef;
   position: absolute;
   width: 960px;
