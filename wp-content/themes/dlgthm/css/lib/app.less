@@ -135,7 +135,6 @@ a:visited {
 #body-wrap {
   /* background-image: linear-gradient(@grey 25%, @greyy 75%);*/
   /* background-repeat: no-repeat;*/
-  height: 100%;
   padding-top: @total_menu_height;
 }
 body.home #body-wrap {
@@ -155,11 +154,13 @@ body.home #body-wrap {
    *****************************************************************************/
    @theme_primary_color: @blue;
     .content-wrap {
+      position: relative;
       width: @layout_width;
       margin: 0 auto;
       overflow: hidden;
       background-color: #fff;
       padding-bottom: 1000px;
+      z-index: 90;
     }
     .content-scrollspy {
       float: left;
@@ -169,7 +170,7 @@ body.home #body-wrap {
       z-index: 98;
     }
     .content-scrollspy.stuck {
-       top: @total_menu_height;
+       top: @total_menu_height + 70;
        width: 199px;
       }
     .content-scrollspy {
@@ -258,7 +259,7 @@ body.home #body-wrap {
 }
 
 /******************************************************************************
- * Banner
+ * Hero Image for Page
  *****************************************************************************/
 #banner {
   background-image: url(http://fc00.deviantart.net/fs71/i/2013/219/c/9/linked_to_our_world_by_barbaraofbruno-d6h01q9.jpg);
@@ -268,6 +269,7 @@ body.home #body-wrap {
   padding-top: 50px;
   margin: 0 auto;
   position: relative;
+  z-index: 89;
 }
 #banner-white-fade {
   background-image: linear-gradient(rgba(255,255,255,0) ,#fff);
@@ -275,6 +277,48 @@ body.home #body-wrap {
   bottom: 0;
   width: 960px;
   position: absolute;
+}
+#banner-parallax-control {
+  width: @layout_width;
+  display: none;
+  height: 250px;
+  padding-top: 50px;
+  margin: 0 auto;
+  position: relative;
+}
+#page-heading-wrap {
+  margin-top: -70px;
+  margin: 0 auto;
+  width: @layout_width;
+  position: relative;
+  padding: 0;
+  overflow: hidden;
+}
+#page-heading-inner {
+  position: relative;
+  z-index: 99;
+}
+#page-heading {
+  color: @greyyy;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  margin: 0;
+  padding-left: 135px;
+  width: (@layout_width - 135px);
+  background-color: #efefef;
+  text-shadow: 0px -1px 0px #ffffff;
+}
+#page-heading-inner.stuck {
+  top: @total_menu_height;
+}
+#banner-bg-filler {
+  height: 80px;
+  background-color: #efefef;
+  position: absolute;
+  width: 960px;
+  margin-left: -480px;
+  left: 50%;
+  top: 245px;
 }
 
 /******************************************************************************

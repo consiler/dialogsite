@@ -27,6 +27,7 @@ function dialog_scripts_styles() {
   {
     wp_enqueue_script('dialog-scrollspy-js', get_template_directory_uri() . '/js/spybar.js', array('jquery'), '0.1', true);
   }
+  wp_enqueue_script('dialog-hero-parallax', get_template_directory_uri() . '/js/hero-parallax.js', array('jquery'), '0.1', true);
 
   // Add Genericons font, used in the main stylesheet.
   wp_enqueue_style('genericons', get_template_directory_uri() . '/fonts/genericons.css', array(), '2.09');

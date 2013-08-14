@@ -23,15 +23,19 @@ var spyBarHeight = spyBar.outerHeight(),
 //Scroll tracking loop
 $(window).scroll(function(){
 // Find out how much the user has scrolled down the page
-var scrolledOffset = $(this).scrollTop() + topMenuHeight;
-console.log(scrolledOffset);
-console.log(spyBarYPosition);
+var heading = $('#page-heading-inner');
+var headingOffset = heading.outerHeight();
+var scrolledOffset = $(this).scrollTop() + topMenuHeight + 70;
 // If the bottom of the fixed nav menu hits the top of the spy bar...
+console.log(scrolledOffset);
 if(scrolledOffset > spyBarYPosition){
   if(isTheSpyBarStaticRightNow)
   {
     spyBar.addClass('stuck');
     spyBar.css({'position' : 'fixed'});
+    heading.addClass('stuck');
+    heading.css({'position': 'fixed'});
+    $('.content-wrap').css({'margin-top' : '70px'});
     isTheSpyBarStaticRightNow = false;
   }
 } else {
@@ -41,6 +45,9 @@ if(scrolledOffset > spyBarYPosition){
   {
     spyBar.removeClass('stuck');
     spyBar.css({'position' : 'static'});
+    heading.removeClass('stuck');
+    heading.css({'position': 'static'});
+    $('.content-wrap').css({'margin-top' : '0px'});
     isTheSpyBarStaticRightNow = true;
   }
 }

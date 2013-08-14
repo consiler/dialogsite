@@ -47,7 +47,7 @@
     }
 
     // Initialize parallax scrolling
-    $.stellar();
+    $.stellar({hideDistantElements: true});
 
     //Add colors to the top level page links based on their data-theme-color
     $('.menu > ul > li').each(function(index, value)
