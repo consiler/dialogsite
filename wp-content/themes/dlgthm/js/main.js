@@ -23,7 +23,8 @@
 (function($) {
   //Globals
   var navMenuWrap = $('.header-wrap');
-  var spyBar = $('#spyMenu');
+  var spyBar = $('.content-scrollspy');
+  //var spyBarWrap = $('.content-scrollspy');
   $(document).ready(function(){
     //Top Navigation Menu
     //Populate the grey sub menu

@@ -167,11 +167,10 @@ body.home #body-wrap {
       top: 0;
       z-index: 98;
     }
-    .content-scrollspy
-    tuck {
-      float: none;
-      top: 95px;
-    }
+    .content-scrollspy.stuck {
+       top: @total_menu_height;
+       width: 199px;
+      }
     .content-scrollspy {
       ul {
         margin: 0;
@@ -302,9 +301,4 @@ Form Example on Front-Page Boxing
   padding: 20px;
   background-color: white;
   margin: 0 auto;
- }
-
- #spyMenu.stuck {
-  top: @total_menu_height;
-  width: 199px;
  }
