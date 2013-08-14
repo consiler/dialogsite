@@ -1,5 +1,6 @@
 <?php
 $parent_id = $post->post_parent;
+global $theme_color;
 if($parent_id)
 {
   //this is a child
@@ -29,7 +30,7 @@ if($parent_id)
     <?php 
     wp_head(); ?>
   </head>
-  <body <?php body_class(); ?>>
+  <body <?php body_class(); ?> data-stellar-background-ratio="0.5">
     <div class="header-wrap">
         <div class="header-inner">
           <div class="menu-wrap">
@@ -62,6 +63,14 @@ if($parent_id)
             <div class="clearfix"></div>
           </div>
         </div>
+        <style type="text/css">
+          .second-menu-wrap > .second-menu > ul > li > a:hover {
+            color: <?php echo $theme_color; ?>;
+          }
+          .second-menu-wrap > .second-menu > ul > li.current_page_item > a {
+            color: <?php echo $theme_color; ?>;
+          }
+        </style>
         <div class="second-menu-wrap">
           <div class="second-menu">
           </div>

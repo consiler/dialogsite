@@ -51,9 +51,10 @@ html {
   height: 100%;
 }
 body {
-  background-image: linear-gradient(#a5a5a5 0%,#dbdbdb 100%);
-  background-color: #dbdbdb;
-  background-repeat: no-repeat;
+  //background-image: linear-gradient(#a5a5a5 0%,#dbdbdb 100%);
+  background-image: url(../images/background-grain-light.jpg);
+  //background-color: #ccc;
+  //background-repeat: no-repeat;
   color: @std_color;
   font-family: @sans;
   font-size: @std_font_size;
@@ -78,8 +79,6 @@ h1 {
   line-height: @std_h1_line_height;
   color: @grey;
   margin: 15px 0;
-  text-shadow: -1px 0px 0px #ddd;
-  filter: dropshadow(color=#ddd, offx=0, offy=-1);
 }
 
 h2 {
@@ -198,10 +197,6 @@ body.home #body-wrap {
         -webkit-box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
         box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
       }
-      li.active > a {
-        border-right: 5px @theme_primary_color solid;
-        color: @theme_primary_color;
-      }
     }
     .content-body {
       float: right;
@@ -264,12 +259,13 @@ body.home #body-wrap {
  * Hero Image for Page
  *****************************************************************************/
 #banner {
-  background-position: 0 515px;
+  background-position: 0 0px;
   width: 1280px;
   height: 400px;
   margin: 0 auto;
   position: relative;
   z-index: 89;
+  background-repeat: no-repeat;
 }
 #banner-parallax-control {
   width: @layout_width;
@@ -290,26 +286,30 @@ body.home #body-wrap {
   z-index: 99;
 }
 #page-heading {
-  color: @greyyy;
+  color: #fff;
   padding-bottom: 15px;
   padding-top: 15px;
   margin: 0;
   padding-left: 135px;
   width: (@layout_width - 135px);
-  background-color: #efefef;
-  text-shadow: 0px -1px 0px #ffffff;
+  background-image: url(../images/background-grain.jpg);
+  text-shadow: -1px -1px 0px #999;
+  filter: dropshadow(color=#666666, offx=0, offy=-1);
 }
 #page-heading-inner.stuck {
   top: @total_menu_height;
 }
 #banner-bg-filler {
   height: 300px;
-  background-color: #efefef;
+  background-image: url(../images/background-grain.jpg);
   position: absolute;
   width: 960px;
   margin-left: -480px;
   left: 50%;
   top: 245px;
+}
+#banner-wrap {
+  background-image: url(../images/background-grain.jpg);
 }
 
 /******************************************************************************

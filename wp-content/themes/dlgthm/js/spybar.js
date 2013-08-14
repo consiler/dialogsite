@@ -67,9 +67,13 @@ if (lastId !== id)
 {
   lastId = id;
   // Set/remove active class
+  //menuItems = spybar.find('a')
   menuItems
-    .parent().removeClass("active")
-    .end().filter("[href=#"+id+"]").parent().addClass("active");
+    .parent()//old li
+    .removeClass("active") //remove old active class and old styles here
+    .end().filter("[href=#"+id+"]")//
+    .parent()//new li
+    .addClass("active");
  }                   
 });
 
