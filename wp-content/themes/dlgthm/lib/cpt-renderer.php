@@ -1,36 +1,25 @@
 <?php
+$debug = false;
+
 // Displaying a post
-function the_cpt_post()
+function the_cpt_post($template_name)
 {
-  $template_id = get_field('template_term');
-  if($template_id)
-  {
-    if(count($template_id) < 1)
-    {
-      die('You cannot have multiple templates or fieldsets assigned to a single post. Look in cpt-renderer to debug.');
-    } else {
-      $template_term = get_term($template_id[0], CPT_TEMPLATE_TAX_NAME);
-      $templates = CONTENT_TEMPLATE_PATH.'template-'.$template_term->name.'.php';
-      echo '<div class="content-template-wrap template-'.$template_term->name.'">';
-      require locate_template($templates);
-      echo '</div>';
-    }
-  }
+  $templates = CONTENT_TEMPLATE_PATH.'template-'.$template_name.'.php';
+  require locate_template($templates);
 }
 
 // Display the entire CPT for the current page
-function the_page_cpt()
+function render_cpt_with_template($cpt_name, $template_name)
 {
   global $post;
-  $page_cpt_name = get_field('cpt_slug');
-  if($page_cpt_name)
+  if($cpt_name)
   {
-    $query_args = array('post_type' => $page_cpt_name, 'orderby' => 'time', 'order' => 'ASC');
+    $query_args = array('post_type' => $cpt_name, 'orderby' => 'time', 'order' => 'ASC');
     $all_posts = get_posts($query_args);
     foreach($all_posts as $post)
     {
       setup_postdata($post);
-      the_cpt_post();
+      the_cpt_post($template_name);
     }
     wp_reset_postdata();
   }
@@ -50,5 +39,23 @@ function verified_fieldset($expected_fieldset)
     }
   }
   return $assigned_fieldset;
+}
+
+function page_get_cpt_list()
+{
+  $cpt_list = get_field('cpt_slug');
+  if($cpt_list)
+  {
+    return explode(',', $cpt_list);
+  } else return false;
+}
+
+function fieldset_mismatch_error($required_fields)
+{
+  $output = 'Assigned fieldset does not match template fieldset in CPT template slide-bigh1. Required Fields: ';
+  foreach ($required_fields as $required_field) { 
+    $output .= $required_field . '| ';
+  }
+  echo $output;
 }
 ?>

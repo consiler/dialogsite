@@ -15,4 +15,6 @@ if($fieldset) {
     <h1 style="color: <?php echo $fieldset['color']; ?>;"><?php echo $fieldset['big_centered_title_text']; ?></h1>
   </div>
 </div>
-<?php } else { echo('Assigned fieldset does not match template fieldset in CPT template slide-bigh1.'); } ?>
+<?php } else {
+  fieldset_mismatch_error($required_fields);
+} ?>

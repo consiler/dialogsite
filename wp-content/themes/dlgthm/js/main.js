@@ -22,7 +22,7 @@
 //But we can still use $ with a scriptwide anonymous function.
 (function($) {
   //Globals
-  var navMenuWrap = $('.header-inner');
+  var navMenuWrap = $('.header-wrap');
   var spyBar = $('#spyMenu');
   $(document).ready(function(){
     //Top Navigation Menu
@@ -55,7 +55,7 @@
     // Spybar container positioning set up (stick to top menu on scroll down)
     var spyBarHeight = spyBar.outerHeight(),
         // pixels from top of page to bounding box excluding margin/padding
-        spyBarYPosition = spyBar.offset.top,
+        spyBarYPosition = spyBar.offset().top,
         // state variable to track whether the spy bar is static (moves with page) or fixed (does not move with page)
         isTheSpyBarStaticRightNow = true,
     // Spybar page section tracking set up
@@ -74,10 +74,12 @@
     //Scroll tracking loop
     $(window).scroll(function(){
       // Find out how much the user has scrolled down the page
+      
+      console.log(spyBarYPosition);
       var scrolledOffset = $(this).scrollTop() + topMenuHeight;
+      console.log(scrolledOffset);
       // If the bottom of the fixed nav menu hits the top of the spy bar...
       if(scrolledOffset > spyBarYPosition){
-        // no need to make it fixed if it already is
         if(isTheSpyBarStaticRightNow)
         {
           spyBar.addClass('stuck');

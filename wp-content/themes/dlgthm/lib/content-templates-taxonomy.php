@@ -7,8 +7,8 @@ function content_templates_taxonomy_init() {
   $pt_to_assign_our_tax_to = array_diff($pt, $pt_ignores);
   // create a new taxonomy
   $labels = array(
-    'name'              => 'Content Assignments',
-    'singular_name'     => 'Content Assignment'
+    'name'              => 'Template Assignments',
+    'singular_name'     => 'Template Assignment'
   );
 
   $args = array(
