@@ -36,4 +36,11 @@ function acf_location_rules_match_tax( $match, $rule, $options )
     }
     return $match;
 }
+
+add_action('acf/register_fields', 'acf_add_video_field');
+
+function acf_add_video_field()
+{
+  include_once('acf-mod-video.php');
+}
 ?>
