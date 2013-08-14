@@ -24,7 +24,7 @@
           <div class="menu-wrap">
             <div class="menu-logo">
               <a href="/"></a>
-              <div class="logo-top"></div>
+              <div class="logo-top" style="background-color: <?php the_field('theme_color',(int)get_the_ID()); ?>"></div>
               <img class="logo-bottom" src="<?php bloginfo('template_url'); ?>/images/dialog-logo.png">
             </div>
               <div class="menu">

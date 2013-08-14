@@ -10,7 +10,7 @@ $required_fields = array(
 $fieldset = verified_fieldset($required_fields);
 if($fieldset) {
 ?>
-<div class="block-wrap" style="background-color: <?php echo $fieldset['background-color']; ?>;">
+<div class="block-wrap template-slide-bigh1" style="background-color: <?php echo $fieldset['background-color']; ?>;">
   <div class="block-center">
     <h1 style="color: <?php echo $fieldset['color']; ?>;"><?php echo $fieldset['big_centered_title_text']; ?></h1>
   </div>
