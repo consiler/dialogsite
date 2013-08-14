@@ -1,3 +1,14 @@
+<?php
+$parent_id = $post->post_parent;
+if($parent_id)
+{
+  //this is a child
+  $theme_color = get_field('theme_color', (int)$parent_id);
+} else {
+  //this is a parent
+  $theme_color = get_field('theme_color', (int)get_the_ID());
+}
+?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" <?php language_attributes(); ?>> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" <?php language_attributes(); ?>> <![endif]-->
@@ -24,7 +35,7 @@
           <div class="menu-wrap">
             <div class="menu-logo">
               <a href="/"></a>
-              <div class="logo-top" style="background-color: <?php the_field('theme_color',(int)get_the_ID()); ?>"></div>
+              <div class="logo-top" style="background-color: <?php echo $theme_color; ?>"></div>
               <img class="logo-bottom" src="<?php bloginfo('template_url'); ?>/images/dialog-logo.png">
             </div>
               <div class="menu">

@@ -27,7 +27,6 @@
 $libfiles = array(
   'settings',
   'dialog-setup',
-  'scripts-styles',
   'widgets',
   'paging-nav',
   'entry-meta-date',
@@ -40,7 +39,8 @@ $libfiles = array(
   'fieldset-taxonomy',
   'acf-mod',
   'cpt-renderer',
-  'nav-walkers'
+  'nav-walkers',
+  'scripts-styles'
   );
 $libdir = "lib/";
 //Must be loaded in order.

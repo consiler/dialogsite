@@ -1,9 +1,6 @@
 <div class="content-wrap">
   <?php
-  //bool - do we want to use a scrollspy sidebar to index the posts?
-  $scrollSpy = get_field('scrollspy');
-  var_dump($scrollSpy);
-  if($scrollSpy)
+  if($scrollspy)
   {
   ?>
     <div class="content-scrollspy">
@@ -12,7 +9,7 @@
       </ul>
     </div>
   <?php } ?>
-  <div class="content-body <?php if(!$scrollSpy) { echo 'content-body-fullwidth'; } ?>">
+  <div class="content-body <?php if(!$scrollspy) { echo 'content-body-fullwidth'; } ?>">
     <?php render_cpt_with_template('team', 'team_profile'); ?>
   </div>
 </div>

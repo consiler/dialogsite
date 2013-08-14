@@ -19,6 +19,15 @@ function dialog_scripts_styles() {
   //Loads main JS
   wp_enqueue_script('dialog-main-js', get_template_directory_uri() . '/js/main.js', array('jquery'), '0.1', true);
 
+  //Loads scrollspy
+  global $scrollspy;
+  $scrollspy = get_field('scrollspy', get_the_ID());
+  if(!$scrollspy) $scrollspy = true;
+  if($scrollspy)
+  {
+    wp_enqueue_script('dialog-scrollspy-js', get_template_directory_uri() . '/js/spybar.js', array('jquery'), '0.1', true);
+  }
+
   // Add Genericons font, used in the main stylesheet.
   wp_enqueue_style('genericons', get_template_directory_uri() . '/fonts/genericons.css', array(), '2.09');
 
