@@ -331,10 +331,12 @@ class WPFakeImageReplacer
         // Additionnal size (added in functions.php with set_post_thumbnail_size or add_image_size)
 
         global $_wp_additional_image_sizes;
-
-        foreach($_wp_additional_image_sizes as $key => $value) 
+        if(isset($_wp_additional_image_sizes))
         {
-            $s[$key] = $this->generate_image($value['width'], $value['height'], 'url');
+            foreach($_wp_additional_image_sizes as $key => $value) 
+            {
+                $s[$key] = $this->generate_image($value['width'], $value['height'], 'url');
+            }
         }
 
         return $s;
