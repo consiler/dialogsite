@@ -1,4 +1,8 @@
 <?php get_header( global_template_base() ); ?>
+<?php
+if(get_field('hero_banner'))
+{
+?>
 <div id="banner-wrap">
   <div id="banner-parallax-control">
   </div>
@@ -13,5 +17,6 @@
     </div>
   </div>
 </div>
+<?php } ?>
   <?php include global_template_path(); ?>
   <?php get_footer( global_template_base() ); ?>

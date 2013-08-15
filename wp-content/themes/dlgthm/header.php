@@ -36,7 +36,7 @@ if($parent_id)
           <div class="menu-wrap">
             <div class="menu-logo">
               <a href="/"></a>
-              <div class="logo-top" style="background-color: <?php echo $theme_color; ?>"></div>
+              <div class="logo-top" <?php if($theme_color) { ?>style="background-color: <?php echo $theme_color; ?>" <?php } ?>></div>
               <img class="logo-bottom" src="<?php bloginfo('template_url'); ?>/images/dialog-logo.png">
             </div>
               <div class="menu">
