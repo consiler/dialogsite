@@ -2,8 +2,10 @@
   $(document).ready(function(){
     var topMenuHeight = $('.header-wrap').outerHeight();
     var b = false;
+    var banner = $('#banner');
     $(window).scroll(function(){
       var scrolledPos = $(this).scrollTop() + topMenuHeight + 70;
+      //when the image has top: -height*2, then convert to parallax control on
       if(scrolledPos >= 365 && !b)
       {
         $('#banner-parallax-control').show();
@@ -14,9 +16,7 @@
         $('#banner-parallax-control').hide();
         b = false;
       }
-      console.log();
     });
-    var banner = $('#banner');
     var bg_img = banner.attr('data-custom-background-image');
     if(bg_img)
     {
