@@ -81,7 +81,7 @@ if (lastId !== id)
 // so we can get a fancy scroll animation to the desired section on click
 menuItems.click(function(e){
   var href = $(this).attr("href");
-  var offsetTop = href === "#" ? 0 : $(href).offset().top-topMenuHeight+1-15;
+  var offsetTop = href === "#" ? 0 : $(href).offset().top-topMenuHeight-95;
   $('html, body').stop().animate({ 
       scrollTop: offsetTop
   }, 300);
