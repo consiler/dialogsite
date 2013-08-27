@@ -88,8 +88,7 @@ To edit CPTs: Custom Post Types menu in wp-admin sidebar. _DO NOT WRITE CPTs INT
 To edit fieldsets: Custom Fields menu in wp-admin sidebar. _DON'T ADD CUSTOM FIELDS ANY OTHER WAY._
 To edit templates: Templates are stored in dlgthm/docs/content-templates/template-{TEMPLATE_NAME}.php
 So when you make a new template, make sure to put your file in the correct place and name it correctly.
-
-
+To change a post's assigned template, just delete its template taxonomy term and add a new taxonomy term which is supposed to be the name of your template, i.e. "slide_h1" would be template_slide_h1.php in the templates dir.
 
 Pages
   have exactly one Custom Post Type.
@@ -106,8 +105,8 @@ Fundamental Data Types
 ===
 The website is structured as a collection of Pages. Each page has an associated:
 * Custom Post Type (cpt_slug)
-* Theme Color(theme_color)
-* Scrollspy(scrollspy) option
+* Theme Color (theme_color)
+* Scrollspy (scrollspy) option
 When a Page is requested, we render a template containing a list of Custom Posts that have the type specified on the Page's edit screen in wp-admin. Pages require a Custom Post Type to be specified when you create them, so the first step to adding new content to the site is to create a Custom Post Type that we can use to display the content we want on some page.
 
 Making a CPT

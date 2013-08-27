@@ -7,8 +7,8 @@ function template_taxonomy_init() {
   $pt_to_assign_our_tax_to = array_diff($pt, $pt_ignores);
   // create a new taxonomy
   $labels = array(
-    'name'              => _x( 'template Assignments', 'taxonomy general name' ),
-    'singular_name'     => _x( 'template Assignment', 'taxonomy singular name' ),
+    'name'              => _x( 'Template Assignments', 'taxonomy general name' ),
+    'singular_name'     => _x( 'Template Assignment', 'taxonomy singular name' ),
     'search_items'      => __( 'Search Assignments' ),
     'all_items'         => __( 'All Assignments' ),
     'parent_item'       => __( 'Parent Assignment' ),
@@ -17,7 +17,7 @@ function template_taxonomy_init() {
     'update_item'       => __( 'Update Assignment' ),
     'add_new_item'      => __( 'Add New template Assignment' ),
     'new_item_name'     => __( 'New template Assignment Name' ),
-    'menu_name'         => __( 'template Assignments' ),
+    'menu_name'         => __( 'Template Assignments' ),
   );
 
   $args = array(
