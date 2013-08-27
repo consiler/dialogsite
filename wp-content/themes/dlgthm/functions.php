@@ -27,8 +27,6 @@
 $libfiles = array(
   'settings',
   'dialog-setup',
-  'widgets',
-  'content-width',
   'wrapper',
   'cpt-content-admin-menu',
   'fieldset-taxonomy',

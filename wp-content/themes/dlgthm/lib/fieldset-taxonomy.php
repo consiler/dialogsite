@@ -8,16 +8,7 @@ function fieldset_taxonomy_init() {
   // create a new taxonomy
   $labels = array(
     'name'              => _x( 'Fieldset Assignments', 'taxonomy general name' ),
-    'singular_name'     => _x( 'Fieldset Assignment', 'taxonomy singular name' ),
-    'search_items'      => __( 'Search Assignments' ),
-    'all_items'         => __( 'All Assignments' ),
-    'parent_item'       => __( 'Parent Assignment' ),
-    'parent_item_colon' => __( 'Parent Assignment:' ),
-    'edit_item'         => __( 'Edit Assignment' ),
-    'update_item'       => __( 'Update Assignment' ),
-    'add_new_item'      => __( 'Add New Fieldset Assignment' ),
-    'new_item_name'     => __( 'New Fieldset Assignment Name' ),
-    'menu_name'         => __( 'Fieldset Assignments' ),
+    'singular_name'     => _x( 'Fieldset Assignment', 'taxonomy singular name' )
   );
 
   $args = array(

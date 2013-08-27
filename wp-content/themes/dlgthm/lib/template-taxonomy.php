@@ -8,16 +8,7 @@ function template_taxonomy_init() {
   // create a new taxonomy
   $labels = array(
     'name'              => _x( 'Template Assignments', 'taxonomy general name' ),
-    'singular_name'     => _x( 'Template Assignment', 'taxonomy singular name' ),
-    'search_items'      => __( 'Search Assignments' ),
-    'all_items'         => __( 'All Assignments' ),
-    'parent_item'       => __( 'Parent Assignment' ),
-    'parent_item_colon' => __( 'Parent Assignment:' ),
-    'edit_item'         => __( 'Edit Assignment' ),
-    'update_item'       => __( 'Update Assignment' ),
-    'add_new_item'      => __( 'Add New template Assignment' ),
-    'new_item_name'     => __( 'New template Assignment Name' ),
-    'menu_name'         => __( 'Template Assignments' ),
+    'singular_name'     => _x( 'Template Assignment', 'taxonomy singular name' )
   );
 
   $args = array(
