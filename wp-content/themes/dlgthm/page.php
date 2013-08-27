@@ -6,7 +6,7 @@
   $cpt_info = get_field('cpt_set');
   //No cpt, no page.
   if(!$cpt_info) die('Every page needs a CPT. This one doesn\'t. Go fix this by editing this page.');
-  if(!is_null($scrollspy))
+  if($scrollspy)
   {
   ?>
     <div class="content-scrollspy">
@@ -18,7 +18,7 @@
       </ul>
     </div>
   <?php } ?>
-  <div class="content-body <?php if(!is_null($scrollspy)) { echo 'content-body-fullwidth'; } ?>">
+  <div class="content-body <?php if(!$scrollspy) { echo 'content-body-fullwidth'; } ?>">
     <?php
       render_cpt_with_template($cpt_info);
     ?>
