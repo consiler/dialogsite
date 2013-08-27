@@ -1,0 +1,15 @@
+<?php
+/*
+Template: Avocado Template 1
+Comment: A template for a basic fullwidth slide with arbitrary bg color and text color. Text is bolded, center.
+*/
+$required_fields = array(
+  'color');
+
+$fieldset = verified_fieldset($required_fields);
+if($fieldset) {
+?>
+    <h1 style="color: <?php echo $fieldset['color']; ?>;">AVOCADO</h1>
+<?php } else {
+  fieldset_mismatch_error($required_fields);
+} ?>
