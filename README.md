@@ -13,10 +13,6 @@ The theme was built with the following plugins...
 * TinyMCE Advanced 3.5.8
 * Wordpress SEO 1.2.13
 
-Make it easy to add icons to pages or content, maybe add textures / background stuff to nav menu or overall bg...
-Make everything in ACF and the CPT manager default to the correct values
-  default to no formatting in all new fields... ACF mod
-  hide the taxonomy section in new page
 Create a Contact Us Page
 Install a Powerpoint Plugin
 
@@ -72,60 +68,51 @@ Practice Areas
         Paraphrase of Mark: "Hospital providers get more traffic than any other people in their market and if yhou can own the conversation around specific treatment data you can see the less dominant player actually has the best cardio numbers because they did well onine with it"
 May be getting copy writer soon
 
-Notes August 10, 2013
-Normally cons. have PAs where they organize both their content - function and industry
-this is how we did it with solutions'
-but actually creaint MM and an IAC which is none other than corporate athlate / n-holon / maslows thing 
-vitruvian man - microcosm of macrocosm
-  so there is some matching pattern in the da vinci drawing and that means that you are balancing your resonance (you are like a tuning fork)
-
-When you come into the site:
-  ??? location of consilient pitch
-  if were going 2 do a dogwhistle sort of search like beacon for your brand where if you want to tune in to our conversation you can
-  so under Purpose & Performance PA you put Integral Development Plan
-  see n-dim wholon that is you, show CA with article, or consilient athlete
-  pyramid is sitting therre
-  ask "how many layers do you perceive?"
-  were walking machines, that's confusing the map for the territory, know there's no way to get off the map of concept
-  clinging to the rational layer, have to get them off of there (def. of being unenlightened, previous age in Spiral Dynamics)
-  Body - Mind - Spirit CA backstory
-    how to unlock consilient content
-      have video interview "what aspacts are you aware of?" - my music self, I was in a band, he had an out of body experience playing their last show, he does experience a lot of energy from music, normally what I want to do with tai chi is to explain yin and yang and parimedes, this starts to get us off the rational layer, to the energy layer, in real life, the IDP, this is the content that gets unlocked, think of Gempo Roshi, Max
-
-  Pyramid, Layers of it
-  It's our meme map, and we show that... in this section
-  We back up to Live Dialog, and there's this other aspect that we could present to you if you clicked "what is energy?"
-  Doctor is still missing that Energy can still heal
-  the PAs are the n-dimensional wholon that is you, and all the content can be organized off thagt
-    We're looking for a way to unlock functionality
-    Back to psychographic sharing we don't care where we enter the conversation
-    We could suggest to this doctor that Energy healing, mindfulness healing, and expose him to this kind of belief
-    We believe Zen is a really useful tool for not confusing the map with the territory
-    We have a Zen Master, Qi Gong master, Tai Chi master, and 
-    Science is like information is the latest metaphor but we're always revising our reality
-    If we're swimming ideas we help you choose and embody wordmaps and you are a flow or a direction, not really a thing, just like the universe is not a thing, but why are you not a thing?
-    Reality won't be the same, everything's going to be different, identifying the world of form, the world of impermaence, 
-    We perceive the reality as information-theoretic but entiryely consistent with classical views of excellence (china, greece)
-    Gong Fu - is actually excellence, the practice of excellence, it's a way of life, it's a "strengthen your mind through your body"
-    Body Mind Spirit = Great Chain of Being (Lack of separation, MIT (study: name for the perennial tradition called "great chain of being, growth from depth to subtle, and there's an energy center for the body, it's the center of gravity, the body center, beyond that is "))
-
-    Basically, use the corporate athlete concept to present the website.
-    Mindfulness is healing becausde of harmony of the three treasures 
-    and that could be a bit somewere
-
-    New Practice Area
-    Purpose and Performance Section
-      Integral Development Plan
-        Integral Dev. Plan Slide from email tonight
-        Link to:
-        Corporate Athlete
-        Presenting the Integral Academy Company
-        Psychographic CRM - Asymptotic Goal
-        Way to hide content
-    consilient design thinking deck - use this deck's content - practicing balance/flow completre philosophy for navigating change in life
-
-How to manage Custom Post Types and their templates
+Introduction
 ====
+
+Before reading this guide, you should know how to use the standard wordpress administration panel. If you find that there's something you don't know how to do, feel free to explore the Wordpress documentation at http://codex.wordpress.org/.
+
+Content Management System Overview
+====
+
+TL;DR
+===
+
+Each page has an associated CPT. The posts of that CPT are rendered in chronological order on the page.
+Each post of that CPT has an associated fieldset. A fieldset is a collection of data types, for example you might have a fieldset containing someone's name, their title, and short bio.
+
+Here "edit" means create, read, update, and delete.
+To edit Pages: Pages menu in wp-admin sidebar.
+To edit CPTs: Custom Post Types menu in wp-admin sidebar. _DO NOT WRITE CPTs INTO functions.php_.
+To edit fieldsets: Custom Fields menu in wp-admin sidebar. _DON'T ADD CUSTOM FIELDS ANY OTHER WAY._
+To edit templates: Templates are stored in dlgthm/docs/content-templates/template-{TEMPLATE_NAME}.php
+So when you make a new template, make sure to put your file in the correct place and name it correctly.
+
+
+
+Pages
+  have exactly one Custom Post Type.
+    Each custom post of the specified type
+      has exactly one fieldset.
+      and has exactly one template.
+  have a Theme Color.
+  have an option to display a scrollspy sidebar.
+
+Page -> CPT -> Custom Posts
+Custom Post -> {fieldset, template}
+
+Fundamental Data Types
+===
+The website is structured as a collection of Pages. Each page has an associated:
+* Custom Post Type (cpt_slug)
+* Theme Color(theme_color)
+* Scrollspy(scrollspy) option
+When a Page is requested, we render a template containing a list of Custom Posts that have the type specified on the Page's edit screen in wp-admin. Pages require a Custom Post Type to be specified when you create them, so the first step to adding new content to the site is to create a Custom Post Type that we can use to display the content we want on some page.
+
+Making a CPT
+===
+We call Custom Post Types "CPTs" for short. Basically, a CPT is a collection of posts that will be displayed in chronological order on one or more pages. For example, I might have a CPT called "Team Members" that I want to be displayed on the "Team" page.
 
 Pages all need to have a custom field where they can specify what CPT to use for the page.
 CPTs use the Content Template Taxonomy. Each CPT instance must be assigned exactly one taxonomy term under "Content Templates" that specifies the path to the CPT instance's assigned PHP template.

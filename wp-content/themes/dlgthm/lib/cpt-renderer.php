@@ -9,7 +9,7 @@ function the_cpt_post($template_name)
 }
 
 // Display the entire CPT for the current page
-function render_cpt_with_template($cpt_name, $template_name)
+function render_cpt_with_template($cpt_name, $template_name = NULL)
 {
   global $post;
   if($cpt_name)
@@ -19,7 +19,28 @@ function render_cpt_with_template($cpt_name, $template_name)
     foreach($all_posts as $post)
     {
       setup_postdata($post);
-      the_cpt_post($template_name);
+      $tax = get_terms(CPT_TEMPLATE_TAX_NAME, array(
+      'orderby'       => 'name', 
+      'order'         => 'ASC',
+      'hide_empty'    => true, 
+      'exclude'       => array(), 
+      'exclude_tree'  => array(), 
+      'include'       => array(),
+      'number'        => '', 
+      'fields'        => 'all', 
+      'slug'          => '', 
+      'parent'         => '',
+      'hierarchical'  => false, 
+      'child_of'      => 0, 
+      'get'           => '', 
+      'name__like'    => '',
+      'pad_counts'    => false, 
+      'offset'        => '', 
+      'search'        => '', 
+      'cache_domain'  => 'core'
+    ));
+      if(is_null($template_name)) the_cpt_post($tax[0]->slug);
+      else the_cpt_post($template_name);
     }
     wp_reset_postdata();
   }
