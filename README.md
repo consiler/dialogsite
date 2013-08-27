@@ -117,5 +117,3 @@ Pages all need to have a custom field where they can specify what CPT to use for
 CPTs use the Content Template Taxonomy. Each CPT instance must be assigned exactly one taxonomy term under "Content Templates" that specifies the path to the CPT instance's assigned PHP template.
 We use a Taxonomy to assign templates in this way to avoid coupling the type of Custom Posts with their custom fields/templates.
 Instead, the custom fields and the template file can be derived purely from their assigned taxonomy term.
-
-get mom to drop family plan
