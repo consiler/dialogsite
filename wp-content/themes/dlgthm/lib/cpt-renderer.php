@@ -22,7 +22,11 @@ function render_cpt_with_template($cpt_name, $template_name = NULL)
       $tax = wp_get_post_terms(get_the_ID(), CPT_TEMPLATE_TAX_NAME);
       if(is_null($template_name))
       {
-        the_cpt_post($tax[0]->slug);
+        $temp = $tax[0]->slug;
+        if($temp)
+          the_cpt_post($temp);
+        else
+          echo 'Could not find template assigned to this post.\n';
       }
       else { the_cpt_post($template_name); }
     }

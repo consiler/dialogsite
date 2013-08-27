@@ -22,7 +22,6 @@ function dialog_scripts_styles() {
   //Loads scrollspy
   global $scrollspy;
   $scrollspy = get_field('scrollspy', get_the_ID());
-  if(!$scrollspy) $scrollspy = true;
   if($scrollspy)
   {
     wp_enqueue_script('dialog-scrollspy-js', get_template_directory_uri() . '/js/spybar.js', array('jquery'), '0.1', true);
