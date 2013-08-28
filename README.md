@@ -120,9 +120,14 @@ Instead, the custom fields and the template file can be derived purely from thei
 
 
 How to create a new CPT 
+===
 
-1. Create custom post type
+*1. Create custom post type
+*2. Create custom field and add fields
+*3. Your template taxonomy term is the exact same as the string that comes after the dash in the templates term
 
-2. Create custom field and add fields
-
-3. Your template taxonomy term is the exact same as the string that comes after the dash in the templates term
+TO DO
+====
+*Make any sized hero image centered rather than shifted to the left 
+*Add padding to footer so that when you scroll down there is more room on the page for scollspy
+*Complete no-hero image page title below the subnav
