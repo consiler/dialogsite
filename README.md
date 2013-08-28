@@ -133,4 +133,4 @@ TO DO
 *Complete no-hero image page title below the subnav
 *   DONE - Balance the footer and content padding
 *Make the subnav text highlight color standard - its starting to look weird with brighter colors and the grey colors. 
-*
+*Figure out non-scrollspy page, make sure it supports having and not having a hero image. 
