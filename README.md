@@ -128,6 +128,7 @@ How to create a new CPT
 
 TO DO
 ====
+*Add tesla-esque horizontal scrollspy to home page. Nothing crazy fancy for now, just implement it so that Bob knows its there and can comment on it.
 *   DONE - Get scroll spy to highlight correct title when clicking on it.
 *Make scrollspy highlight the title of the section you are on a few pixels before you even hit the title of the section, right now the highlighting of the next element seems to be delayed all the way into until you hit the content.
 *Make any sized hero image centered rather than shifted to the left 
