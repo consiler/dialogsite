@@ -136,3 +136,4 @@ TO DO
 *   DONE - Balance the footer and content padding
 *Make the subnav text highlight color standard - its starting to look weird with brighter colors and the grey colors. 
 *Figure out non-scrollspy page, make sure it also supports having and not having a hero image. 
+*Figure out what to display when someone clicks on a top level primary nav element. 
