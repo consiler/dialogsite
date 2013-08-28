@@ -129,5 +129,8 @@ How to create a new CPT
 TO DO
 ====
 *Make any sized hero image centered rather than shifted to the left 
-*Add padding to footer so that when you scroll down there is more room on the page for scollspy
+*   DONE - Add padding to footer so that when you scroll down there is more room on the page for scollspy
 *Complete no-hero image page title below the subnav
+*   DONE - Balance the footer and content padding
+*Make the subnav text highlight color standard - its starting to look weird with brighter colors and the grey colors. 
+*
