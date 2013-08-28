@@ -25,7 +25,7 @@ $(window).scroll(function(){
 // Find out how much the user has scrolled down the page
 var heading = $('#page-heading-inner');
 var headingOffset = heading.outerHeight();
-var scrolledOffset = $(this).scrollTop() + topMenuHeight + 70 ;
+var scrolledOffset = $(this).scrollTop() + topMenuHeight + 70;
 // If the bottom of the fixed nav menu hits the top of the spy bar...
 //console.log(scrolledOffset);
 if(scrolledOffset > spyBarYPosition){
@@ -52,12 +52,12 @@ if(scrolledOffset > spyBarYPosition){
   }
 }
 // Get container scroll position
-var fromTop = $(this).scrollTop()+topMenuHeight;
+var fromTop = $(this).scrollTop()+topMenuHeight+100;
 
 // Get id of current scroll item
 var cur = scrollItems.map(function(){
-if ($(this).offset().top < fromTop)
-  return this;
+  if ($(this).offset().top < fromTop)
+    return this;
 });
 
 // Get the id of the current element
@@ -81,7 +81,7 @@ if (lastId !== id)
 // so we can get a fancy scroll animation to the desired section on click
 menuItems.click(function(e){
   var href = $(this).attr("href");
-  var offsetTop = href === "#" ? 0 : $(href).offset().top-topMenuHeight-95;
+  var offsetTop = href === "#" ? 0 : $(href).offset().top-topMenuHeight-85;
   $('html, body').stop().animate({ 
       scrollTop: offsetTop
   }, 300);
