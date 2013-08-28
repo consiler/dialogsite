@@ -9,7 +9,7 @@ if($fieldset) {
 ?>
 <div class="generic_post">
   <div class="spyOnMe" id="content-section-<?php the_ID(); ?>">
-    <h1><?php the_field('title'); ?></h1>
+    <h1 class="generic_post_h1"><?php the_field('title'); ?></h1>
     <?php the_field('content'); ?>
   </div>
 </div>
