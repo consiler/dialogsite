@@ -5,5 +5,5 @@ Comment: Simply displays the title. Css is done from the wrapper ul element. To 
 */
 ?>
 <li>
-  <a href="#content-section-<?php echo get_the_ID(); ?>"><?php the_field('name'); ?></a>
+  <a href="#content-section-<?php echo get_the_ID(); ?>"><?php the_title(); ?></a>
 </li>
