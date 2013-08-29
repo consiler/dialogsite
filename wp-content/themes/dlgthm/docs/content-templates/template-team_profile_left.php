@@ -1,6 +1,6 @@
 <?php
 /*
-Template: Team Member Bio
+Template: Team Member Bio Left
 Comment: A template for a short fixed width bio of senior management.
 */
 $required_fields = array(
@@ -11,9 +11,14 @@ $required_fields = array(
 $fieldset = verified_fieldset($required_fields);
 if($fieldset) {
 ?>
-<div class="team_profile">
+<div class="team_profile_left">
   <div class="spyOnMe" id="content-section-<?php the_ID(); ?>">
-    <img src= "<?php $headshot = get_field('headshot'); echo $headshot['url']; ?>"></img>
+    <?php
+      $headshot = get_field('headshot');
+      if($headshot){
+        echo "<img src=".$headshot['url']."></img>";
+      }
+    ?>
     <h1><?php the_field('name'); ?></h1>
     <p class="employee-title-field"><?php the_field('title'); ?></p>
     <p><?php the_field('bio'); ?></p>

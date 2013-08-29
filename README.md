@@ -136,3 +136,12 @@ TO DO
 *   DONE - Make the subnav text highlight color standard - its starting to look weird with brighter colors and the grey colors. 
 *Figure out non-scrollspy page, make sure it also supports having and not having a hero image. 
 *Figure out what to display when someone clicks on a top level primary nav element. 
+
+Plugins that are NOT enabled as of 8/29/2013
+===
+*Contact Form DB
+*CP Google Maps
+*Visitor Maps and Who's Online
+*WordPress SEO
+*WP Minify
+*WP Super Cache
