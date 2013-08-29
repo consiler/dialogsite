@@ -46,11 +46,11 @@ Everything we change should be determined in those few lines
     color: @grey;
     font-weight: bold;
     box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.2);
-    -webkit-transition: all .1s ease-in;
-    -moz-transition: all .1s ease-in;
-    -ms-transition: all .1s ease-in;
-    -o-transition: all .1s ease-in;
-    transition: all .1s ease-in;
+    -webkit-transition: color .1s ease-in;
+    -moz-transition: color .1s ease-in;
+    -ms-transition: color .1s ease-in;
+    -o-transition: color .1s ease-in;
+    transition: color .1s ease-in;
   }
   .menu > ul > li > a {
     padding: 0 20px;
@@ -71,7 +71,7 @@ Everything we change should be determined in those few lines
     padding-left: 15px;
     border-left: 5px solid @grey;
   }
-  .menu > ul > li.current_page_parent:hover > a {
+  .menu > ul > li.current_page_parent:hover > a, .menu > ul > li.current_page_item:hover > a {
     border-left: none;
     padding-left: 20px;
     color: @dialogbrown;
@@ -168,11 +168,10 @@ Everything we change should be determined in those few lines
     border: none;
   }
   .second-menu-horizontal > li.current_page_item > a {
-    color: darken(@red, 20%)!important;
+    color: @dialogbrown;
     background-color: transparent;
   }
   .second-menu-horizontal > li > a:hover {
-    color: darken(@red, 10%)!important;
     background-color: transparent;
     color: @dialogbrown;
   }
@@ -192,3 +191,12 @@ Everything we change should be determined in those few lines
     -webkit-filter: hue-rotate(50deg);
   }
 }
+
+/*
+border bug
+current page static brown text
+cptless pages are now crashing
+contact page
+home page
+brown represents current page in top level category
+*/
