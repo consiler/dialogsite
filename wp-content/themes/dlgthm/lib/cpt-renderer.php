@@ -4,6 +4,8 @@ $debug = false;
 // Displaying a post
 function the_cpt_post($template_name)
 {
+  echo 'testing';
+  echo $template_name;
   $templates = CONTENT_TEMPLATE_PATH.'template-'.$template_name.'.php';
   require locate_template($templates);
 }
@@ -61,7 +63,7 @@ function page_get_cpt_list()
 
 function fieldset_mismatch_error($required_fields)
 {
-  $output = 'Assigned fieldset does not match template fieldset in CPT template slide-bigh1. Required Fields: ';
+  $output = 'Assigned fieldset does not match template fieldset in CPT template. Required Fields: ';
   foreach ($required_fields as $required_field) { 
     $output .= $required_field . '| ';
   }

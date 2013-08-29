@@ -22,7 +22,7 @@
     </div>
   <?php } ?>
   <div class="content-body <?php if(!$scrollspy) { echo 'content-body-fullwidth'; } ?>">
-    <?php render_cpt_with_template('our_office', 'office_grid_pane'); ?>
+    <?php render_cpt_with_template('our_office', 'our_office'); ?>
     <?php
       render_cpt_with_template($senior_team);
     ?>
