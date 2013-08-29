@@ -19,6 +19,9 @@ function dialog_scripts_styles() {
   //Loads main JS
   wp_enqueue_script('dialog-main-js', get_template_directory_uri() . '/js/main.js', array('jquery'), '0.1', true);
 
+  //Loads formalize
+  wp_enqueue_script('dialog-main-js', get_template_directory_uri() . '/js/jquery.formalize.js', array('jquery'), '0.1', true);
+
   //Loads scrollspy
   global $scrollspy;
   $scrollspy = get_field('scrollspy', get_the_ID());
@@ -36,6 +39,9 @@ function dialog_scripts_styles() {
 
   //Loads our actual stylesheet.
   wp_enqueue_style('dialog-main-style', get_template_directory_uri() . '/css/main.css', array(), '0.1');
+
+    //Loads the formalize stylesheet.
+  wp_enqueue_style('dialog-main-style', get_template_directory_uri() . '/css/formalize.css', array(), '0.1');
 
   // Loads the Internet Explorer specific stylesheet.
   //wp_enqueue_style( 'twentythirteen-ie', get_template_directory_uri() . '/css/ie.css', array( 'twentythirteen-style' ), '0.1' );
