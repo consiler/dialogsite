@@ -4,8 +4,6 @@ $debug = false;
 // Displaying a post
 function the_cpt_post($template_name)
 {
-  echo 'testing';
-  echo $template_name;
   $templates = CONTENT_TEMPLATE_PATH.'template-'.$template_name.'.php';
   require locate_template($templates);
 }
