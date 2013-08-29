@@ -50,7 +50,7 @@
     $.stellar({hideDistantElements: true});
 
     //Add colors to the top level page links based on their data-theme-color
-    $('.menu > ul > li').each(function(index, value)
+    $('.menu > ul > li:not(".current-page-ancestor")').each(function(index, value)
     {
       var thisID = $(value).attr('id');
       var borderStyle = 'border-left: 5px solid #'+$(value).attr('data-theme-color');

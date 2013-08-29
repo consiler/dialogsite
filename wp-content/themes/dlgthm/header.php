@@ -27,7 +27,7 @@ if($parent_id)
     <!--[if lt IE 9]>
     <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js"></script>
     <![endif]-->
-    <?php 
+    <?php
     wp_head(); ?>
   </head>
   <body <?php body_class(); ?> data-stellar-background-ratio="0.5">
@@ -63,14 +63,6 @@ if($parent_id)
             <div class="clearfix"></div>
           </div>
         </div>
-        <style type="text/css">
-          .second-menu-wrap > .second-menu > ul > li > a:hover {
-            color: <?php echo $theme_color; ?>;
-          }
-          .second-menu-wrap > .second-menu > ul > li.current_page_item > a {
-            color: <?php echo $theme_color; ?>;
-          }
-        </style>
         <div class="second-menu-wrap">
           <div class="second-menu">
           </div>

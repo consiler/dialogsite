@@ -128,8 +128,6 @@ How to create a new CPT
 
 TO DO
 ====
-*Get scroll spy to highlight correct title when clicking on it.
-*Make scrollspy highlight the title of the section you are on a few pixels before you even hit the title of the section, right now the highlighting of the next element seems to be delayed all the way into until you hit the content.
 *Make any sized hero image centered rather than shifted to the left 
 *   DONE - Add padding to footer so that when you scroll down there is more room on the page for scollspy
 *Complete no-hero image page title below the subnav
