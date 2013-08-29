@@ -3,7 +3,7 @@
 Template: Office Member Bios
 Comment: A template for a list/grid of people in the office
 */
-$required_fields = array('our_office');
+$required_fields = array('grid_person_name', 'grid_person_image');
 $fieldset = verified_fieldset($required_fields);
 if($fieldset) {
 ?>

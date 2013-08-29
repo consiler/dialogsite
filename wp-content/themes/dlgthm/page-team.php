@@ -5,8 +5,8 @@
   <?php
   $cpt_info = get_field('cpt_set');
   $cpt_info = explode(', ', $cpt_info);
-  $office_team = $cpt_info[0];
-  $senior_team = $cpt_info[1];
+  $office_team = $cpt_info[1];
+  $senior_team = $cpt_info[0];
   //No cpt, no page.
   if(!$cpt_info) die('Every page needs a CPT. This one doesn\'t. Go fix this by editing this page.');
   if($scrollspy)
