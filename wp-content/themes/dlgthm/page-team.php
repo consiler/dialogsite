@@ -4,6 +4,9 @@
 <div class="content-wrap">
   <?php
   $cpt_info = get_field('cpt_set');
+  $cpt_info = explode(', ', $cpt_info);
+  $office_team = $cpt_info[0];
+  $senior_team = $cpt_info[1];
   //No cpt, no page.
   if(!$cpt_info) die('Every page needs a CPT. This one doesn\'t. Go fix this by editing this page.');
   if($scrollspy)
@@ -14,13 +17,14 @@
         <style type="text/css">
           #spyMenu > li.active > a { border-right: 5px  solid; color: <?php echo $theme_color; ?>; }
         </style>
-        <?php render_cpt_with_template($cpt_info, 'generic_scrollspy_li'); ?>
+        <?php render_cpt_with_template($senior_team, 'generic_scrollspy_li'); ?>
       </ul>
     </div>
   <?php } ?>
   <div class="content-body <?php if(!$scrollspy) { echo 'content-body-fullwidth'; } ?>">
+    <?php render_cpt_with_template('our_office', 'office_grid_pane'); ?>
     <?php
-      render_cpt_with_template($cpt_info);
+      render_cpt_with_template($senior_team);
     ?>
   </div>
 </div>
