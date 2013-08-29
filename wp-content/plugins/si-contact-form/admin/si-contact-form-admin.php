@@ -712,25 +712,26 @@ if (isset($api->version)) {
      echo '<a href="'.admin_url( 'plugins.php' ).'">'.sprintf(__('A newer version of Fast Secure Contact Form is available: %s', 'si-contact-form'),$api->version).'</a>';
      echo "</div>\n";
   }else{
-     $fsc_update = ' '. __('(latest version)', 'si-contact-form');
+     $fsc_update = ' ';
   }
 }
 ?>
-
-<p>Good news! A major update is being worked on. The Fast Secure Contact Form 4.0 project began in late August 2012 and is making great progress. Read about the changes here:<br />
-<a href="http://wordpress.org/support/topic/fast-secure-contact-form-40-project-reports" target="_blank">Fast Secure Contact Form 4.0 project reports</a></p>
-<p><strong>How you can help with the new 4.0 verion:</strong> <a href="http://www.fastsecurecontactform.com/donate" target="_blank">Donate to the project</a>, and/or contribute your ideas in the <a href="http://wordpress.org/support/topic/working-on-a-40-version" target="_blank">Working on a 4.0 Version</a> post.
-</p>
+<div id="message" class="updated">
+<h3>Fast Secure Contact Form Version 4.0 Beta was released August, 15 2013. Please help test it!<br />
+- <a href="http://www.fastsecurecontactform.com/beta" target="_blank">Download and test the 4.0 Beta</a><br />
+- <a href="http://www.fastsecurecontactform.com/donate" target="_blank">Donate to the project</a>
+</h3>
+</div>
 
 <p>
 <?php echo __('Version:', 'si-contact-form'). ' '.$ctf_version.$fsc_update; ?> |
 <a href="http://wordpress.org/extend/plugins/si-contact-form/changelog/" target="_blank"><?php _e('Changelog', 'si-contact-form'); ?></a> |
 <a href="http://www.fastsecurecontactform.com/faq-wordpress-version" target="_blank"><?php _e('FAQ', 'si-contact-form'); ?></a> |
-<a href="http://wordpress.org/support/view/plugin-reviews/si-contact-form" target="_blank"><?php _e('Rate This', 'si-contact-form'); ?></a> |
 <a href="http://www.fastsecurecontactform.com/support" target="_blank"><?php _e('Support', 'si-contact-form'); ?></a> |
+<a href="http://wordpress.org/support/view/plugin-reviews/si-contact-form" target="_blank"><?php _e('Rate This', 'si-contact-form'); ?></a> |
 <a href="http://www.fastsecurecontactform.com/donate" target="_blank"><?php _e('Donate', 'si-contact-form'); ?></a> |
-<a href="http://www.642weather.com/weather/scripts.php" target="_blank"><?php _e('Free PHP Scripts', 'si-contact-form'); ?></a> |
 <a href="http://www.fastsecurecontactform.com/contact" target="_blank"><?php _e('Contact', 'si-contact-form'); ?> Mike Challis</a>
+
 </p>
 
 <?php
@@ -1431,17 +1432,6 @@ foreach ($akismet_send_anyway_array as $k => $v) {
         </div>
         <br />
 
-
-        <input name="si_contact_captcha_perm" id="si_contact_captcha_perm" type="checkbox" <?php if( $si_contact_opt['captcha_perm'] == 'true' ) echo 'checked="checked"'; ?> />
-        <label for="si_contact_captcha_perm"><?php _e('Hide CAPTCHA for', 'si-contact-form'); ?>
-        <strong><?php _e('registered', 'si-contact-form'); ?></strong> <?php __('users who can', 'si-contact-form'); ?>:</label>
-        <?php $this->si_contact_captcha_perm_dropdown('si_contact_captcha_perm_level', $si_contact_opt['captcha_perm_level']);  ?>
-        <a style="cursor:pointer;" title="<?php _e('Click for Help!', 'si-contact-form'); ?>" onclick="toggleVisibility('si_contact_captcha_perm_tip');"><?php _e('help', 'si-contact-form'); ?></a>
-        <div style="text-align:left; display:none" id="si_contact_captcha_perm_tip">
-        <?php _e('Registered users will not have to use the CAPTCHA feature. Do not enable this setting if you do not trust your registered users as some could be spammers.', 'si-contact-form') ?>
-        </div>
-        <br />
-
         <input name="si_contact_captcha_small" id="si_contact_captcha_small" type="checkbox" <?php if ( $si_contact_opt['captcha_small'] == 'true' ) echo ' checked="checked" '; ?> />
         <label for="si_contact_captcha_small"><?php _e('Enable smaller size CAPTCHA image.', 'si-contact-form'); ?></label>
         <a style="cursor:pointer;" title="<?php _e('Click for Help!', 'si-contact-form'); ?>" onclick="toggleVisibility('si_contact_captcha_small_tip');"><?php _e('help', 'si-contact-form'); ?></a>
@@ -1923,7 +1913,7 @@ foreach ($time_format_array as $k => $v) {
 			<input name="si_contact_vcita_dismiss" type="hidden" value="<?php echo esc_attr($si_contact_gb['vcita_dismiss']); ?>" />
 			<input name="si_contact_ctf_version" type="hidden" value="<?php echo esc_attr($si_contact_gb['ctf_version']); ?>" />
 			<input name="si_contact_vcita_email" type="hidden" value="<?php echo esc_attr($si_contact_opt['vcita_email']); ?>" />
-			
+
 			<?php if ( empty($si_contact_opt['vcita_uid'])) : ?>
 			    
 			    <label class="vcita-label" for="si_contact_vcita_email_new"><?php _e('Email Address:', 'si-contact-form') ?></label>
