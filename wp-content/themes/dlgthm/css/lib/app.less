@@ -288,6 +288,9 @@ body.home #body-wrap {
   z-index: 99;
   background-image: url(../images/background-grain.jpg);
 }
+#page-heading-inner.light {
+  background-image: none;
+}
 #page-heading {
   width: (@layout_width - 135px);
   margin: 0 auto;
@@ -298,6 +301,9 @@ body.home #body-wrap {
   background-image: url(../images/background-grain.jpg);
   //text-shadow: -1px -1px 0px #999;
   //filter: dropshadow(color=#666666, offx=0, offy=-1);
+}
+#page-heading.light {
+  background-image: none;
 }
 #page-heading-inner.stuck {
   top: @total_menu_height;
@@ -354,14 +360,19 @@ Form Example on Front-Page Boxing
  * Contact Page
  *****************************************************************************/
 
- .contact-tele {
-  float: left;
-  width: 50%;
- }
- .contact-phys {
-  float: right;
-  width: 50%;
- }
- .contact-wrap {
+.contact-top {
+
+}
+.contact-wrap {
   overflow: hidden;
- }
+}
+.contact-left {
+  width: 50%;
+  float: left;
+}
+.contact-right {
+  width: 50%;
+  float: right;
+}
+.contact-form-wrap {
+}
