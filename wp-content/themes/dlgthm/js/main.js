@@ -32,7 +32,6 @@
       // If we found a dropdown menu, we add a class that changes the dropdown menu's look
       //to a padded horizontal list of links, and add it to the silver bar
       //directly under the main navigation bar.
-      console.log(currentPageCategoryDropDownMenu.length);
       currentPageCategoryDropDownMenu.addClass('second-menu-horizontal').appendTo('.second-menu');
     } else {
       // If we cannot find a drop down menu, our current section must not have any child pages.
@@ -50,9 +49,14 @@
     $.stellar({hideDistantElements: true});
 
     //Add colors to the top level page links based on their data-theme-color
-    $('.menu > ul > li:not(".current-page-ancestor")').each(function(index, value)
+    $('.menu > ul > li').each(function(index, value)
     {
-      var thisID = $(value).attr('id');
+      var thisNode = $(value);
+      if(thisNode.hasClass('current_page_item') || thisNode.hasClass('current_page_parent'))
+      {
+        return;
+      }
+      var thisID = thisNode.attr('id');
       var borderStyle = 'border-left: 5px solid #'+$(value).attr('data-theme-color');
       $(value).append('<style type="text/css">#'+thisID+':hover > a { '+borderStyle+' } #'+thisID+':hover > .sub-menu { '+borderStyle+' } </style>');
     });
