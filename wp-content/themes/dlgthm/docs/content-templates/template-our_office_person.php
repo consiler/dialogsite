@@ -8,9 +8,13 @@ $fieldset = verified_fieldset($required_fields);
 if($fieldset) {
 ?>
 <div class="our_office_person">
+  <p><?php the_field('grid_person_name'); ?></p>
    <?php
-    $name = get_field("grid_person_name");
-    var_dump($name);
+    $headshot = get_field('grid_person_image');
+    echo "<br>";
+      if($headshot){
+        echo "<img src=".$headshot."></img>";
+      }
    ?>
  </div>
 <?php } else {
