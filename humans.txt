@@ -3,13 +3,15 @@
 
 # TEAM
 
-    <name> -- <role> -- <twitter>
+    MP/Consiler
+    S76
 
 # THANKS
 
-    <name>
+    Bob, Mark
 
 # TECHNOLOGY COLOPHON
 
     HTML5, CSS3
     jQuery, Modernizr
+    Wordpress
