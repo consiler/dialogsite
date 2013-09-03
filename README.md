@@ -43,6 +43,9 @@ Videos (remind mark of these) all general
 
 for every slide, solicit copy to explain image for all these slides
 
+Note: Only make pages for major concepts.
+Else CPT instance.
+
 Practice Areas
   Digital Domination
     line: "digital land grab/dominate real estate you need to, owning conversations"

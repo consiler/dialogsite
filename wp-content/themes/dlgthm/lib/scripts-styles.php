@@ -40,16 +40,8 @@ function dialog_scripts_styles() {
   //Loads our actual stylesheet.
   wp_enqueue_style('dialog-main-style', get_template_directory_uri() . '/css/main.css', array(), '0.1');
 
-  //Loads the formalize stylesheet.
-  wp_enqueue_style('dialog-formalize-style', get_template_directory_uri() . '/css/formalize.css', array(), '0.1');
-
-  if(is_front_page())
-  {
-    //Loads the front page stylesheet.
-    wp_enqueue_style('dialog-fp', get_template_directory_uri() . '/css/frontpage.css', array(), '0.1');
-    //Loads front page scripts
-    wp_enqueue_script('dialog-fp-script', get_template_directory_uri() . '/js/frontpage.js', array('jquery'), '0.1', true);
-  }
+    //Loads the formalize stylesheet.
+  wp_enqueue_style('dialog-main-style', get_template_directory_uri() . '/css/formalize.css', array(), '0.1');
 
   // Loads the Internet Explorer specific stylesheet.
   //wp_enqueue_style( 'twentythirteen-ie', get_template_directory_uri() . '/css/ie.css', array( 'twentythirteen-style' ), '0.1' );
