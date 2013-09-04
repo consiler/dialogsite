@@ -10,7 +10,7 @@ Comment:
       <h1 id="fp_slide1-heading">Dialog Approach: Succeeding in an Age of Transparency</h1>
       <div class="blue-center">Radical Clarity</div>
       <div class="fp_slide1-circle-wrap">
-        <div class="fp_slide1-circle" id="fs1c-blue"><span><span>Purpose</span></span></div><div class="fp_slide1-circle" id="fs1c-greyy"><span><span>Strategy</span></span></div><div class="fp_slide1-circle" id="fs1c-beige"><span><span>Execution</span></span></div>
+        <div class="fp_slide1-circle" id="fs1c-blue">Purpose</div><div class="fp_slide1-circle" id="fs1c-greyy">Strategy</div><div class="fp_slide1-circle" id="fs1c-beige">Execution</div>
       </div>
       <div class="blue-center">Alignment</div>
     </div>
