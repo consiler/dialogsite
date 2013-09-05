@@ -22,7 +22,7 @@ module.exports = function(grunt) {
          'css/lib/*.less'
        ],
        tasks: ['recess']
-     }
+     },
    }
  });
 
