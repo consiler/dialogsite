@@ -25,7 +25,7 @@ function dialog_scripts_styles() {
   //Loads scrollspy
   global $scrollspy;
   $scrollspy = get_field('scrollspy', get_the_ID());
-  if($scrollspy)
+  if($scrollspy && !is_front_page())
   {
     wp_enqueue_script('dialog-scrollspy-js', get_template_directory_uri() . '/js/spybar.js', array('jquery'), '0.1', true);
   }
@@ -40,7 +40,13 @@ function dialog_scripts_styles() {
   //Loads our actual stylesheet.
   wp_enqueue_style('dialog-main-style', get_template_directory_uri() . '/css/main.css', array(), '0.1');
 
-    //Loads the formalize stylesheet.
+  //Load frontpage.js
+  if(is_front_page())
+  {
+    wp_enqueue_script('dialog-frontpage-js', get_template_directory_uri() . '/js/frontpage.js', array('jquery'), '0.1', true);
+  }
+
+  //Loads the formalize stylesheet.
   wp_enqueue_style('dialog-main-style', get_template_directory_uri() . '/css/formalize.css', array(), '0.1');
 
   // Loads the Internet Explorer specific stylesheet.

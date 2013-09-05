@@ -1,4 +1,5 @@
 (function($) {
+$(document).ready(function(){
 var spyBar = $('.content-scrollspy');
 var navMenuWrap = $('.header-wrap');
 // Spybar container positioning set up (stick to top menu on scroll down)
@@ -86,5 +87,7 @@ menuItems.click(function(e){
       scrollTop: offsetTop
   }, 300);
   e.preventDefault();
+});
+//end doc ready
 });
 })(jQuery);

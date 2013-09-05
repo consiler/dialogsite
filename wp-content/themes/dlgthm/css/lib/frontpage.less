@@ -1,4 +1,73 @@
 @import url('settings.less');
+
+/* Scrollspy */
+
+.fp-scrollspy {
+  height: 100px;
+  background: rgb(255,255,255);
+  background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(230,231,232,1) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(230,231,232,1)));
+  background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(230,231,232,1) 100%);
+  background: -o-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(230,231,232,1) 100%);
+  background: -ms-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(230,231,232,1) 100%);
+  background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(230,231,232,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e6e7e8',GradientType=0 );
+}
+.fp-scrollspy-inner {
+  width: (@layout_width - 125px);
+  margin: 0 auto;
+  height: 100px;
+  padding-left: 125px;
+  -webkit-transition: all 200ms ease-in-out;
+    -moz-transition: all 200ms ease-in-out;
+        -ms-transition: all 200ms ease-in-out;
+        -o-transition: all 200ms ease-in-out;
+    transition: all 200ms ease-in-out;
+}
+.fp-scrollspy-inner > .fp-scrollspy-anchor {
+  display: inline-block;
+  width: 100px;
+  line-height: 100px;
+  text-align: center;
+  color: @grey;
+  border-right: 1px solid #ddd;
+}
+/* sticky scrollspy */
+.fp-scrollspy-fixed {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  height: 49px;
+  border-bottom: 1px solid #ddd;
+  -webkit-box-shadow:  0px 2px 5px 0px rgba(0, 0, 0, 0.3);
+  box-shadow:  0px 2px 5px 0px rgba(0, 0, 0, 0.3);
+}
+.fp-scrollspy-fixed .fp-scrollspy-anchor {
+  line-height: 49px!important;
+  height: 49px!important;
+}
+.fp-scrollspy-anchor:hover {
+  cursor: pointer;
+  color: #333;
+  background: rgb(230,231,232);
+  background: -moz-linear-gradient(top,  rgba(230,231,232,1) 0%, rgba(255,255,255,1) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(230,231,232,1)), color-stop(100%,rgba(255,255,255,1)));
+  background: -webkit-linear-gradient(top,  rgba(230,231,232,1) 0%,rgba(255,255,255,1) 100%);
+  background: -o-linear-gradient(top,  rgba(230,231,232,1) 0%,rgba(255,255,255,1) 100%);
+  background: -ms-linear-gradient(top,  rgba(230,231,232,1) 0%,rgba(255,255,255,1) 100%);
+  background: linear-gradient(to bottom,  rgba(230,231,232,1) 0%,rgba(255,255,255,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e6e7e8', endColorstr='#ffffff',GradientType=0 );
+}
+.fp-scrollspy-anchor.active {
+  background-color: #fff;
+}
+.fp-scrollspy-placeholder {
+  display: none;
+  height: 100px;
+}
+
+/* A strategic marketing firm like no... */
 .fp_slide0-wrap {
   background-image: url(../images/fp-dialog-center.jpg);
   background-size: 100%;

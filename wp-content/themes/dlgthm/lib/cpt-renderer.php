@@ -9,7 +9,7 @@ function the_cpt_post($template_name)
 }
 
 // Display the entire CPT for the current page
-function render_cpt_with_template($cpt_name, $template_name = NULL)
+function render_cpt_with_template($cpt_name, $template_name = NULL, $use_id_wrap = false)
 {
   global $post;
   if($cpt_name)
@@ -19,12 +19,15 @@ function render_cpt_with_template($cpt_name, $template_name = NULL)
     foreach($all_posts as $post)
     {
       setup_postdata($post);
-      $tax = wp_get_post_terms(get_the_ID(), CPT_TEMPLATE_TAX_NAME);
+      $id = get_the_ID();
+      $tax = wp_get_post_terms($id, CPT_TEMPLATE_TAX_NAME);
       if(is_null($template_name))
       {
         $temp = $tax[0]->slug;
         if($temp)
+          if($use_id_wrap) echo '<div id="cpt-'.$id.'">';
           the_cpt_post($temp);
+          if($use_id_wrap) echo '</div>';
         else
           echo 'Could not find template assigned to this post.\n';
       }
