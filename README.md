@@ -137,6 +137,8 @@ TO DO
 *Figure out non-scrollspy page, make sure it also supports having and not having a hero image. 
 *Figure out what to display when someone clicks on a top level primary nav element. 
 *Build multi-depth scrollspy menu
+*investigate whether old intro presentation is to be adapted for the new website
+*change style of no hero header for pages
 
 Plugins that are NOT enabled as of 8/29/2013
 ===
