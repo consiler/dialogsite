@@ -128,16 +128,13 @@ How to create a new CPT
 
 TO DO
 ====
-*Add tesla-esque horizontal scrollspy to home page. Nothing crazy fancy for now, just implement it so that Bob knows its there and can comment on it.
 *Make any sized hero image centered rather than shifted to the left 
 *   DONE - Add padding to footer so that when you scroll down there is more room on the page for scollspy
 *Complete no-hero image page title below the subnav
 *   DONE - Balance the footer and content padding
 *   DONE - Make the subnav text highlight color standard - its starting to look weird with brighter colors and the grey colors. 
-*Figure out non-scrollspy page, make sure it also supports having and not having a hero image. 
-*Figure out what to display when someone clicks on a top level primary nav element. 
 *Build multi-depth scrollspy menu
-*investigate whether old intro presentation is to be adapted for the new website
+*Meeting: investigate whether old intro presentation is to be adapted for the new website
 *change style of no hero header for pages
 
 Plugins that are NOT enabled as of 8/29/2013
@@ -148,3 +145,9 @@ Plugins that are NOT enabled as of 8/29/2013
 *WordPress SEO
 *WP Minify
 *WP Super Cache
+
+Pre Meeting Notes
+
+- Scrollspy on Front Page
+- Explicit spec for the Front Page Preso
+- New light layout for internal pages

@@ -283,10 +283,23 @@ body.home #body-wrap {
   position: relative;
   padding: 0;
   overflow: hidden;
+  background-image: url(../images/background-grain.jpg);
+}
+.page-heading-wrap-light {
+  background-image: none!important;
+  background-color: #f00;
 }
 #page-heading-inner {
   z-index: 99;
   background-image: url(../images/background-grain.jpg);
+}
+.page-heading-wrap-light > #page-heading-inner {
+  background-image: none;
+}
+.page-heading-wrap-light > #page-heading-inner > #page-heading {
+  background-image: none;
+  background-color: #fff;
+  color: @greyyy;
 }
 #page-heading-inner.light {
   background-image: none;

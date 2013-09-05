@@ -12,7 +12,7 @@ $url_field = get_field('hero_banner');
     </div>
     <div id="banner-bg-filler"></div>
   <?php } ?>
-  <div id="page-heading-wrap">
+  <div id="page-heading-wrap" <?php $light_layout = get_field('light_layout'); if($light_layout) { echo 'class="page-heading-wrap-light"'; } ?>>
     <div id="page-heading-inner">
       <h1 id="page-heading"><?php the_title(); ?></h1>
     </div>
