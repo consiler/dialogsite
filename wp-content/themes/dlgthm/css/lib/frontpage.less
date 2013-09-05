@@ -19,10 +19,10 @@
   height: 100px;
   padding-left: 125px;
   -webkit-transition: all 200ms ease-in-out;
-    -moz-transition: all 200ms ease-in-out;
-        -ms-transition: all 200ms ease-in-out;
-        -o-transition: all 200ms ease-in-out;
-    transition: all 200ms ease-in-out;
+  -moz-transition: all 200ms ease-in-out;
+  -ms-transition: all 200ms ease-in-out;
+  -o-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
 }
 .fp-scrollspy-inner > .fp-scrollspy-anchor {
   display: inline-block;
@@ -30,8 +30,13 @@
   line-height: 100px;
   text-align: center;
   color: @grey;
-  border-right: 1px solid #ddd;
+  border-right: 1px solid @greyy;
+  position: relative;
 }
+.fp-scrollspy-inner > .fp-scrollspy-anchor:first-child {
+  border-left: 1px solid @greyy;
+}
+
 /* sticky scrollspy */
 .fp-scrollspy-fixed {
   position: fixed;
@@ -47,25 +52,45 @@
   line-height: 49px!important;
   height: 49px!important;
 }
+
+/* scrollspy links */
+.fp-scrollspy-anchor {
+-webkit-transition: background 200ms ease-in;
+-moz-transition: background 200ms ease-in;
+-ms-transition: background 200ms ease-in;
+-o-transition: background 200ms ease-in;
+transition: background 200ms ease-in;
+}
 .fp-scrollspy-anchor:hover {
   cursor: pointer;
   color: #333;
-  background: rgb(230,231,232);
-  background: -moz-linear-gradient(top,  rgba(230,231,232,1) 0%, rgba(255,255,255,1) 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(230,231,232,1)), color-stop(100%,rgba(255,255,255,1)));
-  background: -webkit-linear-gradient(top,  rgba(230,231,232,1) 0%,rgba(255,255,255,1) 100%);
-  background: -o-linear-gradient(top,  rgba(230,231,232,1) 0%,rgba(255,255,255,1) 100%);
-  background: -ms-linear-gradient(top,  rgba(230,231,232,1) 0%,rgba(255,255,255,1) 100%);
-  background: linear-gradient(to bottom,  rgba(230,231,232,1) 0%,rgba(255,255,255,1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e6e7e8', endColorstr='#ffffff',GradientType=0 );
 }
 .fp-scrollspy-anchor.active {
   background-color: #fff;
+}
+.fp-scrollspy-anchor.active > .arrow-down {
+  border-top: 6px solid @red;
 }
 .fp-scrollspy-placeholder {
   display: none;
   height: 100px;
 }
+.arrow-down {
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid @greyy;
+  position: relative;
+  top: -16px;
+  margin-top: -6px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.fp-scrollspy-fixed .arrow-down {
+  top: -5px;
+}
+
 
 /* A strategic marketing firm like no... */
 .fp_slide0-wrap {
