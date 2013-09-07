@@ -25,9 +25,11 @@ function render_cpt_with_template($cpt_name, $template_name = NULL, $use_id_wrap
       {
         $temp = $tax[0]->slug;
         if($temp)
+        {
           if($use_id_wrap) echo '<div id="cpt-'.$id.'">';
           the_cpt_post($temp);
           if($use_id_wrap) echo '</div>';
+        }
         else
           echo 'Could not find template assigned to this post.\n';
       }

@@ -32,7 +32,7 @@
 
       // Get id of current scroll item
       var cur = scrollItems.map(function(){
-        if ($(this).offset().top < scrolledOffset + 50)
+        if ($(this).offset().top < scrolledOffset + 51)
         {
           return this;}
       });
